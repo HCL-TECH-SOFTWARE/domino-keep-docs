@@ -21,7 +21,7 @@ While the installation instructions may seem a bit intimidatingly at first, if y
 
 ### Creating the KEEP image
 
-See [Running KEEP with a Docker Image](../../installconfig/installation/docker).
+See [Running KEEP with a Docker Image](../../../installconfig/installation/docker).
 
 ### Scripts
 
