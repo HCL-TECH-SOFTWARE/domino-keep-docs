@@ -1,0 +1,4 @@
+#!/bin/bash
+# Before she shutdown domino we shutdown KEEP
+export ADMINPORT=8009
+curl -d '{"shutdownkey" : "The End is near!!"}' -H "Content-Type: application/json" -X POST http://localhost:$ADMINPORT/shutdown

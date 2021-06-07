@@ -1,0 +1,58 @@
+# (C) 2021 HCL America Inc. All rights reserved
+# This is a Docker compose command to setup a
+# primary server, one that runs a new Domino domain
+# standalone
+#
+# You have to EDIT the .env file and replace
+# all entries after the = sign with your values:
+#
+# Variable             Example
+# =====================================================================
+# ${hostname}         domino.acme.com
+# ${admin_name}       Peter Parker
+# ${domain_name}      MarvelPhase4  <- YOUR EXSISTING NOTES DOMAIN
+# ${org_name}         Stark Industries <- YOUR EXSISTING ORG
+# ${server_name}      keep-server-01
+# ${network_hostname} keep01.domino.acme.com <- MUST RESOLVE
+# ${volume_name}      domino_keep_notesdata
+# ${admin_firstname}  Paul
+# ${admin_lastname}   Herbert
+# ${admin_password}   domin4ever
+# ${cert_password}    supersecret
+version: "3.6"
+services:
+  domino:
+    image: docker.hcllabs.net/hclcom/projectkeep-r12:latest
+    container_name: "${container_name}"
+    hostname: "${hostname}"
+    stop_grace_period: 60s
+    environment:
+      SetupAutoConfigure: 1
+      SERVERSETUP_SERVER_TYPE: "first"
+      SERVERSETUP_ADMIN_FIRSTNAME: "${admin_firstname}"
+      SERVERSETUP_ADMIN_LASTNAME: "${admin_lastname}"
+      SERVERSETUP_ADMIN_PASSWORD: "${admin_password}"
+      SERVERSETUP_ADMIN_IDFILEPATH: admin.id
+      SERVERSETUP_ORG_CERTIFIERPASSWORD: "${cert_password}"
+      SERVERSETUP_SERVER_DOMAINNAME: "${domain_name}"
+      SERVERSETUP_ORG_ORGNAME: "${org_name}"
+      SERVERSETUP_SERVER_NAME: "${server_name}"
+      SERVERSETUP_NETWORK_HOSTNAME: "${network_hostname}"
+      SERVERSETUP_SECURITY_ACL_PROHIBITANONYMOUSACCESS: "true"
+      SERVERSETUP_SECURITY_ACL_ADDLOCALDOMAINADMINS: "true"
+      LANG: en_US.UTF-8
+    cap_add:
+      - SYS_PTRACE
+    ports:
+      - 80:80
+      - 443:443
+      - 1352:1352
+      - 8880:8880
+      - 8889:8889
+      - 8890:8890
+    volumes:
+      - keep_vol:/local/notesdata
+volumes:
+  keep_vol:
+    name: "${volume_name}"
+    external: false

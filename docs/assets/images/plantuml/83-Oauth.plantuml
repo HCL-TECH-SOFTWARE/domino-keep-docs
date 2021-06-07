@@ -1,0 +1,22 @@
+@startuml OAuthDance
+autonumber
+title OAuth Flow with application server
+actor       "Resource\nOwner" as human
+participant "Application\nServer" as App
+participant "Identity Provider\nAuthorization\nEndpoint" as IdP1
+participant "Identity Provider\nToken\nEndpoint" as IdP2
+database "KEEP API\nEndpoint" as keep
+human <-- App: request\nauthorization
+human -> IdP1: access IdP
+human <-> IdP1: authenticates
+human <-> IdP1: authorizes client
+human <-- IdP1: redirects with authorization code
+human -> App: provide authorziation code
+App -> IdP2: send Application server credentials\nand authorization code
+note left of IdP2: (7) not suitable for browser\nor client based access\nsince they can't keep secrets
+App <- IdP2: provide access token (JWT)
+group covered by KEEP
+App -[#000000]> keep: send access token (JWT) & Keep App ID/Secret\n with resource request
+App <[#000000]- keep: provide resource
+end
+@enduml

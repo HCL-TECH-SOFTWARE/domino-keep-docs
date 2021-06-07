@@ -1,0 +1,3 @@
+#!/bin/bash
+# After shutdown - kill the Java task
+pkill -9 -f projectkeep
