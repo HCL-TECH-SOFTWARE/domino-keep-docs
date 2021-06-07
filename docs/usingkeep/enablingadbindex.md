@@ -5,11 +5,11 @@ parent: Using KEEP
 nav_order: 1
 ---
 
-## Enabling a database 
+## Enabling a database
 
 If you have a database that you would like to use with KEEP, you'll need to ensure it is on the same Domino server as KEEP and configure it. Follow the tutorial for instructions on how to do it using [AdminUI](../../tutorial/adminui) or [Postman or curl](../../tutorial/postmancurl).
 
-It is worth noting that all the actions that you can do using the Admin UI can also be done using Postman, curl or any similar tool. 
+It is worth noting that all the actions that you can do using the Admin UI can also be done using Postman, curl or any similar tool.
 Below are some examples to perform additional actions for database, people and application management, like adding a database, listing views, agents and forms, listing and adding application and listing and adding person.
 
 A group of API requests is known as a collection. Each collection may have subfolders and multiple requests. Request URL or the endpoint is used to identify the link to where the API will communicate with.
@@ -24,7 +24,7 @@ A group of API requests is known as a collection. Each collection may have subfo
 
 To add a database, run the following command. Find the applicable Request URL from the OpenAPI Specification document. Provide the body for Post request.
 
-![Adddatabase]({{ '/assets/images/adddatabase.PNG' | relative_url }})
+![Adddatabase]({{ '/assets/images/adddatabase.png' | relative_url }})
 
 #### Curl code snippet
 
@@ -58,7 +58,7 @@ curl --location --request POST 'localhost:8880/api/v1/admin/database' \
 
 To list the views, run the following command. Find the applicable Request URL from the OpenAPI Specification document.Execute. For Get request,body is not needed.
 
-![ListViews]({{ '/assets/images/listviews.PNG' | relative_url }})
+![ListViews]({{ '/assets/images/listviews.png' | relative_url }})
 
 #### Curl code snippet
 
@@ -72,7 +72,7 @@ curl --location --request GET 'localhost:8880/api/v1/lists?db=demo' \
 
 Find the applicable Request URL from the OpenAPI Specification document. Execute. For Get request, body is not needed.
 
-![RetrieveView]({{ '/assets/images/retrieveview.PNG' | relative_url }})
+![RetrieveView]({{ '/assets/images/retrieveview.png' | relative_url }})
 
 #### Curl code snippet
 
@@ -91,7 +91,7 @@ curl --location -g --request GET 'localhost:8880/api/v1/lists/{{name}}/default?d
 
 To list the agents, run the following command. Find the applicable Request URL from the OpenAPI Specification document.Execute. For Get request, body is not needed.
 
-![ListAgents]({{ '/assets/images/listagents.PNG' | relative_url }})
+![ListAgents]({{ '/assets/images/listagents.png' | relative_url }})
 
 #### Curl code snippet
 
@@ -104,7 +104,7 @@ curl --location --request GET 'localhost:8880/api/v1/design/agents?db=demo' \
 
 To list the forms, run the following command. Find the applicable Request URL from the OpenAPI Specification document.Execute. For Get request, body is not needed.
 
-![ListForms]({{ '/assets/images/ListForms.PNG' | relative_url }})
+![ListForms]({{ '/assets/images/ListForms.png' | relative_url }})
 
 #### Curl code snippet
 
@@ -115,17 +115,17 @@ curl --location --request GET 'localhost:8880/api/v1/design/forms?db=demo' \
 
 ### Creating a document
 
-![Collection]({{ '/assets/images/Collection.PNG' | relative_url }})
+![Collection]({{ '/assets/images/Collection.png' | relative_url }})
 
 Find the applicable Request URL from the OpenAPI Specification document. In Postman, include the request body in JSON format for the POST request.
 
 In the upper right corner there is a send button. Execute it.
 
-![Create document]({{ '/assets/images/CreateDocument.PNG' | relative_url }})
+![Create document]({{ '/assets/images/CreateDocument.png' | relative_url }})
 
 The curl command for the above can be found using the symbol.
 
-![curl symbol]({{ '/assets/images/CreateDocument2.PNG' | relative_url }})
+![curl symbol]({{ '/assets/images/CreateDocument2.png' | relative_url }})
 
 #### Curl code snippet
 
@@ -151,13 +151,13 @@ curl --location --request POST 'localhost:8880/api/v1/document?db=demo' \
 
 Find the applicable Request URL from the OpenAPI Specification document.Execute.For Get request ,body is not needed.
 
-![RetrieveDoc]({{ '/assets/images/retrievedoc.PNG' | relative_url }})
+![RetrieveDoc]({{ '/assets/images/retrievedoc.png' | relative_url }})
 
 #### Curl code snippet
 
 Please replace `$Bearer` with actual Bearer value.
 
-Please replace `{{UNID_0}}` with actual UNID. 
+Please replace `{{UNID_0}}` with actual UNID.
 
 ```
 curl --location -g --request GET 'localhost:8880/api/v1/document/{{UNID_0}}/default?db=demo' \
@@ -170,7 +170,7 @@ curl --location -g --request GET 'localhost:8880/api/v1/document/{{UNID_0}}/defa
 
 To live the available applications, run the following command. Find the applicable Request URL from the OpenAPI Specification document.Execute. For Get request, body is not needed.
 
-![ListApplications]({{ '/assets/images/ListApplications.PNG' | relative_url }})
+![ListApplications]({{ '/assets/images/ListApplications.png' | relative_url }})
 
 #### Curl code snippet
 
@@ -186,11 +186,12 @@ curl --location --request GET 'localhost:8880/api/v1/admin/applications/all' \
 		]
 }'
 ```
+
 #### Add an application
 
 To add an application, run the following command. Find the applicable Request URL from the OpenAPI Specification document. Provide the body for Post request.
 
-![AddApplicationPostman]({{ '/assets/images/AddApplicationPostman.PNG' | relative_url }})
+![AddApplicationPostman]({{ '/assets/images/AddApplicationPostman.png' | relative_url }})
 
 ##### Curl code snippet
 
@@ -210,7 +211,7 @@ curl --location --request POST 'localhost:8880/api/v1/admin/application' \
 
 To list the available people, run the following command. Find the applicable Request URL from the OpenAPI Specification document.Execute. For Get request, body is not needed.
 
-![ListPeople]({{ '/assets/images/ListPeople.PNG' | relative_url }})
+![ListPeople]({{ '/assets/images/ListPeople.png' | relative_url }})
 
 #### Curl code snippet
 
@@ -224,7 +225,7 @@ curl --location --request GET 'localhost:8880/api/pim-v1/public/people' \
 
 To add a person, run the following commands. Find the applicable Request URL from the OpenAPI Specification document. Provide the body for Post request.
 
-![AddPersonPostman]({{ '/assets/images/AddPersonPostman.PNG' | relative_url }})
+![AddPersonPostman]({{ '/assets/images/AddPersonPostman.png' | relative_url }})
 
 #### Curl code snippet
 
@@ -264,7 +265,7 @@ curl --location --request POST 'localhost:8880/api/pim-v1/public/person' \
 
 To list the available groups, run the following command. Find the applicable Request URL from the OpenAPI Specification document.Execute. For Get request, body is not needed.
 
-![ListGroups]({{ '/assets/images/ListGroups.PNG' | relative_url }})
+![ListGroups]({{ '/assets/images/ListGroups.png' | relative_url }})
 
 #### Curl code snippet
 
@@ -278,7 +279,7 @@ curl --location --request GET 'localhost:8880/api/pim-v1/public/groups' \
 
 To add a group, run the following command. Find the applicable Request URL from the OpenAPI Specification document. Provide the body for Post request.
 
-![AddGroupPostman]({{ '/assets/images/AddGroupPostman.PNG' | relative_url }})
+![AddGroupPostman]({{ '/assets/images/AddGroupPostman.png' | relative_url }})
 
 #### Curl code snippet
 

@@ -7,14 +7,14 @@ nav_order: 2
 
 ## Using Postman and curl
 
-This tutorial shows how to configure and use a database using Postman and curl. Download the database `Demo.nsf` from [Resources](../../references/downloads) and follow along. We also have a Postman collection under [Resources](../../references/downloads) to download and used for quick learning. 
+This tutorial shows how to configure and use a database using Postman and curl. Download the database `Demo.nsf` from [Resources](../../references/downloads) and follow along. We also have a Postman collection under [Resources](../../references/downloads) to download and used for quick learning.
 
 ### Prepare database access
 
 First, copy the demo database to the server.
 
-Download demo.nsf. Then, use the following command to copy demo.nsf to the server. Replace `$Server` with actual server name. 
- 
+Download demo.nsf. Then, use the following command to copy demo.nsf to the server. Replace `$Server` with actual server name.
+
 ```
 docker cp Demo.nsf $Server:/local/notesdata/Demo.nsf
 ```
@@ -23,26 +23,26 @@ docker cp Demo.nsf $Server:/local/notesdata/Demo.nsf
 
 Provide the user name and password for login.
 
-![Login]({{ '/assets/images/PostmanLogin.PNG' | relative_url }})
+![Login]({{ '/assets/images/PostmanLogin.png' | relative_url }})
 
 #### Curl code snippet
 
-Replace `$password` with actual password value and `$username` with actual user name value. 
+Replace `$password` with actual password value and `$username` with actual user name value.
 
 ```
 curl --location --request POST 'localhost:8880/api/v1/auth' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-"password" : $password,	
+"password" : $password,
  "username" : $username
 }'
 ```
 
 ### List available databases
 
-Use the following command to list all the databases: 
+Use the following command to list all the databases:
 
-![AllDatabases]({{ '/assets/images/AllDatabasesPostman.PNG' | relative_url }})
+![AllDatabases]({{ '/assets/images/AllDatabasesPostman.png' | relative_url }})
 
 #### Curl code snippet
 
@@ -57,7 +57,7 @@ curl --location --request GET 'localhost:8880/api/v1/admin/nsf' \
 
 Use the following commands to check the views and forms in the database.
 
-![PostmanViews]({{ '/assets/images/PostmanViews.PNG' | relative_url }})
+![PostmanViews]({{ '/assets/images/PostmanViews.png' | relative_url }})
 
 #### Curl code snippet
 
@@ -69,7 +69,7 @@ curl --location --request GET 'localhost:8880/api/v1/lists?db=demo' \
 --header 'Accept: application/json'
 ```
 
-![PostmanForms]({{ '/assets/images/PostmanForms.PNG' | relative_url }})
+![PostmanForms]({{ '/assets/images/PostmanForms.png' | relative_url }})
 
 #### Curl code snippet
 
@@ -81,10 +81,10 @@ curl --location --request GET 'localhost:8880/api/v1/design/forms?db=demo' \
 ```
 
 ### Create document
- 
+
 Use the following command to provide the body for the create document POST request.
 
-![CreateDocument]({{ '/assets/images/CreateDocument.PNG' | relative_url }})
+![CreateDocument]({{ '/assets/images/CreateDocument.png' | relative_url }})
 
 #### Curl code snippet
 
@@ -110,7 +110,7 @@ curl --location --request POST 'localhost:8880/api/v1/document?db=demo' \
 
 Use the following command to retrieve a document.
 
-![RetrieveDocument]({{ '/assets/images/retrievedoc.PNG' | relative_url }})
+![RetrieveDocument]({{ '/assets/images/retrievedoc.png' | relative_url }})
 
 #### Curl code snippet
 
@@ -127,7 +127,7 @@ curl --location -g --request GET 'localhost:8880/api/v1/document/{{UNID_0}}/defa
 
 Use the following command to delete a document.
 
-![DeleteDocument]({{ '/assets/images/Deletedoc.PNG' | relative_url }})
+![DeleteDocument]({{ '/assets/images/Deletedoc.png' | relative_url }})
 
 #### Curl code snippet
 
@@ -140,17 +140,17 @@ curl --location -g --request DELETE 'localhost:8880/api/v1/document/{{UNID_0}}/d
 --data-raw ''
 ```
 
-### Verify that the document is deleted 
+### Verify that the document is deleted
 
 To verify that the document is deleted, try retrieving it again. Retrieve should fail.
 
-![DocumentRetrieve]({{ '/assets/images/DocumentRetrieve.PNG' | relative_url }})
+![DocumentRetrieve]({{ '/assets/images/DocumentRetrieve.png' | relative_url }})
 
 ### Logout
 
 Use the following command to log out.
 
-![Logout]({{ '/assets/images/Logout.PNG' | relative_url }})
+![Logout]({{ '/assets/images/Logout.png' | relative_url }})
 
 #### Curl code snippet
 
@@ -167,7 +167,7 @@ curl --location --request POST 'localhost:8880/api/v1/auth/logout' \
 
 Finally, use the following command to shut down. Provide the body for the POST request.
 
-![Shutdown]({{ '/assets/images/Shutdown.PNG' | relative_url }})
+![Shutdown]({{ '/assets/images/Shutdown.png' | relative_url }})
 
 #### Curl code snippet
 

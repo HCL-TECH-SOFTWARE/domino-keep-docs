@@ -6,6 +6,7 @@ nav_order: 3
 ---
 
 ## SwaggerUI
+
 This tutorial shows how to use SwaggerUI to create a document and to list views.
 
 ### Create a document with SwaggerUI
@@ -14,13 +15,13 @@ This tutorial shows how to use SwaggerUI to create a document and to list views.
 
 2. Provide the JWT token for authorization:
 
-![JwtToken]({{ '/assets/images/TokenJwt.PNG' | relative_url }})
+![JwtToken]({{ '/assets/images/TokenJwt.png' | relative_url }})
 
-![JwtToken1]({{ '/assets/images/TokenJwt1.PNG' | relative_url }})
+![JwtToken1]({{ '/assets/images/TokenJwt1.png' | relative_url }})
 
 3. Go to the required API and provide all the mandatory field values. Execute:
 
-![SwaggerAPI]({{ '/assets/images/ApiSwagger.PNG' | relative_url }})
+![SwaggerAPI]({{ '/assets/images/ApiSwagger.png' | relative_url }})
 
 ### List views with SwaggerUI
 
@@ -28,7 +29,7 @@ This tutorial shows how to use SwaggerUI to create a document and to list views.
 
 2. Go to the required API and provide the db value. Execute.
 
-![SwaggerAPIViews]({{ '/assets/images/ApiSwaggerViews.PNG' | relative_url }})
+![SwaggerAPIViews]({{ '/assets/images/ApiSwaggerViews.png' | relative_url }})
 
 ### View the SwaggerUI for a specific KEEP Database
 
@@ -38,6 +39,6 @@ This tutorial shows how to use SwaggerUI to create a document and to list views.
 
 3. Review the Schemas at the bottom. If you have not specified read / write fields on a form, you will see the genericFormResult / genericFormRequest. If you have specified read or write fields, you will see a schema for "_formName_-_modeName_ Responses" / "_formName_-_modeName_ Requests".
 
-![SwaggerAPIDatabase]({{ '/assets/images/ApiSwaggerDatabase.PNG' | relative_url }})
+![SwaggerAPIDatabase]({{ '/assets/images/ApiSwaggerDatabase.png' | relative_url }})
 
 If you URL encode "/api/v1/openapi?db=demo" you can create a URL to share with developers who consume the KEEP API for that database. The URL encoded value should be appended as the "url" querystring parameter. The resulting URL will look like "http://localhost:8880/openapi/index.html?url=/api/v1/openapi%3Fdb%3Ddemo", where the KEEP database name is after the "%3D" (url encoded "=").
