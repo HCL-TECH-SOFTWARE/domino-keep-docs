@@ -171,11 +171,11 @@ Focusing on Maven-based builds allows us to run builds both locally and on our C
 
 To familiarize yourself with KEEP's functionality, you should read the following pages:
 
-- [KEEP Overview]({{ 'docs/design/index' | relative_url }})
-- [OpenAPI specification]({{ '/docs/extending/intro/openapi-spec' | relative_url }})
-- [The EventBus]({{ '/docs/design/eventbus' | relative_url }}) 
-- [The Barbican]({{ '/docs/design/barbican' | relative_url }})
-- [OData]({{ '/docs/tutorial/odata' | relative_url }})
+- [KEEP Overview](../index)
+- [OpenAPI specification](../extendingkeep/openapi-spec)
+- [The EventBus](eventbus.md) 
+- [The Barbican](barbican.md)
+- [OData](../tutorial/odata)
 
 
 

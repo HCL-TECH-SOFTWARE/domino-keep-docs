@@ -23,11 +23,11 @@ This tutorial includes multiple sections. You will see how to add a database to 
 
 ## More tutorials
 
-Additional tutorials are available as described below and also [can be found here](https://opensource.hcltechsw.com/keep-tutorials):
+Additional tutorials are available as described below and also [can be found here](https://opensource.hcltechsw.com/domino-keep-tutorials/):
 
 ### Notes and Domino Developers
 
-Follow the "Domino ToDo Database" [tutorial for Notes and Domino developers](https://opensource.hcltechsw.com/keep-tutorials). It will walk you through:
+Follow the "Domino ToDo Database" [tutorial for Notes and Domino developers](https://opensource.hcltechsw.com/domino-keep-tutorials/pages/todo/index). It will walk you through:
 
 - Using the XPages ToDo Application.
 - Viewing the ACL via Keep Postman APIs.
@@ -36,7 +36,7 @@ Follow the "Domino ToDo Database" [tutorial for Notes and Domino developers](htt
 
 ### Web Developers
 
-If you are new to Domino, see the "New Domino Database" [tutorial for web developers](https://opensource.hcltechsw.com/keep-tutorials) It will walk you through:
+If you are new to Domino, see the "New Domino Database" [tutorial for web developers](https://opensource.hcltechsw.com/domino-keep-tutorials/pages/domino-new/index#pre-requisites) It will walk you through:
 
 - Creating a new Domino database.
 - Adding forms for customers and contacts.
