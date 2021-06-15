@@ -28,8 +28,8 @@ You can use the built-in Swagger API, curl, or the [KEEP Admin UI](../../usingke
 ### Tutorials
 
 - Easy steps [on this site](../../tutorial)
-- A [tutorial for the skilled Notes developer](https://opensource.hcltechsw.com/keep-tutorials)
-- Similar to the previous one, but from the viewpoint of a [skilled web developer](https://opensource.hcltechsw.com/keep-tutorials)
+- A [tutorial for the skilled Notes developer](https://opensource.hcltechsw.com/domino-keep-tutorials/pages/todo/index)
+- Similar to the previous one, but from the viewpoint of a [skilled web developer](https://opensource.hcltechsw.com/domino-keep-tutorials/pages/domino-new/index#pre-requisites)
 - Explore on your own using a [Postman collection](../../references/downloads)
 
 ![OpenAPI](../assets/images/postman.png)

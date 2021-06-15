@@ -28,7 +28,7 @@ We don't try to boil the ocean, but follow Antoine de Saint-Exupéry who proclai
 "_Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away._"
 
 - KEEP uses Forms as data schema. So access to a document is determined by the value of the form item.
-- The KEEP configuration determines what items can be read/written per form and [mode](TODO: insert mode link).
+- The KEEP configuration determines what items can be read/written per form and mode.
 - The Admin UI provides access to the field names of the form, but the API lets you specify any field name.
 - If an item doesn't exist in a document, it doesn't get returned.
 - When you have multiple forms with the same name, the AdminUI will pick one, we don't guarantee which one.
