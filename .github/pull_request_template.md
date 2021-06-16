@@ -1,6 +1,4 @@
-# [LABS-###](https://jira01.hclpnp.com/browse/LABS-###)
-
-## Changes description
+## Change description
 
 
 ## Due diligence
@@ -10,9 +8,9 @@
 
 ## Review/Merge
 
-- [X] for review
-- [X] for merge
+- [X] Ready for review
+- [X] Ready for merge
 
 ## Follow-up work
 
-List any out-of-scope work you have identified
+List any out-of-scope work that you identified
