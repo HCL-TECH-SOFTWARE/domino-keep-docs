@@ -67,7 +67,7 @@ KEEP caters to Domino mail as well as Domino applications, irrespective of the d
 
 ![MailVsApplication](assets/images/svg/MailVsApps.svg)
 
-### What applications does KEEP support?
+## What applications does KEEP support?
 
 KEEP is designed to work with:
 
@@ -78,34 +78,34 @@ KEEP is designed to work with:
 - [OData](https://www.odta.org) aware applications (e.g. SAP, Salesforce, Microsoft Excel, [Tableau](https://help.tableau.com/current/pro/desktop/en-us/examples_odata.htm) etc).
 - LowCode environments like [HCL Volt MX](https://www.hcltechsw.com/volt-mx), [NodeRED](https://wwww.nodered.org) or others.
 
-### Domino KEEP features
+## Domino KEEP features
 
 KEEP is based on industry standards, allows Notes and Domino to be accessed from other platforms, follows standard APIs, is extendable and uses the Notes and Domino security model. KEEP also puts the power in the hands of the developer to work using their preferred programming language.
 
-#### KEEP is secure
+### KEEP is secure
 
 KEEP is secure by default since it inherits all the [security features](installconfig/configuration/security/index.md) of Notes and Domino. All access to the database is authenticated using [JSON Web Token (JWT)](https://www.jwt.io) and [Scopes](installconfig/configuration/security/authentication.md). Identity can be provided using Domino credentials and/or your Enterprise IdP (Identity Provider) like Keycloak or Active Directory. The databases or forms and views that can be accessed are explicitly listed. Security extends to a field level read/write control by [The Barbican](howkeepworks/barbican.md)
 
-#### Modern Java API (Java 8++)
+### Modern Java API (Java 8++)
 
 Domino KEEP uses redesigned Java APIs named Domino JNX (Domino Java Next), which follow industry standards and best practices.
 
-#### Public API based on OpenAPI 3.0
+### Public API based on OpenAPI 3.0
 
 We follow the [API first](https://swagger.io/resources/articles/adopting-an-api-first-approach/) design with full interactive documentation. Our public APIs follow the standards set by OpenAPI 3.0. The OpenAPI specifications you see in Swagger/Redoc on the server are used dynamically by KEEP to validate requests, so you know they are up-to-date.
 
-#### Extensible architecture
+### Extensible architecture
 
 KEEP has an [extensible architecture](extendingkeep/index.md) that allows it to serve multiple API versions from a Domino server. We currently support admin, core, CI/CD and PIM APIs but KEEP can be extended to add more APIs.
 
-#### Web admin GUI
+### Web admin GUI
 
 We provide a Web [Admin UI](usingkeep/administrationui) that facilitates admin actions.
 
-#### Design, admin and data
+### Design, admin and data
 
 Along with the application design and admin features, KEEP allows CRUD operations on documents, retrieval of collections (aka views and folders), execution of queries and submission of access control, design and code, while maintaining and extending Domino’s security model.
 
-#### Low barrier to entry
+### Low barrier to entry
 
 KEEP runs on Domino and/or your Notes Client on Windows/Linux/Mac. Someone with previous working experience of Notes and Domino can quickly get started with KEEP, as you are about to find out for yourself!
