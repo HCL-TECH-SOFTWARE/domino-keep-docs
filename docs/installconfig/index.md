@@ -13,7 +13,7 @@ has_children: true
 
 ---
 
-KEEP can be installed on:
+After [downloading {{ site.version}} ]({{ site.flexnet_url }}), KEEP can be installed on:
 
 - Notes Client on [macOS](installation/mac)
 - Notes Client on [Windows](installation/win)

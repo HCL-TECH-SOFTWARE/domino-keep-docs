@@ -9,7 +9,7 @@ nav_order: 1
 
 ---
 
-> **NOTE**: The Early Access June release only contains a [Docker image](../../installconfig/installation/docker). The installer, as described here, is subject to a later code drop.
+> **NOTE**: The Early Access June release only contains a [Docker image](../../installconfig/installation/docker). The installer, as described here, is subject to a later code drop. [Download {{ site.version}} ]({{ site.flexnet_url }}).
 
 ---
 

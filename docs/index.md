@@ -21,7 +21,7 @@ has_children: true
 
 ![KEEP API]({{ '/assets/images/svg/DominoKeepAPI.svg' | relative_url }}){: .scale-img-seventy-five-percent }
 
-[Get started now]({{ 'introduction/quickstart' | relative_url }}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub]({{ site.github.repository_url }}){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Get started now]({{ 'introduction/quickstart' | relative_url }}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub]({{ site.github.repository_url }}){: .btn .fs-5 .mb-4 .mb-md-0 } [Download {{ site.version}} ]({{ site.flexnet_url }}){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
@@ -31,13 +31,13 @@ has_children: true
 
 Domino REST API is designed to re-establish Domino as a world class, modern, standards-complaint, cloud native and enterprise-level collaboration platform. It adds contemporary [REST APIs](https://www.redhat.com/en/topics/api/what-is-a-rest-api) to Notes and Domino, enabling a modern programming experience with the tools of your choice.
 
-Classic Domino applications are document-oriented and based on an approval model: documents flow through a business lifecyle and are approved at each stage. Domino developers develop a separate user interface for each approval state that is used by the people who perform the actions for that state. 
+Classic Domino applications are document-oriented and based on an approval model: documents flow through a business lifecyle and are approved at each stage. Domino developers develop a separate user interface for each approval state that is used by the people who perform the actions for that state.
 
-KEEP moves access control out of the code and into the configuration. But it means control stays with those who need to support the data, not those who consume the data. KEEP grants granular access for actions like read or write depending on what the document data is and who is viewing it.  This approach ensures that the correct person can perform the correct action on the document and its data. Most importantly, it means control over data quality remains with those who need to support the data, not those who provide and consume the data.
+KEEP moves access control out of the code and into the configuration. But it means control stays with those who need to support the data, not those who consume the data. KEEP grants granular access for actions like read or write depending on what the document data is and who is viewing it. This approach ensures that the correct person can perform the correct action on the document and its data. Most importantly, it means control over data quality remains with those who need to support the data, not those who provide and consume the data.
 
 ![Barbican1]({{'/assets/images/BarbicanInActionPart1.png' | relative_url }})
 
-For example, in the case of an expense report filed by an employee, the approver and the employee can only edit the fields that correspond to their role. An approver might be able to approve and add a remark only and an employee might be able to provide a subject, description, and cost only. 
+For example, in the case of an expense report filed by an employee, the approver and the employee can only edit the fields that correspond to their role. An approver might be able to approve and add a remark only and an employee might be able to provide a subject, description, and cost only.
 
 This granular access managed through configurations is what makes Domino REST API unique!
 

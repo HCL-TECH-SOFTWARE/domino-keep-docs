@@ -9,6 +9,10 @@ nav_order: 4
 
 Downloadable assets to get you started.
 
+### Domino REST API
+
+- [{{ site.version}} ]({{ site.flexnet_url }})
+
 ### Docker
 
 - [Docker compose file for primary server](../../assets/downloads/docker-compose-primary.yml)
