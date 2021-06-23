@@ -7,6 +7,8 @@ com.hcl.domino.crypt
 com.hcl.domino.data
 com.hcl.domino.dbdirectory
 com.hcl.domino.design
+com.hcl.domino.design.action
+com.hcl.domino.design.agent
 com.hcl.domino.dql
 com.hcl.domino.dxl
 com.hcl.domino.exception
