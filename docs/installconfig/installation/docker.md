@@ -43,24 +43,27 @@ docker load -i [name_of_tar_file].tar
 
 ### Table of variables
 
-Depending on the compose file you choose, a different set of variables needs to be replaced. If a variable isn't in the compose file, you don't need it.
+Depending on the compose file you choose, a different set of variables needs to be replaced. If a variable isn't in the compose file, you don't need it. We keep the variable names in sync with [One-touch Domino setup](https://help.hcltechsw.com/domino/12.0.0/admin/wn_one-touch_domino_setup.html), thus in the compose file you will find gems like `SERVERSETUP_SERVER_NAME: "${SERVERSETUP_SERVER_NAME}"`. This makes naming of variables consisten.
 
-| Variable         | Example                | Remarks                                        |
-| ---------------- | ---------------------- | ---------------------------------------------- |
-| hostname         | domino.acme.com        | Pro tip: use something.local dor local testing |
-| admin_name       | Peter Parker           |
-| container_name   | domino-keep-test02     |
-| domain_name      | MarvelPhase4           | YOUR EXSISTING NOTES DOMAIN                    |
-| org_name         | Stark Industries       | YOUR EXSISTING ORG                             |
-| server_name      | keep-server-01         |
-| network_hostname | keep01.domino.acme.com | MUST RESOLVE                                   |
-| admin_server     | domino01               | YOUR EXISTING SERVER                           |
-| admin_ip         | 10.45.10.3             | MUST BE REACHABLE, can use DNS too             |
-| volume_name      | domino_keep_notesdata  | no spaces or special chars                     |
-| admin_firstname  | Paul                   |
-| admin_lastname   | Herbert                |
-| admin_password   | domin4ever             |
-| cert_password    | supersecret            |
+Please also refer to the official [List of One-touch environment variables](https://help.hcltechsw.com/domino/12.0.0/admin/inst_onetouch_preparing_sysenv.html) for reference.
+
+| Variable                                | Example                | Remarks                                          |
+| --------------------------------------- | ---------------------- | ------------------------------------------------ |
+| CONTAINER_HOSTNAME                      | domino.acme.com        | Pro tip: use something.local dor local testing   |
+| CONTAINER_IMAGE                         |                        | docker.hcllabs.net/hclcom/projectkeep-r12:latest |
+| CONTAINER_NAME                          | domino-keep-test02     |
+| CONTAINER_VOLUMES                       | domino_keep_notesdata  | no spaces or special chars                       |
+| SERVERSETUP_ADMIN_CN                    | Peter Parker           |
+| SERVERSETUP_ADMIN_FIRSTNAME             | Paul                   |
+| SERVERSETUP_ADMIN_LASTNAME              | Herbert                |
+| SERVERSETUP_ADMIN_PASSWORD              | domin4ever             |
+| SERVERSETUP_EXISTINGSERVER_CN           | domino01               | YOUR EXISTING SERVER                             |
+| SERVERSETUP_EXISTINGSERVER_HOSTNAMEORIP | 10.45.10.3             | MUST BE REACHABLE, can use DNS too               |
+| SERVERSETUP_NETWORK_HOSTNAME            | keep01.domino.acme.com | MUST RESOLVE                                     |
+| SERVERSETUP_ORG_CERTIFIERPASSWORD       | supersecret            |
+| SERVERSETUP_ORG_ORGNAME                 | Stark Industries       | YOUR EXSISTING ORG                               |
+| SERVERSETUP_SERVER_DOMAINNAME           | MarvelPhase4           | YOUR EXSISTING NOTES DOMAIN                      |
+| SERVERSETUP_SERVER_NAME                 | keep-server-01         |
 
 ## Running KEEP
 
@@ -113,3 +116,22 @@ docker exec -it $containername /bin/bash
 - KEEP should be accessible on `http://$host:8880`.
 - KEEP Management should be accessible on `http://$host:8889`.
 - Metrics should be accessible on `http://$host:8890/metrics`.
+
+## Alternate Docker cofiguration
+
+When you run you Domino servers on Linux, you probably use the [Nashcom startup script](https://www.nashcom.de/nshweb/pages/startscript.htm) for Domino.
+On this foundation the GitHub.com hosted [Domino Docker](https://github.com/IBM/domino-docker) project offers management scripts that allows easy management of
+your Docker container using a command `domino_container`.
+
+Installation steps are as follows:
+
+1. Clone the [domino-docker](https://github.com/IBM/domino-docker) repository: `git clone https://github.com/IBM/domino-docker.git`
+2. Change into the installations directory: `cd start_script`
+3. Run the installer `./install_domino_container` (You might need `sudo`)
+
+Now you have the command `domino_container` at your disposal:
+
+- use `domino_container cfg`, to set your configuration
+- use `domino_container env` for the environment values
+- start Doinin and KEEP using `domino_container start`
+- Learn more about the scripts using `domino_container help`
