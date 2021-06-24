@@ -172,10 +172,10 @@ Focusing on Maven-based builds allows us to run builds both locally and on our C
 To familiarize yourself with KEEP's functionality, you should read the following pages:
 
 - [KEEP Overview](../index)
-- [OpenAPI specification](../extendingkeep/openapi-spec)
+- [OpenAPI specification](../../extendingkeep/openapi-spec)
 - [The EventBus](eventbus.md) 
 - [The Barbican](barbican.md)
-- [OData](../tutorial/odata)
+- [OData](../../tutorial/odata)
 
 
 
