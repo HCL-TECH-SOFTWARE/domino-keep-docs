@@ -47,18 +47,14 @@ Start using: `load keep`.
 
 When you issue the console command `sh ta`, you will then see a task for "keep".
 
-ProjectKeepAddin task listens for commands with the prefix `tell keep...`. The following commands are supported:
+The administrator needs to add the `keep` task to the automatically starting tasks or issue `load keep` manually in the Domino console.
 
-- `tell keep help` gives commands supported.
-- `tell keep info` writes the Keep version information to the console.
-- `tell keep quit` shuts down Keep and unloads the runjava addin.
-- `tell tkeep restart` restarts Keep.
+Please refer to the [The KEEP Task](../../usingkeep/keeptask) detail page.
 
 ---
 
 #### Note 1
 
-Don't use the KEEP standard REST API POST command for shutdown on a Windows server.
 Use `tell keep quit` to shut down KEEP. To restart KEEP, use `tell keep restart`.
 
 ### Client installation

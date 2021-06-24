@@ -27,3 +27,5 @@ java -jar keepinstaller \
 ```
 
 The administrator needs to add the `keep` task to the automatically starting tasks or issue `load keep` manually in the Domino console.
+
+Please refer to the [The KEEP Task](../../usingkeep/keeptask) detail page.
