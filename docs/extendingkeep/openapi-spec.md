@@ -9,7 +9,7 @@ nav_order: 2
 
 Much of the programming is driven by the OpenAPI specification. This is why you should always include the latest OpenAPI specification in  `src\main\resources`.
 
-### What do ee mean?
+### What do we mean?
 `Launch.start` looks at the `config.json` file, gets the `versions` object and loads the corresponding OpenAPI specs into memory with `Launch.loadKeepApiInfo()`. 
 
 - `io.vertx.ext.web.api.contract.openapi3.OpenAPI3RouterFactory` introspects the OpenAPI specs.
@@ -23,13 +23,14 @@ Much of the programming is driven by the OpenAPI specification. This is why you 
     - validates HTTP request content matches contract (throwing Bad Request, HTTP 400).
 
  * All verticles are loaded based on config in `config.json`.  
- - HttpListener loads handlers for each version by introspecting the RestAPI object in the config.json, which identifies the URL route     to apply for each version and where to find the handler. The config defines the prefix and postfix, so in this case they are always    "Web" + operationId (first letter upper-cased) + "Handler". If not found, and the content-type for request body and response body     are both "application/json", a default class defined for that version in the config is used, in our case always          `com.hcl.domino.keep.handlers.DefaultJsonHandler`. If the request body or response body are not "application/json" a custom handler     will need adding.-`DominoDefaultVerticle` instances loads handlers using config.json's prefix + operationId (first letter upper-       cased) + postfix, based on the tag in the OpenAPI spec. E.g. for an "admin" tagged OpenAPI endpoint, they're loaded only by an         instance of DominoDefaultVerticle, loading a handler for "Admin" + operationId (first letter upper-cased) + "Task", using a class in   the com.hcl.domino.keep.dbrequests package. Consequently tags need to be unique across all OpenAPI specs.
+ - HttpListener loads handlers for each version by introspecting the RestAPI object in the config.json, which identifies the URL route to apply for each version and where to find the handler. The config defines a package for each OpenAPI spec, so it looks for a handler in that package whose class name is the operationId (first letter upper-cased). If not found the default class defined for that OpenAPI spec in the config is used, in our case always `com.hcl.domino.keep.handlers.DefaultJsonHandler`. If the request body or response body are not "application/json" a custom handler will need adding.
+ - `DominoDefaultVerticle` instances loads verticles as defined in config.json's package, based on the tag in an OpenAPI spec. E.g. for an "admin" tagged OpenAPI endpoint, they're loaded only by an instance of DominoDefaultVerticle, loading handlers in the `com.hcl.domino.keep.dbrequests.admin` package, using a class whose name is the operationId (first letter upper-cased). Consequently tags need to be unique across all OpenAPI specs.
 
 ### Path params, query params and body content
-- AbstractAPIHandler extracts bearer token from Authorization header and "db" query parameter in `addStandardParamsFromRequestHeaders()` and `addStandardRequestParamsFromRequestQueryParams()`
-- It adds in the operation id from the OpenAPI spec in `addStandardRequestHeaders()`
-- `DefaultJsonHandler.processPayload()` calls `payloadFromAllParams()` to merge in content from Vert.x's RoutingContext's parsed           parameters - cookies, headers, query parameters, path parameters and form. The body is also adding in as "payload".
-- A handler's `processPayload()` may subsequently manipulate the payload prior to routing onto the Event Bus.
+- AbstractAPIHandler records the request in the metrics and extracts bearer token from Authorization header and "db" query parameter in `addStandardParamsFromRequestHeaders()` and `addStandardRequestParamsFromRequestQueryParams()`
+- It adds in the operation id from the OpenAPI spec in `addStandardParamsFromApiInfo()`
+- `prepareRequestBody()` calls `requestBodyFromAllParams()` to merge in content from Vert.x's RoutingContext's parsed parameters - cookies, headers, query parameters, path parameters and form. The body is also adding in as "payload".
+- A handler's `listenForResponse()` creates an EventBusRequestObservable to route onto the Event Bus and listen for data coming back, streaming it onto the HttpServerResponse.
 
 ### What is validated where?
 The router validates:
@@ -42,11 +43,9 @@ The security handlers manage authorization:
 The OpenAPI router also validates against the spec:
 - Invalid methods (GET on a POST endpoint) throw a 405 error.
 - Body that is not valid JSON or missing throws a 400 error with the message "$: string found, object expected".
-- Based on the RequestOptionFlags defined for the relevant handler, an ill-formed Authorization header and/or "db" query parameter are     validated by `AbstractAPIHandler` before even parsing the RoutingContext parameters. An HTTP 400 error is thrown.
-- If nothing has been configured yet to consume messages for "keep.request. + operationId, the handler's `listenForResponse()` method     throws a 500 response.
-- The `processPayload` method of handlers that consume messages (in `com.hc.domino.keep.dbrequests` package) may apply additional         validation.
-- Anything extending `AsyncDominoJNXDesignRequest` validates that the user has at least Designer access to the relevant database.
-- Anything extending `AsyncDominoJNXFormModeRequest` validates the database, form and (if required) mode have been configured for KEEP access.
-- Anything extending `AsyncDominoJNXUserRequest` checks whether the user exists, throwing an error accordingly.
-- Other handlers may do additional validation (e.g. checking for name collisions when name changes occur). 
+- Based on the RequestOptionFlags defined for the relevant handler, an ill-formed Authorization header and/or "db" query parameter are validated by `AbstractAPIHandler` before even parsing the RoutingContext parameters. An HTTP 400 error is thrown.
+- If nothing has been configured yet to consume messages for the operationId, the handler's `listenForResponse()` method throws a 500 response.
+- The message is then passed to the NSF handler for asynchronous processing.
+- Annotations in the NSF handler are used to validate that the user has a minimum ACL level access, flags and/or roles to the relevant database.
+- The `request.validate()` in the `process` method of NSF handlers (in `com.hc.domino.keep.dbrequests` packages) may apply additional validation.
 
