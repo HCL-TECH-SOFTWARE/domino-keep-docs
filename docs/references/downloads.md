@@ -31,10 +31,12 @@ with Daniel Nashed's [Domino Startup Script](https://www.nashcom.de/nshweb/pages
 ### Mac
 
 - [Shell script](../../assets/downloads/startkeepmac.sh) to start KEEP on MacOS.
+- Mac [keep](../../assets/downloads/keep) shell script to interacto with KEEP.
 
 ### Windows
 
-- [Command file](../../assets/downloads/windows_run_keep.cmd) to start KEEP on a Windows client
+- [Command file](../../assets/downloads/windows_run_keep.cmd) to start KEEP on a Windows client.
+- Windows [keep.cmd](../../assets/downloads/keep.cmd) command file to interacto with KEEP.
 
 ### Postman
 

@@ -2,7 +2,7 @@
 # Poor man's keep command line
 #Global variables
 httpcommand=$(echo "$1" | tr '[:lower:]' '[:upper:]')
-keep=https://frascati.projectkeep.io
+keep=https://your.keep.enabled.server.local
 user="Doctor Notes"
 apipath=api/v1
 
@@ -38,7 +38,7 @@ execute_logout() {
 # Make a call to keeep
 execute_http() {
 if [ ! -f $TMPDIR/keep.login ]; then
-	echo "You need to login first with keep-login"
+	echo "You need to login first with keep login"
 	exit 1
 fi
 export $(cat $TMPDIR/keep.login | xargs)
@@ -55,8 +55,8 @@ if [ -z "$1" ]; then
   echo "Usage keep [login|logout|get|post|put|patch|delete] URL PAYLOAD"
   echo "      keep pim [get|post|put|patch|delete] URL PAYLOAD"
   echo " e.g. keep login"
-  echo "      keep get databases"
-  echo "      keep pim get inbox"
+  echo "      keep get /databases"
+  echo "      keep pim get /inbox"
   exit 1
 fi
 

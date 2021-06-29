@@ -23,7 +23,7 @@ To get up and running quickly, you will need to:
   - (Optional) pick the agents.
 - Try out the API.
 
-You can use the built-in Swagger API, curl, or the [KEEP Admin UI](../../usingkeep/administrationui/). To help you, use one of the following tutorials.
+You can use the built-in Swagger API, curl, or the [KEEP Admin UI](../../usingkeep/administrationui/). To help you, use one of the following tutorials. We have a curl based [keep shell script](../../references/downloads) for you to play with.
 
 ### Tutorials
 
