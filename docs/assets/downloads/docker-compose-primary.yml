@@ -41,7 +41,8 @@ services:
       SERVERSETUP_NETWORK_HOSTNAME: "${SERVERSETUP_NETWORK_HOSTNAME}"
       SERVERSETUP_SECURITY_ACL_PROHIBITANONYMOUSACCESS: "true"
       SERVERSETUP_SECURITY_ACL_ADDLOCALDOMAINADMINS: "true"
-      SERVERSETUP_NOTESINI_SERVERTASKS: replica,router,update,amgr,adminp,http,keep
+      SERVERSETUP_SERVER_SERVERTASKS: replica,router,update,amgr,adminp,http,keep
+      KEEP_LAUNCH_TYPE: task
       LANG: en_US.UTF-8
     cap_add:
       - SYS_PTRACE
