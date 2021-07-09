@@ -25,7 +25,7 @@
 version: "3.6"
 services:
   domino:
-    image: "{$CONTAINER_IMAGE}"
+    image: "${CONTAINER_IMAGE}"
     container_name: "${CONTAINER_NAME}"
     hostname: "${CONTAINER_HOSTNAME}"
     stop_grace_period: 120s
