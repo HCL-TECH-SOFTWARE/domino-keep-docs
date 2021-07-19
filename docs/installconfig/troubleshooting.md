@@ -7,6 +7,10 @@ nav_order: 10
 
 ## Troubleshooting common errors with the installing and running the Keep API service
 
+### Domino Not Running (First-Time Setup)
+
+If Domino is not up and running, follow the steps for [Troubleshooting one-touch Domino Setup](https://help.hcltechsw.com/domino/12.0.0/admin/inst_onetouch_troubleshooting.html).
+
 ### Address already in use error
 
 You get this error when you run the [sample script](../../references/downloads) with the sample Notes database:
