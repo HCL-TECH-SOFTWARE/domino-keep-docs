@@ -2,7 +2,7 @@
 layout: default
 title: KEEP SAML configuration
 parent: Security
-grand-parent: Installing & configuring
+grand_parent: Installing & configuring
 nav_order: 7
 ---
 
