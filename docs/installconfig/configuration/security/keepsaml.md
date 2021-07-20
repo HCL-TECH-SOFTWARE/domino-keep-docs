@@ -8,14 +8,15 @@ nav_order: 7
 
 ## KEEP SAML configuration
 
-To be able to access encrypted resources, like emails or confidential documents in application databases, KEEP needs to be configured as a SAML identity provider.
+To be able to access encrypted resources, like emails or confidential documents in application databases, KEEP needs to be configured as a SAML identity provider. 
 
 There are two scenarios:
 
 - KEEP is the only identity provider (This feature is subject to a later code drop)
 - KEEP is an additional identiy provider (This feature is subject to a later code drop)
 
-Below is how you can setup websites to use an ID Vault via SAML
+SAML is already available for you. You just need to add KEEP as an Identity Provider. Below is how you can do that and setup websites to use an ID Vault via SAML. 
+
 
 1. Open Domino Administrator. Go to **_Current Server Document_** and open **_Configuration_** tab. Make sure **_Load Internet configurations from Server\Internet Sites documents_** is enabled. Save and close. 
 ![Load Internet Configuration](../../../assets/images/SAML-LoadInternetConfigurations.png)
