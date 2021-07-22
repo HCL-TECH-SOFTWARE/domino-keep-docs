@@ -41,6 +41,25 @@ Explanation of parameters
 | `-s`  | `--skipDirectoryCheck`      |           | skips the checks if the program and data directories<br /> contain Notes/Domino |
 | `-V`  | `--version`                 |           | Print version information and exit.                                             |
 
+### Using a response file
+
+Instead of providing all parameters on the command line, the KEEP installer can be called using a [response file](https://picocli.info/#AtFiles):
+
+```bash
+java -jar keepinstaller.jar @responses.txt
+```
+
+The file contains one parameter per line, lines starting with `#` get ignored. Variables with `\` need to be escaped `\\`:
+
+```properties
+# Sample of an installer response file
+--dataDir=D:\\Domino\\data
+--ini=D:\\Domino\\data\\notes.ini
+--keepDir=C:\\Program Files\\HCL\\KEEP
+--programDir=C:\\Program Files\\HCL\\Domino
+--accept
+```
+
 ## Hosting your static application
 
 A typical use case for KEEP is to build a web UI with the flavor of the day web development framework like Angular, ReactJS, Swelte etc. These frameworks usually generate a `build` directory with a set of static files.
