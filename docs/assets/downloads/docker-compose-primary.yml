@@ -11,6 +11,7 @@
 # ${CONTAINER_HOSTNAME}                domino.acme.com
 # ${CONTAINER_VOLUMES}                 domino_keep_notesdata
 # ${CONTAINER_NAME}                    domino-keep-test02
+# ${CONTAINER_IMAGE}                   docker.hcllabs.net/hclcom/projectkeep-r12:0.9.25-EARLYACCESS-1
 # ---
 # ${SERVERSETUP_SERVER_DOMAINNAME}     MarvelPhase4  <- YOUR EXSISTING NOTES DOMAIN
 # ${SERVERSETUP_ORG_ORGNAME}           Stark Industries <- YOUR EXSISTING ORG
@@ -18,12 +19,13 @@
 # ${SERVERSETUP_NETWORK_HOSTNAME}      keep01.domino.acme.com <- MUST RESOLVE
 # ${SERVERSETUP_ADMIN_FIRSTNAME}       Paul
 # ${SERVERSETUP_ADMIN_LASTNAME}        Herbert
-# ${SERVERSETUP_ADMIN_PASSWORD}        domin4ever
+# ${SERVERSETUP_ADMIN_PASSWORD}        domino4ever
 # ${SERVERSETUP_ORG_CERTIFIERPASSWORD} supersecret
+
 version: "3.6"
 services:
   domino:
-    image: "{$CONTAINER_IMAGE}"
+    image: "${CONTAINER_IMAGE}"
     container_name: "${CONTAINER_NAME}"
     hostname: "${CONTAINER_HOSTNAME}"
     stop_grace_period: 120s

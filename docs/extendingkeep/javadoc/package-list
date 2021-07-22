@@ -14,6 +14,7 @@ com.hcl.domino.keep.dbrequests.pim
 com.hcl.domino.keep.dbrequests.pim.mapper
 com.hcl.domino.keep.eventbus
 com.hcl.domino.keep.exceptions
+com.hcl.domino.keep.handlers.admin
 com.hcl.domino.keep.handlers.core
 com.hcl.domino.keep.handlers.pim
 com.hcl.domino.keep.info

@@ -24,6 +24,7 @@ Downloadable assets to get you started.
 These scripts are designed to work
 with Daniel Nashed's [Domino Startup Script](https://www.nashcom.de/nshweb/pages/startscript.htm).
 
+- [Pre Startup Script](../../assets/downloads/pre_startup_script)
 - [Post Startup Script](../../assets/downloads/post_startup_script)
 - [Pre Shutdown Script](../../assets/downloads/pre_shutdown_script)
 - [Post Shutdown Script](../../assets/downloads/post_shutdown_script)
@@ -31,7 +32,7 @@ with Daniel Nashed's [Domino Startup Script](https://www.nashcom.de/nshweb/pages
 ### Mac
 
 - [Shell script](../../assets/downloads/startkeepmac.sh) to start KEEP on MacOS.
-- Mac [keep](../../assets/downloads/keep) shell script to interacto with KEEP.
+- Mac [keep](../../assets/downloads/keep) shell script to interacto with KEEP on the command line.
 
 ### Windows
 
