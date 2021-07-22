@@ -7,12 +7,6 @@ has_children: true
 
 ## Installation
 
----
-
-> **NOTE**: The Early Access June release contains only a [Docker image](installation/docker). The installer described here is planned for a later code drop.
-
----
-
 After [downloading {{ site.version}} ]({{ site.flexnet_url }}), KEEP can be installed on:
 
 - Notes Client on [macOS](installation/mac)
@@ -23,20 +17,29 @@ After [downloading {{ site.version}} ]({{ site.flexnet_url }}), KEEP can be inst
 
 All platforms use a Java-based installer except the Docker which uses a Docker image. The installer and Docker image can be downloaded from your Flexnet account. Speak to your HCL seller to gain access if not sure.
 
-The installer requires a series of parameters. Details are explained on the operating system pages.
+The installer requires a series of parameters:
 
 ```bash
-Usage: keepinstaller [-ahv] -d=<dataDir> -i=<notesIni> -k=<keepDir> -p=<programDir>
-Installs Domino KEEP on a Windows/Linux server or Windows/macOS client
-  -a, --accept              Automatically accept terms & ccoditions.
-  -d, --dataDir=<dataDir>   Directory of your HCL Notes or Domino data.
-  -h, --help                Show this help message and exit.
-  -i, --ini=<notesIni>      HCL Notes/Domino notes.ini file.
-  -k, --keepDir=<keepDir>   Directory for the KEEP binary installation.
-  -p, --programDir=<programDir>
-                            Directory where HCL Notes or Domino is installed.
-  -v, --version             Print version information and exit.
+java -jar keepinstaller.jar [-ahnrsV] -d=<dataDir> -i=<notesIni> -k=<keepDir> -p=<programDir>
 ```
+
+Notes and Domino install a JVM on your computer, you can use it for the installer
+
+Explanation of parameters
+
+| Short | full parameter              | mandatory | Description                                                                     |
+| :---: | --------------------------- | :-------: | ------------------------------------------------------------------------------- |
+| `-d`  | `--dataDir=<dataDir>`       |     ✓     | Directory of your HCL Notes or Domino data                                      |
+| `-i`  | `--ini=<notesIni>`          |     ✓     | HCL Notes/Domino notes.ini file                                                 |
+| `-k`  | `--keepDir=<keepDir>`       |     ✓     | Directory for the Keep binary installation                                      |
+| `-p`  | `--programDir=<programDir>` |     ✓     | Directory where HCL Notes or Domino is installed                                |
+|       |                             |           |
+| `-a`  | `--accept`                  |           | automatically accept terms & ccoditions                                         |
+| `-h`  | `--help`                    |           | Show this help message and exit.                                                |
+| `-n`  | `--noIniUpdates`            |           | Install the files, show updated ini entries, but don't write them out           |
+| `-r`  | `--dryRun`                  |           | do not actually copy or alter files and settings                                |
+| `-s`  | `--skipDirectoryCheck`      |           | skips the checks if the program and data directories<br /> contain Notes/Domino |
+| `-V`  | `--version`                 |           | Print version information and exit.                                             |
 
 ## Hosting your static application
 

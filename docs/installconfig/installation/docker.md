@@ -47,23 +47,23 @@ Depending on the compose file you choose, a different set of variables needs to 
 
 Please also refer to the official [List of One-touch environment variables](https://help.hcltechsw.com/domino/12.0.0/admin/inst_onetouch_preparing_sysenv.html) for reference.
 
-| Variable                                | Example                | Remarks                                          |
-| --------------------------------------- | ---------------------- | ------------------------------------------------ |
-| CONTAINER_HOSTNAME                      | domino.acme.com        | Pro tip: use something.local dor local testing   |
-| CONTAINER_IMAGE                         |                        | docker.hcllabs.net/hclcom/projectkeep-r12:latest |
-| CONTAINER_NAME                          | domino-keep-test02     |
-| CONTAINER_VOLUMES                       | domino_keep_notesdata  | no spaces or special chars                       |
-| SERVERSETUP_ADMIN_CN                    | Peter Parker           |
-| SERVERSETUP_ADMIN_FIRSTNAME             | Paul                   |
-| SERVERSETUP_ADMIN_LASTNAME              | Herbert                |
-| SERVERSETUP_ADMIN_PASSWORD              | domin4ever             |
-| SERVERSETUP_EXISTINGSERVER_CN           | domino01               | YOUR EXISTING SERVER                             |
-| SERVERSETUP_EXISTINGSERVER_HOSTNAMEORIP | 10.45.10.3             | MUST BE REACHABLE, can use DNS too               |
-| SERVERSETUP_NETWORK_HOSTNAME            | keep01.domino.acme.com | MUST RESOLVE                                     |
-| SERVERSETUP_ORG_CERTIFIERPASSWORD       | supersecret            |
-| SERVERSETUP_ORG_ORGNAME                 | Stark Industries       | YOUR EXSISTING ORG                               |
-| SERVERSETUP_SERVER_DOMAINNAME           | MarvelPhase4           | YOUR EXSISTING NOTES DOMAIN                      |
-| SERVERSETUP_SERVER_NAME                 | keep-server-01         |
+| Variable                                | Example                                          | Remarks                                                                                                                                   |
+| --------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| CONTAINER_HOSTNAME                      | domino.acme.com                                  | Pro tip: use something.local dor local testing                                                                                            |
+| CONTAINER_IMAGE                         | docker.hcllabs.net/hclcom/projectkeep-r12:latest | **Check** carefully for the current image name! `:latest` most likely need to be replaced. Use "`docker images ls`" to see the exact name |
+| CONTAINER_NAME                          | domino-keep-test02                               |
+| CONTAINER_VOLUMES                       | domino_keep_notesdata                            | no spaces or special chars                                                                                                                |
+| SERVERSETUP_ADMIN_CN                    | Peter Parker                                     |
+| SERVERSETUP_ADMIN_FIRSTNAME             | Paul                                             |
+| SERVERSETUP_ADMIN_LASTNAME              | Herbert                                          |
+| SERVERSETUP_ADMIN_PASSWORD              | domin4ever                                       |
+| SERVERSETUP_EXISTINGSERVER_CN           | domino01                                         | YOUR EXISTING SERVER                                                                                                                      |
+| SERVERSETUP_EXISTINGSERVER_HOSTNAMEORIP | 10.45.10.3                                       | MUST BE REACHABLE, can use DNS too                                                                                                        |
+| SERVERSETUP_NETWORK_HOSTNAME            | keep01.domino.acme.com                           | MUST RESOLVE                                                                                                                              |
+| SERVERSETUP_ORG_CERTIFIERPASSWORD       | supersecret                                      |
+| SERVERSETUP_ORG_ORGNAME                 | Stark Industries                                 | YOUR EXSISTING ORG                                                                                                                        |
+| SERVERSETUP_SERVER_DOMAINNAME           | MarvelPhase4                                     | YOUR EXSISTING NOTES DOMAIN                                                                                                               |
+| SERVERSETUP_SERVER_NAME                 | keep-server-01                                   |
 
 ## Running KEEP
 
@@ -75,7 +75,7 @@ docker-compose up
 
 ---
 
-> Note Start in the directory where the files `server.id` and `docker-compose.yml` are located!
+> **Note:** Start in the directory where the files `server.id` and `docker-compose.yml` are located!
 
 ---
 

@@ -1,15 +1,15 @@
-## Change description
+# Domino REST API Documentation Update
 
+## Change description
 
 ## Due diligence
 
 - [ ] tested locally using `bundle exec jekyll serve`
 
-
 ## Review/Merge
 
-- [X] Ready for review
-- [X] Ready for merge
+- [x] Ready for review
+- [x] Ready for merge
 
 ## Follow-up work
 
