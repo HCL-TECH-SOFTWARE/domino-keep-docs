@@ -46,4 +46,4 @@ If you are new to Domino, see the "New Domino Database" [tutorial for web develo
 
 ### OData
 
-We also have a tutorial to demonstrate how to export data from Notes databases to [OData](https://www.odata.org) using KEEP API.
+We also have a tutorial to demonstrate how to export data from Notes databases to [OData](https://www.odata.org) using KEEP API
