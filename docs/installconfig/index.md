@@ -25,7 +25,7 @@ java -jar keepinstaller.jar [-ahnrsV] -d=<dataDir> -i=<notesIni> -k=<keepDir> -p
 
 Notes and Domino install a JVM on your computer, you can use it for the installer
 
-Explanation of parameters
+### Explanation of parameters
 
 | Short | full parameter              | mandatory | Description                                                                     |
 | :---: | --------------------------- | :-------: | ------------------------------------------------------------------------------- |
@@ -40,6 +40,37 @@ Explanation of parameters
 | `-r`  | `--dryRun`                  |           | do not actually copy or alter files and settings                                |
 | `-s`  | `--skipDirectoryCheck`      |           | skips the checks if the program and data directories<br /> contain Notes/Domino |
 | `-V`  | `--version`                 |           | Print version information and exit.                                             |
+
+### Installation return codes
+
+| Code | Explanation                                                   |
+| :--: | ------------------------------------------------------------- |
+|  0   | Operation completed with no known error                       |
+|  1   | Licence not accepted                                          |
+|  2   | Installation type could not be determined or is not supported |
+|  3   | Check for / creation of installation directories failed       |
+|  4   | Extraction of Keep binaries and Jars failed                   |
+|  5   | Creation of start script/cmd failed                           |
+|  6   | Update of notes.ini failed                                    |
+
+### Using a response file
+
+Instead of providing all parameters on the command line, the KEEP installer can be called using a [response file](https://picocli.info/#AtFiles):
+
+```bash
+java -jar keepinstaller.jar @responses.txt
+```
+
+The file contains one parameter per line, lines starting with `#` get ignored. Variables with `\` need to be escaped `\\`:
+
+```properties
+# Sample of an installer response file
+--dataDir=D:\\Domino\\data
+--ini=D:\\Domino\\data\\notes.ini
+--keepDir=C:\\Program Files\\HCL\\KEEP
+--programDir=C:\\Program Files\\HCL\\Domino
+--accept
+```
 
 ## Hosting your static application
 
