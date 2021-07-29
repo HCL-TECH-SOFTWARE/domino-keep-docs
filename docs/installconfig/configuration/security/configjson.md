@@ -153,7 +153,7 @@ A current `config.json` has the following top-level properties. These properties
 | shutdownkey       | String                                         | Key to be passed to trigger a server shutdown. This is hashed out in the "/config" endpoint and only accessible by looking at the relevant config files. Note, this may have been overloaded in a config file in the config.d directory. |
 | versions          | [versionParameters](#version-parameters)       | List of the OpenAPI definition files to load.                                                                                                                                                                                            |
 | verticles         | [verticlesParameters](#restapi-verticle)       | The verticles to load.                                                                                                                                                                                                                   |
-| vertx             | [vertexParameters](#vertex-parameters)         | Parameters to hand to the start of vert.x, see [the vert.x documentation](https://vertx.io/docs/apidocs/io/vertx/core/VertxOptions.html) for details.                                                                                     |
+| vertx             | [vertxParameters](#vertx-parameters)         | Parameters to hand to the start of vert.x, see [the vert.x documentation](https://vertx.io/docs/apidocs/io/vertx/core/VertxOptions.html) for details.                                                                                     |
 
 ### Prometheus Parameters
 
@@ -175,7 +175,7 @@ Versions has a named list of entries with two parameters:
 
 The name of the entries must match the name used in versions of the RestAPI verticle (See [below](#restapi-verticle) ).
 
-### Vertex Parameters
+### Vert.x Parameters
 
 | Property | Type                                     | Description                  |
 | :------- | :--------------------------------------- | :--------------------------- |
