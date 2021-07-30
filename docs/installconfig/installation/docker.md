@@ -43,13 +43,13 @@ docker load -i [name_of_tar_file].tar
 
 ### Table of variables
 
-Depending on the compose file you choose, a different set of variables needs to be replaced. If a variable isn't in the compose file, you don't need it. We keep the variable names in sync with [One-touch Domino setup](https://help.hcltechsw.com/domino/12.0.0/admin/wn_one-touch_domino_setup.html), thus in the compose file you will find gems like `SERVERSETUP_SERVER_NAME: "${SERVERSETUP_SERVER_NAME}"`. This makes naming of variables consisten.
+Depending on the compose file you choose, a different set of variables needs to be replaced. If a variable isn't in the compose file, you don't need it. We keep the variable names in sync with [One-touch Domino setup](https://help.hcltechsw.com/domino/12.0.0/admin/wn_one-touch_domino_setup.html), thus in the compose file you will find gems like `SERVERSETUP_SERVER_NAME: "${SERVERSETUP_SERVER_NAME}"`. This makes naming of variables consistent.
 
 Please also refer to the official [List of One-touch environment variables](https://help.hcltechsw.com/domino/12.0.0/admin/inst_onetouch_preparing_sysenv.html) for reference.
 
 | Variable                                | Example                                          | Remarks                                                                                                                                   |
 | --------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| CONTAINER_HOSTNAME                      | domino.acme.com                                  | Pro tip: use something.local dor local testing                                                                                            |
+| CONTAINER_HOSTNAME                      | domino.acme.com                                  | Pro tip: use something.local for local testing                                                                                            |
 | CONTAINER_IMAGE                         | docker.hcllabs.net/hclcom/projectkeep-r12:latest | **Check** carefully for the current image name! `:latest` most likely need to be replaced. Use "`docker images ls`" to see the exact name |
 | CONTAINER_NAME                          | domino-keep-test02                               |
 | CONTAINER_VOLUMES                       | domino_keep_notesdata                            | no spaces or special chars                                                                                                                |
