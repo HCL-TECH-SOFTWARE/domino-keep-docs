@@ -153,7 +153,7 @@ A current `config.json` has the following top-level properties. These properties
 | shutdownkey       | String                                         | Key to be passed to trigger a server shutdown. This is hashed out in the "/config" endpoint and only accessible by looking at the relevant config files. Note, this may have been overloaded in a config file in the config.d directory. |
 | versions          | [versionParameters](#version-parameters)       | List of the OpenAPI definition files to load.                                                                                                                                                                                            |
 | verticles         | [verticlesParameters](#restapi-verticle)       | The verticles to load.                                                                                                                                                                                                                   |
-| vertx             | [vertexParameters](#vertex-parameters)         | Parameters to hand to the start of vert.x, see [the vert.x documentation](https://vertx.io/docs/apidocs/io/vertx/core/VertxOptions.html) for details.                                                                                     |
+| vertx             | [vertxParameters](#vertx-parameters)         | Parameters to hand to the start of vert.x, see [the vert.x documentation](https://vertx.io/docs/apidocs/io/vertx/core/VertxOptions.html) for details.                                                                                     |
 
 ### Prometheus Parameters
 
@@ -175,7 +175,7 @@ Versions has a named list of entries with two parameters:
 
 The name of the entries must match the name used in versions of the RestAPI verticle (See [below](#restapi-verticle) ).
 
-### Vertex Parameters
+### Vert.x Parameters
 
 | Property | Type                                     | Description                  |
 | :------- | :--------------------------------------- | :--------------------------- |
@@ -214,8 +214,9 @@ Verticles define a separate unit of work for particular tags. For the RestAPI ve
 | active         | Boolean | Whether this verticle is loaded.                                                                                                                                                                                                                                                                 |
 | className      | String  | Parameter for the class to use for the verticle. Typically this is `com.hcl.domino.keep.verticles.DominoDefaultVerticle`, unless you need to extend that class.                                                                                                                             |
 | tags           | Object  | Parameter for tags from OpenAPI specs to allocate to this verticle and the package in which to find the NSFHandlers.                                                                                                                                                                             |
-| threadPoolName | String  | If a worker verticle should use a dedicated pool, defines a thread pool name. By default it will be assigned 10 threads, but this can be overwritten with threadPoolSize. If the same threadPoolName is used by multiple verticles, the thread pool is shared across those verticles.  |
-| threadPoolSize | int     | Used only for worker threads with a specific threadPoolName. The default is 10, but this can be overwritten.                                                                                                                                                                    |
+| instances      | int  | Relevant only for RestAPI verticle, loads multiple instances that each use a thread pool. You will need to be aware of the number of cores available and scalability, see the [Vert.x documentation](https://vertx.io/docs/vertx-core/java/#_specifying_number_of_verticle_instances) |
+| threadPoolName | String  | If a worker verticle should use a dedicated pool instead of the generic worker thread pool, define a thread pool name. If the same threadPoolName is used by multiple verticles, the thread pool is shared across those verticles.  |
+| threads | int     | Used only for AsyncAgentScheduler, the number of threads to assign to the Worker Executor, see [Vert.x documentation](https://vertx.io/docs/vertx-core/java/#blocking_code).|
 | worker         | Boolean | To make this a [worker verticle](https://medium.com/@levon_t/java-vert-x-starter-guide-part-2-worker-verticles-c49866df44ab). Worker verticles do not run on the event loop thread but on worker threads from a preconfigured pool of 20 threads. This should be used for heavy-duty verticles. |
 
 The following are types of verticles with additional parameters:
