@@ -2,7 +2,7 @@
 layout: default
 title: KEEP is Different
 parent: Using KEEP
-nav_order: 4
+nav_order: 6
 ---
 
 ## KEEP is different
