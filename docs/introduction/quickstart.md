@@ -13,6 +13,17 @@ nav_order: 1
 
 ---
 
+## What's New 
+
+Here's what's new in {{ site.version }}
+- Installer jar file
+- OData is read and write operations compatible
+- Dependencies updated to the latest
+- At startup we no longer use the DXL to bootstrap the database, hence making the process more stable
+- More API documentation
+
+## Let's get started
+
 To get up and running quickly, you will need to:
 
 - [Install](../../installconfig/index) KEEP on a Notes client or a Domino server.
