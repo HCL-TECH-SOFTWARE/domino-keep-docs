@@ -3,7 +3,7 @@ theme: "just-the-docs"
 remote_theme: pmarsceill/just-the-docs
 title: "HCL Domino REST API (Domino KEEP)"
 description: A modern take on REST interaction with Domino
-version: 12.0.1-EarlyAccess Beta1
+version: 12.0.1-EarlyAccess Beta2
 logo: "/assets/images/svg/HCL_Domino_KEEP_light.svg"
 flexnet_url: "https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/entitledDownloadFile.action?downloadPkgId=HCL_Domino_REST_API_EAP"
 baseurl: "/domino-keep-docs" # the subpath of your site, e.g. /blog
