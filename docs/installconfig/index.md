@@ -15,7 +15,7 @@ After [downloading {{ site.version}} ]({{ site.flexnet_url }}), KEEP can be inst
 - Domino Server on [Linux](installation/linux)
 - Domino Server on [Docker or Kubernetes](installation/docker)
 
-All platforms use a Java-based installer except the Docker which uses a Docker image. The installer and Docker image can be downloaded from your Flexnet account. Speak to your HCL seller to gain access if not sure.
+All platforms use a Java-based installer except the Docker which uses a Docker image. The installer and Docker image can be downloaded from your Flexnet account. Speak to your HCL seller to gain access, if not sure.
 
 The installer requires a series of parameters:
 
@@ -23,23 +23,23 @@ The installer requires a series of parameters:
 java -jar keepinstaller.jar [-ahnrsV] -d=<dataDir> -i=<notesIni> -k=<keepDir> -p=<programDir>
 ```
 
-Notes and Domino install a JVM on your computer, you can use it for the installer
+Notes and Domino install a JVM on your computer. You can use it for the installer.
 
 ### Explanation of parameters
 
-| Short | full parameter              | mandatory | Description                                                                     |
-| :---: | --------------------------- | :-------: | ------------------------------------------------------------------------------- |
-| `-d`  | `--dataDir=<dataDir>`       |     ✓     | Directory of your HCL Notes or Domino data                                      |
-| `-i`  | `--ini=<notesIni>`          |     ✓     | HCL Notes/Domino notes.ini file                                                 |
-| `-k`  | `--keepDir=<keepDir>`       |     ✓     | Directory for the Keep binary installation                                      |
-| `-p`  | `--programDir=<programDir>` |     ✓     | Directory where HCL Notes or Domino is installed                                |
+| Short | Full parameter              | Mandatory | Description                                                                        |
+| :---: | --------------------------- | :-------: | -------------------------------------------------------------------------------    |
+| `-d`  | `--dataDir=<dataDir>`       |     ✓     | Directory of your HCL Notes or Domino data                                         |
+| `-i`  | `--ini=<notesIni>`          |     ✓     | HCL Notes/Domino notes.ini file                                                    |
+| `-k`  | `--keepDir=<keepDir>`       |     ✓     | Directory for the KEEP binary installation                                         |
+| `-p`  | `--programDir=<programDir>` |     ✓     | Directory where HCL Notes or Domino is installed                                   |
 |       |                             |           |
-| `-a`  | `--accept`                  |           | automatically accept terms & ccoditions                                         |
-| `-h`  | `--help`                    |           | Show this help message and exit.                                                |
-| `-n`  | `--noIniUpdates`            |           | Install the files, show updated ini entries, but don't write them out           |
-| `-r`  | `--dryRun`                  |           | do not actually copy or alter files and settings                                |
-| `-s`  | `--skipDirectoryCheck`      |           | skips the checks if the program and data directories<br /> contain Notes/Domino |
-| `-V`  | `--version`                 |           | Print version information and exit.                                             |
+| `-a`  | `--accept`                  |           | Automatically accept terms & ccoditions                                            |
+| `-h`  | `--help`                    |           | Show this help message and exit                                                    |
+| `-n`  | `--noIniUpdates`            |           | Install the files, show updated ini entries but don't write them out               |
+| `-r`  | `--dryRun`                  |           | Do not actually copy or alter files and settings                                   |
+| `-s`  | `--skipDirectoryCheck`      |           | Skips the checks if the program and data directories<br /> contain Notes or Domino |
+| `-V`  | `--version`                 |           | Print version information and exit.                                                |
 
 ### Installation return codes
 
@@ -49,7 +49,7 @@ Notes and Domino install a JVM on your computer, you can use it for the installe
 |  1   | Licence not accepted                                          |
 |  2   | Installation type could not be determined or is not supported |
 |  3   | Check for / creation of installation directories failed       |
-|  4   | Extraction of Keep binaries and Jars failed                   |
+|  4   | Extraction of KEEP binaries and JARs failed                   |
 |  5   | Creation of start script/cmd failed                           |
 |  6   | Update of notes.ini failed                                    |
 
@@ -61,7 +61,7 @@ Instead of providing all parameters on the command line, the KEEP installer can 
 java -jar keepinstaller.jar @responses.txt
 ```
 
-The file contains one parameter per line, lines starting with `#` get ignored. Variables with `\` need to be escaped `\\`:
+The file contains one parameter per line. Lines starting with `#` get ignored. Variables with `\` need to be escaped `\\`:
 
 ```properties
 # Sample of an installer response file
@@ -90,7 +90,7 @@ The configuration follows the concept of [an Overlay File System](https://www.da
 
 ![The call hierarchy](../assets/images/ActualConfiguration.png)
 
-All files contribute JSON, which are overlayed on top of each other. JSON elements with the same name get overwritten. Arrays are replaced and not overwritten.
+All files contribute JSON, which are overlayed on top of each other. JSON elements with same names get overwritten. Arrays are replaced and not overwritten.
 
 The JSON files in `keepconfig.d` are processed in alphabetical order. Last entry wins. This processing order allows you, for example, to disable elements temporarily through settings in a `z-final-words.json` file without impacting the permanent configuration.
 
@@ -98,7 +98,7 @@ For more information, see [the vert.x overloading rules](https://vertx.io/docs/v
 
 ### Example
 
-Given the files `config.json`, `a.json`, and the environment variable `PORT=8564` you get the result `result.json` as shown below:
+Given the files `config.json`, `a.json` and the environment variable `PORT=8564`, you get the result `result.json` as shown below:
 
 #### config.json
 
@@ -133,7 +133,7 @@ Given the files `config.json`, `a.json`, and the environment variable `PORT=8564
 }
 ```
 
-Merge these 2 files, apply the environment varbles
+Merge these 2 files and apply the environment variables.
 
 #### result.json
 
@@ -159,5 +159,5 @@ The actual result can be inspected on the KEEP management API, like [on a local 
 
 ### Important Notes
 
-> JSON overlay doesn't allow you to **remove** JSON elements, so most settings have an `active` parameter that
-> can be set false in an overlay.
+> JSON overlay doesn't allow you to **remove** JSON elements. So, most settings have an `active` parameter that
+> can be set to false in an overlay.

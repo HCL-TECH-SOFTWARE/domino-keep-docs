@@ -2,7 +2,7 @@
 layout: default
 title: KEEP Applications
 parent: Using KEEP
-nav_order: 3
+nav_order: 5
 ---
 
 ## Connecting your application to KEEP

@@ -23,15 +23,15 @@ Running KEEP with a Docker image requires the following:
 
 ### Getting Ready
 
-A Domino server uses one persistent volume to store its data. This volume also stores log files and the server’s ID file. When you remove the container, that volume remains and is reused when you start a new container instance.
+A Domino server uses one persistent volume to store its data. This volume also stores log files and the server’s ID file. When you remove the container that volume remains and is reused when you start a new container instance.
 
 ![Docker Consumption](../../assets/images/DominoKeepContainers.png)
 
-When you want to run multiple servers, create separate volumes for each, DO NOT share volumes between running instances.
+When you want to run multiple servers, create separate volumes for each. DO NOT share volumes between running instances.
 
-- Make sure, your server id file is named `server.id`.
+- Make sure that your server id file is named `server.id`.
 - Rename the compose file you downloaded from [resources](../../../references/downloads) to `docker-compose.yml`.
-- Edit the `.env` file to update your values. You need to replace all values after the equal (`=`) sign
+- Edit the `.env` file to update your values. You need to replace all values after the equal (`=`) sign.
 
 You can configure multiple Domino servers in a single compose file. For details, check the [Docker compose](https://docs.docker.com/compose/) documentation. Keep in mind, each server needs its own volume.
 
@@ -43,13 +43,13 @@ docker load -i [name_of_tar_file].tar
 
 ### Table of variables
 
-Depending on the compose file you choose, a different set of variables needs to be replaced. If a variable isn't in the compose file, you don't need it. We keep the variable names in sync with [One-touch Domino setup](https://help.hcltechsw.com/domino/12.0.0/admin/wn_one-touch_domino_setup.html), thus in the compose file you will find gems like `SERVERSETUP_SERVER_NAME: "${SERVERSETUP_SERVER_NAME}"`. This makes naming of variables consisten.
+Depending on the compose file you choose, a different set of variables needs to be replaced. If a variable isn't in the compose file, you don't need it. We keep the variable names in sync with [One-touch Domino setup](https://help.hcltechsw.com/domino/12.0.0/admin/wn_one-touch_domino_setup.html), thus in the compose file you will find gems like `SERVERSETUP_SERVER_NAME: "${SERVERSETUP_SERVER_NAME}"`. This makes naming of variables consistent.
 
 Please also refer to the official [List of One-touch environment variables](https://help.hcltechsw.com/domino/12.0.0/admin/inst_onetouch_preparing_sysenv.html) for reference.
 
 | Variable                                | Example                                          | Remarks                                                                                                                                   |
 | --------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| CONTAINER_HOSTNAME                      | domino.acme.com                                  | Pro tip: use something.local dor local testing                                                                                            |
+| CONTAINER_HOSTNAME                      | domino.acme.com                                  | Pro tip: use something.local for local testing                                                                                            |
 | CONTAINER_IMAGE                         | docker.hcllabs.net/hclcom/projectkeep-r12:latest | **Check** carefully for the current image name! `:latest` most likely need to be replaced. Use "`docker images ls`" to see the exact name |
 | CONTAINER_NAME                          | domino-keep-test02                               |
 | CONTAINER_VOLUMES                       | domino_keep_notesdata                            | no spaces or special chars                                                                                                                |
@@ -64,6 +64,7 @@ Please also refer to the official [List of One-touch environment variables](http
 | SERVERSETUP_ORG_ORGNAME                 | Stark Industries                                 | YOUR EXSISTING ORG                                                                                                                        |
 | SERVERSETUP_SERVER_DOMAINNAME           | MarvelPhase4                                     | YOUR EXSISTING NOTES DOMAIN                                                                                                               |
 | SERVERSETUP_SERVER_NAME                 | keep-server-01                                   |
+| SERVERSETUP_SERVER_SERVERTASKS          | replica,router,update,amgr,adminp,http,keep      | Refer to the [KEEP task](../../../usingkeep/keeptask) page.                                                                              |
 
 ## Running KEEP
 
@@ -83,7 +84,7 @@ The setup can take a few minutes, depending on your hardware and the network spe
 
 ---
 
-> Pro Tip: when you don't have DNS setup, amend your hosts file for name resolution:
+> Pro Tip: When you don't have DNS setup, amend your hosts file for name resolution:
 >
 > - `/etc/hosts` on Linux or macOS
 > - `C:\Windows\System32\drivers\etc\hosts` on Windows
@@ -119,9 +120,8 @@ docker exec -it $containername /bin/bash
 
 ## Alternate Docker cofiguration
 
-When you run you Domino servers on Linux, you probably use the [Nashcom startup script](https://www.nashcom.de/nshweb/pages/startscript.htm) for Domino.
-On this foundation the GitHub.com hosted [Domino Docker](https://github.com/IBM/domino-docker) project offers management scripts that allows easy management of
-your Docker container using a command `domino_container`.
+When you run your Domino servers on Linux, you probably use the [Nashcom startup script](https://www.nashcom.de/nshweb/pages/startscript.htm) for Domino.
+On this foundation, the GitHub.com hosted [Domino Docker](https://github.com/IBM/domino-docker) project offers management scripts that allows easy management of your Docker container using a command `domino_container`.
 
 Installation steps are as follows:
 
@@ -131,7 +131,7 @@ Installation steps are as follows:
 
 Now you have the command `domino_container` at your disposal:
 
-- use `domino_container cfg`, to set your configuration
+- use `domino_container cfg` to set your configuration
 - use `domino_container env` for the environment values
-- start Doinin and KEEP using `domino_container start`
+- start Domino and KEEP using `domino_container start`
 - Learn more about the scripts using `domino_container help`

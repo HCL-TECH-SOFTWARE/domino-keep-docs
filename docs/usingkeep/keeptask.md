@@ -5,15 +5,15 @@ parent: Using KEEP
 nav_order: 1
 ---
 
-## The KEEP Task
+## The KEEP task
 
-On Domino servers KEEP can be loaded using `load keep` in the Domino server console.
+On Domino servers, KEEP can be loaded using `load keep` in the Domino server console.
 
-To automatically start KEEP on server start, the mode of operation you want for a production system, add `keep` to the values of the `notes.ini` entry `servertasks`
+To automatically start KEEP on server start, the mode of operation you want for a production system, add `keep` to the values of the `notes.ini` entry `servertasks`.
 
-The launch of KEEP is governed by the `notes.ini` key `KeepCmdLine` which is set by the KEEP installer
+The launch of KEEP is governed by the `notes.ini` key `KeepCmdLine`, which is set by the KEEP installer.
 
-## KEEP Task commands
+## KEEP task commands
 
 Once the KEEP task is loaded in the Domino console, you can use the following commands to interact with KEEP:
 

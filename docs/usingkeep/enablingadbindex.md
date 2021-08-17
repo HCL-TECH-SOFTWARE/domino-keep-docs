@@ -2,7 +2,7 @@
 layout: default
 title: Enabling a Database
 parent: Using KEEP
-nav_order: 1
+nav_order: 2
 ---
 
 ## Enabling a database
