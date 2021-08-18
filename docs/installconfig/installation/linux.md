@@ -58,4 +58,18 @@ The installer conducts a series of actions:
 - copy `keep` into the Domino directory
 - update the `ServerTasks` variable in `notes.ini`, add `keep`
 - add a variable `KeepCmdLine` to the `notes.ini` pointing to `startkeep.sh`
-- update the `EXTMGR_ADDINS` variable in the `notes.ini`
+- (in future) update the `EXTMGR_ADDINS` variable in the `notes.ini`
+
+## File ownership and access rights
+
+On Linux you need to carefully check that your file and directory ownership and access rights are set correctly. The **strongly** recommended conventions are:
+
+- User to run the Domino server: `notes`
+- Domino installed in `/opt/hcl/domino` -> owned by `root`
+- KEEP installed in `/opt/hcl/keep` -> owned by `root`
+- Domino data directory `/local/notesdata` -> owned by `notes`
+- Access for files and directories in `/opt` set to `755`
+- Access for directories in `/local/notesdata` set to `770`
+- Access for files in `/local/notesdata` set to `660`
+- NOTE: directories need the execute flag (1), otherwise they can't be accessed, so access for a directory must be an odd number always
+- When you set access anywhere to `777` a kitten will die, don't ever do this
