@@ -3,6 +3,7 @@
     "modeName": "default",
     "computeWithForm": false,
     "strictInput": true,
+    "allowAnyField" : false,
     "onLoad": "",
     "onSave": "@SetField(\"Status\";\"Submitted\")",
     "readAccessFields":  [ "Approver", "Subject", "Requestor", "DueDate", "Status", "Body" ],
