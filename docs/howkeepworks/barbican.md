@@ -38,7 +38,7 @@ Form Modes are used to manage access to documents. KEEP only allows access to do
 
 When a form is not configured, documents with that form item are not accessible via KEEP. A form configuration has one or more **Form Modes** to determine access.
 
-![Form configuration with modes](../assets/images/formconfiguration.png)
+![Form configuration with modes](../assets/images/Formconfiguration.png)
 
 Each mode, specified in JSON as a series of flags and formulas, that determine access. Currently we make use of the [`@Formula` language](https://help.hcltechsw.com/dom_designer/12.0.0/basic/H_NOTES_FORMULA_LANGUAGE.html), but we might extend the options in future.
 
