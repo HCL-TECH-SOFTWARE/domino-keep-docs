@@ -3,13 +3,23 @@ theme: "just-the-docs"
 remote_theme: pmarsceill/just-the-docs
 title: "HCL Domino REST API (Domino KEEP)"
 description: A modern take on REST interaction with Domino
-version: 12.0.1-EarlyAccess Beta2
+version: 12.0.1-EarlyAccess Beta3
 logo: "/assets/images/svg/HCL_Domino_KEEP_light.svg"
 flexnet_url: "https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/entitledDownloadFile.action?downloadPkgId=HCL_Domino_REST_API_EAP"
 baseurl: "/domino-keep-docs" # the subpath of your site, e.g. /blog
 git_url: "https://opensource.hcltechsw.com/domino-keep-docs" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: pretty
-exclude: ["*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "lib/", "bin/", "README.md", "Rakefile"]
+exclude:
+  [
+    "*.gemspec",
+    "*.gem",
+    "Gemfile",
+    "Gemfile.lock",
+    "lib/",
+    "bin/",
+    "README.md",
+    "Rakefile",
+  ]
 
 # Set a path/url to a logo that will be displayed instead of the title
 #logo: "/assets/images/just-the-docs.png"
@@ -71,7 +81,6 @@ footer_content: "HCL Domino REST API (Domino KEEP)"
 # last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
 # last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
 
-
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub"
@@ -99,7 +108,6 @@ kramdown:
   # syntax_highlighter_opts:
   #   block:
   #     line_numbers: true
-
 # compress_html:
 #   clippings: all
 #   comments: all
