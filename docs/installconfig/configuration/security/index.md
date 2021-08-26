@@ -19,7 +19,7 @@ Good security is not a one-trick pony, but a combination of factors. Here is wha
 - Access to sensitive information can be limited to servers that present additional credentials.
 - Read/Write access is controlled on a per form, field and user basis. See [The Barbican](../../../howkeepworks/barbican) for details.
 
-Here's a flowchart to show how KEEP handles security. 
+Here's a flowchart to show how KEEP handles security.
 
 ![Security flow](../../../assets/images/KeepDataAccess.png)
 

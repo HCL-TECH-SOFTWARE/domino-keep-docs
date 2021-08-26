@@ -34,3 +34,16 @@ Below are the requirements for contributing to or extending KEEP:
 - [Apicurio](https://www.apicur.io/), which is an online GUI editor for OpenAPI files
 
 Check the details to [setup the development environment](../../extendingkeep/devenv/devenvindex)
+
+### Documentation
+
+We use [Markdown](https://en.wikipedia.org/wiki/Markdown) to render this documentation in [GitHub Pages](https://pages.github.com/) using the custom [Just-The-Docs](https://pmarsceill.github.io/just-the-docs/) theme.
+
+Images used here are created in multiple ways:
+
+- [OmniGraffle](https://www.omnigroup.com/omnigraffle/) (Mac)
+- [SmartDraw](https://www.smartdraw.com/) (Browser and Windows)
+- [PlantUML](https://plantuml.com/) rendering text into images (using this [VSCode plugin](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml))
+- Occasionally [Balsamiq](https://balsamiq.com/) for Wireframes
+- [GIMP](https://www.gimp.org/) to postprocess screenshots if needed
+- ... and a few others

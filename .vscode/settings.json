@@ -1,7 +1,6 @@
 {
-    "plantuml.diagramsRoot": "/assets/images/plantuml",
+    "plantuml.diagramsRoot": "/docs/assets/images/plantuml",
     "plantuml.exportFormat": "png",
-    "plantuml.exportOutDir": "/assets/images",
+    "plantuml.exportOutDir": "/docs/assets/images",
     "plantuml.exportSubFolder": false,
-
 }

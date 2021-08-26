@@ -15,7 +15,8 @@ However, for an actual deployment, you might want to configure your own IdP and 
 
 ### Identity providers
 
-KEEP supports the following identity providers:
+KEEP supports identity providers, that can produce JWT access tokens e.g:
+
 - Microsoft Active Directory
 - Redhat Keycloak
 - Tivoli Federate Identity Manager
@@ -37,7 +38,7 @@ When decoded, this translates to-
 {
   "iss": "The Demo Wizzard",
   "sub": "CN=Doctor Notes/O=ProjectKeep",
-  "scopes": "MAIL $DATA",
+  "scope": "MAIL $DATA",
   "iat": 1618506339,
   "exp": 1618509939,
   "aud": "Domino"
