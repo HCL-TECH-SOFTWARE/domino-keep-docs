@@ -8,24 +8,34 @@ nav_order: 3
 
 ## Postman Test
 
-[Postman](https://www.postman.com) is a tool used for API Testing. Because KEEP doesn't use a GUI, you can't do manual or automated testing.  We can send a request and get a response through the API protocols. Through the response we can verify the status codes to see whether the protocols are working. With the help of Postman we can test the API's.
+[Postman](https://www.postman.com) is a tool used for API Testing. Postman allows to send requests and receive responses through the API protocols. Based on the response received, we can verify the status codes to see if the protocols are working. KEEP doesn't have a GUI but using Postman, we can test the KEEP APIs.
 
-The KEEP core includes the following APIs:
-- Admin-vi
-- Ci-cd
-- Core-vi
+In Postman, we can create collections, environments and user defined folders. For each API, there are JSON files. Additionally, you can also import an existing JSON file in Postman application using the Import button. The API's can be tested under different environments, like UAT.  
+
+To carry out end-to-end Acceptance Testing of KEEP, we have provided collection and environment JSONs in the KEEP directory. These files are available at /domino-keep\keep-core\src\test\downstream-openclient. Import these files into Postman. In the test collections, there are 4 folders, corresponding to the following 4 KEEP core APIs: 
+- Admin-v1
+- CI/CD
+- Core-v1
 - Pim-v1
 
-Under each API are JSON files. Postman accepts a JSON request and sends the response. In Postman we can create collections, create a request, send a request and get a response. If you have a readymade JSON we can import those files. In github if you access the path you have Collections and Environments. In Collections you have 4 API's. In the API's you have JSON files. You can test the API's under different environments like UAT, testing. The JSON files can be imported in our Postman application. The user can import the JSON files by clicking on the Import button. When you click on Import you can import a file, folder, by fetching the links we can import JSON files. Normally we click on upload file button to get the JSON files.
+### How to run the KEEP Acceptance and CI/CD end-to-end tests
+Before you run the tests, make sure that auth is running in Postman i.e. if you send a request, you should receive a response. If you get an error, make sure that the docker is running. Follow one of the below methods to execute the KEEP tests. 
 
-You can click on import file to download the file to the respective folders. Also you can create a copy of a imported file.The user can replace the imported file also.Files will be stored under respective folders. Under respective folders we will have a set of requests.
-Under Postman path there will Collections, Environments and User defined folders as well.
-Folders contains API's. API's contains JSON files.
-Under manage Environments you will have different fields like Variables, Inital Value and Current Value. 
-Under Variable field you will have contents like AdminName, AdminPassword,PIMHOST and HOST.
+#### Using the command file provided in the domino-keep directory
+1. In the domino-keep directory, is the collection_runner.cmd.
+2. In the command prompt, navigate to domino-keep directory and run collection_runner.cmd, as administrator.
+3. Select which API you want to run.
+4. Select the json file.
+5. After the tests have run, you'll get an HTML report. This report gets saved under newman folder in domino-keep.
+The generated report shows the total iterations, assertions, failed tests and skipped tests. You can also find additional details in the report. The 'Failed Tests' tab on the top shows the assertions that failed, along with the error message.
 
-Then user will declare global variables depending on the request. In GUI's you login to a webpage and start testing like the same way you do the testing in API's based on the HOST.When the user runs the request it will give success and it will show the output.
+#### Running from Postman
+1. Once you have imported the collection and environment JSON files, you can run the test by hitting the Runner button in Postman.
+2. Select the collection and the folders to run. (You can also run the full collection.)
+3. Select the environment.
+4. Select 'Save Response'.
+5. Run KEEP Acceptance.
+On the result window, you can see the assertions that failed. You can also export the results from here.
 
-All the testing part will done in the application HCL Notes.  User creates a request and clicks on Send , the request will be sent and its gives the output. If any error is there it will show the error, if it is success it will show the status as success.
 
 
