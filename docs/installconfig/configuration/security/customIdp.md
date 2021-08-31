@@ -12,7 +12,7 @@ KEEP requires an access token in [JWT](https://jwt.io/) ([RFC 7519](https://tool
 
 ---
 
-**Note**: Check carefully which systems you trust to provide identity. They hold the key to data accesss
+**Note**: Check carefully which systems you trust to provide identity. They hold the key to data access.
 
 ---
 
@@ -20,7 +20,7 @@ When none of the existing IdP solutions fit your needs, you can use a custom pro
 
 ## Sample function
 
-This function turns a given user name and scope into a signed JWT token
+This function turns a given user name and scope into a signed JWT token.
 
 ```js
 const template = require("./template.json");
@@ -43,7 +43,7 @@ const renderJwt = (sub, scope) => {
 module.export = { renderJwt };
 ```
 
-Error handling omitted for clarity
+Error handling omitted for clarity.
 
 ## The template
 
@@ -67,7 +67,7 @@ This the relevant part of the `package.json`
 
 ## Keys you need
 
-You need to generate a public/private key pair
+You need to generate a public/private key pair.
 
 ```shell
 ssh-keygen -t rsa -b 4096 -m PEM -f private.key
