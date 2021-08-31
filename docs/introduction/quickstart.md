@@ -16,12 +16,17 @@ nav_order: 1
 ## What's New 
 
 Here's what's new in {{ site.version }}
-- Installer jar file
-- OData is read and write operations compatible
-- Dependencies updated to the latest
-- At startup we no longer use the DXL to bootstrap the database, hence making the process more stable
-- New Domino server add-in task created for KEEP
-- More API documentation
+- Java based installer that works on all platforms (bugs fixed)
+- Docker container uses Domino 12.0.1 Beta
+- New endpoints
+  - bulk/create
+  - bulk/update
+  - vcalendar/{calid}/{unid}
+- Updated Postman test
+- Start script fixes
+- vert.x updated to 4.2.0
+- Dependencies updated
+- Reworked KEEP task (no more pipe errors)
 
 ## Let's get started
 

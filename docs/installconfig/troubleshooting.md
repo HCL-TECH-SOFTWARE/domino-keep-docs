@@ -5,7 +5,7 @@ parent: Installing & configuring
 nav_order: 10
 ---
 
-## Troubleshooting common errors with the installing and running the Keep API service
+## Troubleshooting common errors with the installing and running the KEEP API service
 
 ### Domino Not Running (First-Time Setup)
 
