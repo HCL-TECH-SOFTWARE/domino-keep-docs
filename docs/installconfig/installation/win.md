@@ -29,16 +29,11 @@ Run the installer to deploy KEEP for Domino:
 java -jar keepinstaller.jar ^
  -d="D:\Domino\data" ^
  -i="D:\Domino\data\notes.ini" ^
- -k="C:\PROGRA~1\HCL\KEEP" ^
- -p="C:\PROGRA~1\HCL\Domino" ^
+ -k="C:\Program Files\HCL\KEEP" ^
+ -p="C:\Program Files\HCL\Domino" ^
  -a
 ```
 
----
-
-**Note**: Currently the installer and keep task barfs on **spaces** in path names. You need to use the "short path". E.g `C:\PROGRA~1` instead of `C:\Program Files`. You can determine the short name using `dir /x`. For details on short path check [this SuperUser Q&A](https://superuser.com/questions/348079/how-can-i-find-the-short-path-of-a-windows-directory-file)
-
----
 
 ### All parameters
 
