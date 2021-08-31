@@ -17,7 +17,7 @@ If the planned application is mobile, desktop (including Excel), or just uses a 
 
 ![Local applications](../assets/images/access/LocalApp.png)
 
-If the planned application is a web application (build using ReactJS, Angular etc), you can host the static application files in `keepapps.d` directory or your Domino server of choice.
+If the planned application is a web application (build using ReactJS, Angular etc), you can host the static application files in `keepweb.d` directory or your Domino server of choice.
 
 ![KEEP Properties](../assets/images/access/WebApp-local.png)
 
@@ -44,7 +44,7 @@ The KEEP configuration allows you to fine tune access permissions. KEEP allows y
 - Decrypt encrypted items, if the user has a suitable key.
 - Specify which views to expose on the API.
 - Specify which agents to expose on the API.
-- Specify which forms to expose on the API. 
-Here, [the Barbican's capabilities](../../howkeepworks/barbican) is used to tailor field access based on document data and current user, allowing for API-based data integrity.
+- Specify which forms to expose on the API.
+  Here, [the Barbican's capabilities](../../howkeepworks/barbican) is used to tailor field access based on document data and current user, allowing for API-based data integrity.
 
 ![KEEP Properties](../assets/images/access/KEEPproperties.png)

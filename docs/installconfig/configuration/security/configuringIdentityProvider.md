@@ -18,11 +18,11 @@ However, for an actual deployment, you might want to configure your own IdP and 
 KEEP supports identity providers, that can produce JWT access tokens e.g:
 
 - Microsoft Active Directory
-- Redhat Keycloak
+- Redhat [Keycloak](https://keycloak.org/)
 - Tivoli Federate Identity Manager
 - Okta
 - Auth0
-- Roll your own
+- [Roll your own](./customIdp)
 
 ### Example JWT
 

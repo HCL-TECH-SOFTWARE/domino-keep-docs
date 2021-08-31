@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Authentication
+title: Auth*
 parent: Security
 grand_parent: Installing & configuring
 nav_order: 1
@@ -70,7 +70,7 @@ The JWT requires the following format (Additional entries get ignored):
 }
 ```
 
-All elements need to be present, “audience” must be set to “Domino” and “scopes” must be a space-separated list of database aliases, MAIL, and/or $DATA.
+All elements need to be present, “audience” must be set to “Domino” and “scope” must be a space-separated list of database aliases, MAIL, and/or $DATA.
 
 - MAIL allows a request to attempt to access the mail file of a given user. Access is limited by Domino’s ACL entries.
 - $DATA allows a request to attempt to access any database configured for KEEP access. Access is limited by Domino’s ACL entries. Users can only access databases that grant them access in the ACL.
