@@ -7,26 +7,26 @@ nav_order: 1
 
 ## Quickstart
 
----
+[Download {{ site.version}} ]({{ site.flexnet_url }}).
+{: .alert .alert-info}
 
-> **NOTE**: The Early Access June release only contains a [Docker image](../../installconfig/installation/docker). The installer, as described here, is subject to a later code drop. [Download {{ site.version}} ]({{ site.flexnet_url }}).
+## What's New
 
----
+Here's what's new in {{ site.version }}:
 
-## What's New 
-
-Here's what's new in {{ site.version }}
 - Java based installer that works on all platforms (bugs fixed)
 - Docker container uses Domino 12.0.1 Beta
 - New endpoints
   - bulk/create
   - bulk/update
+  - bulk/delete
   - vcalendar/{calid}/{unid}
 - Updated Postman test
 - Start script fixes
 - vert.x updated to 4.2.0
 - Dependencies updated
 - Reworked KEEP task (no more pipe errors)
+- Updated templates
 
 ## Let's get started
 

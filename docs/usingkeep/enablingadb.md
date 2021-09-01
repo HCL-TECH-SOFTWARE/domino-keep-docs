@@ -14,11 +14,8 @@ Below are some examples to perform additional actions for database, people and a
 
 A group of API requests is known as a collection. Each collection may have subfolders and multiple requests. Request URL or the endpoint is used to identify the link to where the API will communicate with.
 
----
-
-> Note: when using the code snippets provided, replace `$Bearer` with actual Bearer value.
-
----
+**Note**: when using the code snippets provided, replace `$Bearer` with actual Bearer value.
+{: .alert .alert-success}
 
 ### Add a database
 
@@ -26,9 +23,9 @@ To add a database, run the following command. Find the applicable Request URL fr
 
 ![Adddatabase]({{ '/assets/images/adddatabase.png' | relative_url }})
 
-#### Curl code snippet
+#### Curl code snippet 1
 
-```
+```bash
 curl --location --request POST 'localhost:8880/api/v1/admin/database' \
 --header 'Authorization: Bearer $Bearer' \
 --header 'Content-Type: application/json' \
@@ -60,9 +57,9 @@ To list the views, run the following command. Find the applicable Request URL fr
 
 ![ListViews]({{ '/assets/images/listviews.png' | relative_url }})
 
-#### Curl code snippet
+#### Curl code snippet 2
 
-```
+```bash
 curl --location --request GET 'localhost:8880/api/v1/lists?db=demo' \
 --header 'Authorization: Bearer $Bearer' \
 --header 'Accept: application/json'
@@ -74,13 +71,13 @@ Find the applicable Request URL from the OpenAPI Specification document. Execute
 
 ![RetrieveView]({{ '/assets/images/retrieveview.png' | relative_url }})
 
-#### Curl code snippet
+#### Curl code snippet 3
 
 Please replace `$Bearer` with actual Bearer value.
 
 Please replace `{{name}}` with actual name.
 
-```
+```bash
 curl --location -g --request GET 'localhost:8880/api/v1/lists/{{name}}/default?db=demo' \
 --header 'Authorization: Bearer $Bearer' \
 --header 'Content-Type: application/json' \
@@ -93,9 +90,9 @@ To list the agents, run the following command. Find the applicable Request URL f
 
 ![ListAgents]({{ '/assets/images/listagents.png' | relative_url }})
 
-#### Curl code snippet
+#### Curl code snippet 4
 
-```
+```bash
 curl --location --request GET 'localhost:8880/api/v1/design/agents?db=demo' \
 --header 'Authorization: Bearer $Bearer '
 ```
@@ -106,9 +103,9 @@ To list the forms, run the following command. Find the applicable Request URL fr
 
 ![ListForms]({{ '/assets/images/ListForms.png' | relative_url }})
 
-#### Curl code snippet
+#### Curl code snippet 5
 
-```
+```bash
 curl --location --request GET 'localhost:8880/api/v1/design/forms?db=demo' \
 --header 'Authorization: Bearer $Bearer '
 ```
@@ -127,11 +124,11 @@ The curl command for the above can be found using the symbol.
 
 ![curl symbol]({{ '/assets/images/CreateDocument2.png' | relative_url }})
 
-#### Curl code snippet
+#### Curl code snippet 6
 
 Please replace `$Bearer` with actual Bearer value.
 
-```
+```bash
 curl --location --request POST 'localhost:8880/api/v1/document?db=demo' \
 --header 'Authorization: Bearer $Bearer' \
 --header 'Content-Type: application/json' \
@@ -153,13 +150,13 @@ Find the applicable Request URL from the OpenAPI Specification document.Execute.
 
 ![RetrieveDoc]({{ '/assets/images/retrievedoc.png' | relative_url }})
 
-#### Curl code snippet
+#### Curl code snippet 7
 
 Please replace `$Bearer` with actual Bearer value.
 
 Please replace `{{UNID_0}}` with actual UNID.
 
-```
+```bash
 curl --location -g --request GET 'localhost:8880/api/v1/document/{{UNID_0}}/default?db=demo' \
 --header 'Authorization: Bearer $Bearer' \
 --header 'Content-Type: application/json' \
@@ -172,18 +169,18 @@ To live the available applications, run the following command. Find the applicab
 
 ![ListApplications]({{ '/assets/images/ListApplications.png' | relative_url }})
 
-#### Curl code snippet
+#### Curl code snippet 8
 
-```
+```bash
 curl --location --request GET 'localhost:8880/api/v1/admin/applications/all' \
 --header 'Authorization: Bearer $Bearer ' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-	"appName": "My Second Application",
-	"databasesRequested": [
-		"keepconfig",
-		"demo"
-		]
+   "appName": "My Second Application",
+   "databasesRequested": [
+     "keepconfig",
+     "demo"
+    ]
 }'
 ```
 
@@ -193,17 +190,17 @@ To add an application, run the following command. Find the applicable Request UR
 
 ![AddApplicationPostman]({{ '/assets/images/AddApplicationPostman.png' | relative_url }})
 
-##### Curl code snippet
+##### Curl code snippet 9
 
-```
+```bash
 curl --location --request POST 'localhost:8880/api/v1/admin/application' \
 --header 'Authorization: Bearer $Bearer ' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-	"appName": "My Demo Application",
-	"databasesRequested": [
-		"demo"
-		]
+   "appName": "My Demo Application",
+   "databasesRequested": [
+      "demo"
+    ]
 }'
 ```
 
@@ -213,9 +210,9 @@ To list the available people, run the following command. Find the applicable Req
 
 ![ListPeople]({{ '/assets/images/ListPeople.png' | relative_url }})
 
-#### Curl code snippet
+#### Curl code snippet 10
 
-```
+```bash
 curl --location --request GET 'localhost:8880/api/pim-v1/public/people' \
 --header 'Authorization: Bearer $Bearer' \
 --data-raw ''
@@ -227,9 +224,9 @@ To add a person, run the following commands. Find the applicable Request URL fro
 
 ![AddPersonPostman]({{ '/assets/images/AddPersonPostman.png' | relative_url }})
 
-#### Curl code snippet
+#### Curl code snippet 11
 
-```
+```bash
 curl --location --request POST 'localhost:8880/api/pim-v1/public/person' \
 --header 'Authorization: Bearer $Bearer ' \
 --header 'Content-Type: application/json' \
@@ -267,9 +264,9 @@ To list the available groups, run the following command. Find the applicable Req
 
 ![ListGroups]({{ '/assets/images/ListGroups.png' | relative_url }})
 
-#### Curl code snippet
+#### Curl code snippet 12
 
-```
+```bash
 curl --location --request GET 'localhost:8880/api/pim-v1/public/groups' \
 --header 'Authorization: Bearer $Bearer' \
 --data-raw ''
@@ -281,9 +278,9 @@ To add a group, run the following command. Find the applicable Request URL from 
 
 ![AddGroupPostman]({{ '/assets/images/AddGroupPostman.png' | relative_url }})
 
-#### Curl code snippet
+#### Curl code snippet 13
 
-```
+```bash
 curl --location --request POST 'localhost:8880/api/pim-v1/public/group' \
 --header 'Authorization: Bearer $Bearer' \
 --header 'Content-Type: application/json' \

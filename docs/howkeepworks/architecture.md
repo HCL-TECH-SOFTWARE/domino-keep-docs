@@ -4,20 +4,24 @@ title: Architectural Decisions
 parent: How KEEP Works
 nav_order: 6
 ---
+
+{::options parse_block_html="true" /}
+
 ## Architectural Decisions
 
 "_Architecture represents the significant design decisions that shape a system,
 where significant is measured by cost of change._"
 -- [Grady Booch](https://en.wikipedia.org/wiki/Grady_Booch)
 
-### KEEP objectives
-
+<div class="panel panel-success">
+**KEEP objectives**
+{: .panel-heading}
+<div class="panel-body">
 "_Make Domino development and access available to a broad audience with diverse development backgrounds. Keep the barrier to entry low without sacrificing enterprise and container deployability. Ensure access control through declaration on the server and its databases, relieving end-user applications from that task_"
 
+</div></div>
+
 The following sections provide some insight into the architectural decisions that were made keeping in mind the objectives of KEEP. Listed here are the justifications, alternatives that were considered and the implications. The objective is to help you understand how KEEP was designed and implemented.
-
-
-<hr />
 
 ### 1. API definition
 
@@ -37,11 +41,12 @@ OpenAPI offers the following benefits:
 
 #### Alternatives
 
-We considered but decided against the following APIs: 
+We considered but decided against the following APIs:
+
 - SOAP (outdated)
 - Protocol buffers (backend format, no support in browser despite being donated to Cloud Computing Foundation driven by single vendor, code generation limited to a few languages, poor documentation of proto files)
 - Java RPC (single language only)
-- Websockets (not suitable for backend, no documentation format) 
+- Websockets (not suitable for backend, no documentation format)
 - oDATA (decided to implement that as a database specific option)
 
 #### Implication
@@ -111,7 +116,7 @@ OSGI plugins would limit us to Domino servers. Spring Boot involved a learning c
 
 We can deploy KEEP to Linux (server), Windows (client & server), and Mac (client only) with minimal effort. The vert.x HTTP stack supports HTTP2 and SSL certificates in multiple formats. Using more than one port allows us to fine-tune access, so administrator operations (shutdown, restart) and metrics can be network isolated from regular operations. Vert.x also offers deployment into multiple threads (Workers) and can make use of available cores by deploying extra instances of its unit of work, the verticle.<br />
 
-**Caveat**: Event driven or reactive programming is a new technology and might require some learning for most Java developers. 
+**Caveat**: Event driven or reactive programming is a new technology and might require some learning for most Java developers.
 
 <hr />
 
@@ -125,7 +130,7 @@ KEEP is API only, so any dance that requires user interaction must happen before
 
 #### Alternatives
 
-We also looked at OICD, SAML, and Kerberos. They all require user interaction to authorize access. Since KEEP is API only and has no user interface, the application must authorize access. 
+We also looked at OICD, SAML, and Kerberos. They all require user interaction to authorize access. Since KEEP is API only and has no user interface, the application must authorize access.
 
 #### Implication
 
@@ -173,9 +178,6 @@ To familiarize yourself with KEEP's functionality, you should read the following
 
 - [KEEP Overview](../index)
 - [OpenAPI specification](../../extendingkeep/openapi-spec)
-- [The EventBus](eventbus.md) 
+- [The EventBus](eventbus.md)
 - [The Barbican](barbican.md)
 - [OData](../../tutorial/odata)
-
-
-

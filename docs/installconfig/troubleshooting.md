@@ -26,7 +26,7 @@ ps -eaf | grep launch.class
 kill -9 [pid number]
 ```
 
-#### Database is not fully initialized error
+### Database is not fully initialized error
 
 You get this error when you go to your Notes client and:
 
@@ -37,15 +37,14 @@ The following error is shown:
 
 ![KeepConfigDBError]({{ '/assets/images/KeepConfigError.png' | relative_url }}){: .scale-img-fifty-percent }
 
-**Solution**: Delete the `KeepConfig.nsf` from the Notes data directory and restart the [sample script](../../references/downloads). 
+**Solution**: Delete the `KeepConfig.nsf` from the Notes data directory and restart the [sample script](../../references/downloads).
 
 > e.g. On Mac, the data directory path is `/Users/[userid]/Library/Application Support/HCL Notes Data/`
-
 
 ### User ID and password being requested repeatedly when using Notes for KEEP testing
 
 Sometimes on the initial starting up of KEEP or creation of KeepConfig and KeepAgents databases, or doing things like creating a folder in mail database, you can get prompted for user ID and password repeatedly. This happens if the "Don't prompt for a password" checkbox under User Security is unchecked or if it gets reset based on the organisation's policy.
 
-To fix this, stop your KEEP debugging session, go into Notes, go to the Notes setting under File -> Security -> User Security -> enable "Don't prompt for a password from other Notes-based programs (reduces security)", exit Notes and restart your KEEP debugging session. 
+To fix this, stop your KEEP debugging session, go into Notes, go to the Notes setting under File -> Security -> User Security -> enable "Don't prompt for a password from other Notes-based programs (reduces security)", exit Notes and restart your KEEP debugging session.
 
-This setting can get reset each time you start Notes depending upon your organization's Policy, in which case, you'll need to enable it again. 
+This setting can get reset each time you start Notes depending upon your organization's Policy, in which case, you'll need to enable it again.

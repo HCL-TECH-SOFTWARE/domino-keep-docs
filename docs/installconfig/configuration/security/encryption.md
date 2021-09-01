@@ -78,11 +78,8 @@ The shutdown key, as well as the metrics credential password are stored salted a
 
 KEEP used X509 certificates and a public/private key pair for [SAML](../keepsaml) interaction with the Domino R12 [IDVault](# TODO: link to vault). The management console offers a convenient way to generate those and the needed configuration entries.
 
----
-
-> Note: You need access to the Domino server's file system to collect the keys/cert
-
----
+Note: You need access to the Domino server's file system to collect the keys/cert
+{: .alert .alert-danger}
 
 Enter a certificate name, don't use spaces or special characters, stick to: `0-9,a-z,A-z,-,_`.
 Then enter the `Shutdown key` (masked input) and click on `Create IdP Certificate. 4 things will happen:

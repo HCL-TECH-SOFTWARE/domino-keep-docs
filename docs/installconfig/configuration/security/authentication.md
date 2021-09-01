@@ -6,9 +6,9 @@ grand_parent: Installing & configuring
 nav_order: 1
 ---
 
-## Auth*
+## Auth\*
 
-KEEP offers a built-in endpoint to exchange your Domino credentials for a valid JSON Web Token (JWT). This page describes the setup of external JWT identity providers.
+KEEP offers a built-in endpoint to exchange your Domino credentials for a valid JSON Web Token (JWT). This page describes the setup of **external JWT identity providers** (IdP).
 
 ### JWT Authorization
 
@@ -33,6 +33,9 @@ Should Domino use a permanent JWT Key, we can use a public/private key pair and 
 }
 ```
 
+**Pro tip** The management UI (Port 8889) provides a one click option to create such key pairs and configuration entry stored in `keepconfig.d`
+{: .alert .alert-success}
+
 These keys can be shared between Domino servers, allowing, for example, redirects to a different mail server.
 
 ### External JWT provider
@@ -54,6 +57,9 @@ To enable an external provider, KEEP requires access to the provider’s public 
 ```
 
 It is the responsibility of the administrator to save key files in secure locations.
+
+**Note** We have a ticket in our backlog to support the R12 certmanager feature for enhanced security and ease of cert distribution
+{: .alert .alert-info}
 
 ### JWT Payload
 

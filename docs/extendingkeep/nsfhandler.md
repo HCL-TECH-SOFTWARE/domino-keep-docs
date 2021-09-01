@@ -5,14 +5,16 @@ parent: Extending KEEP
 nav_order: 5
 ---
 
-
 ## NSF Handler
 
 The CORE database handlers can be found in the package `com.hcl.domino.keep.dbrequests` or in its sub-packages.
 
-Handlers extend the [`AsyncDominoJNX`](https://github01.hclpnp.com/stephan-wissel/keep-documentation/blob/master/testapidocs/com/hcl/domino/keep/dbrequests/AsyncDominoJNXTest.html) (or a subclass) that contains the  required code.
+Handlers extend the [`AsyncDominoJNX`](./javadoc/com/hcl/domino/keep/dbrequests/AsyncDominoJNX.html) (or a subclass) that contains the required code. There are two subclasses that can handle most use cases:
 
-The only function which we can implement is `ProcessMethod`
+- [`AsyncDominoJNXJson`](./javadoc/com/hcl/domino/keep/dbrequests/AsyncDominoJNXJson.html) returning one or more instances of JsonObjects
+- [`AsyncDominoJNXBuffer`](./javadoc/com/hcl/domino/keep/dbrequests/AsyncDominoJNXBuffer.html) returning binary data, typically using a [`ResponseSubscriberOutputStream`](./javadoc/com/hcl/domino/keep/eventbus/ResponseSubscriberOutputStream.html)
+
+The only function which we can implement is `process` method
 
 ```Java
 @Override
@@ -21,10 +23,13 @@ The only function which we can implement is `ProcessMethod`
       // Your code goes here
 }
 ```
+
 ### DbRequestParameters
+
 Parameter object that is used to hand over allElements that are needed to execute operations synchronously against a database for a given user.
 
 ### Request
+
 DbRequestParameters granting access to session and database.
 
 Inside the function processPayload 2 methods will send the results back to the EventBus with the incoming request:
@@ -52,18 +57,6 @@ For some of the calls (e.g OData, Inbox, Drafts, All Documents) an existing hand
     dpqr.process(delegate);
 ```
 
-### emit()
+### emit(JsonObject | Buffer)
+
 emit() is used to return results from the database operationIt can be called zero to N times.
-
-
-
-
-
-
-
-
-
-
-
-
-

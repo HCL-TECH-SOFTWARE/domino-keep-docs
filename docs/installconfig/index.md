@@ -20,15 +20,19 @@ All platforms use a Java-based installer except the Docker which uses a Docker i
 The installer requires a series of parameters:
 
 ```bash
-java -jar keepinstaller.jar [-ahnrsV] -d=<dataDir> -i=<notesIni> -k=<keepDir> -p=<programDir>
+[sudo] java -jar keepinstaller.jar [-ahnrsV] -d=<dataDir> -i=<notesIni> -k=<keepDir> -p=<programDir>
 ```
 
-Notes and Domino install a JVM on your computer. You can use it for the installer.
+You can use a response file (see below) to provide the parameters.
+{: .alert .alert-info}
+
+Notes and Domino install a JVM on your computer. You can and should use it for the installer.
+{: .alert .alert-warning}
 
 ### Explanation of parameters
 
 | Short | Full parameter              | Mandatory | Description                                                                        |
-| :---: | --------------------------- | :-------: | -------------------------------------------------------------------------------    |
+| :---: | --------------------------- | :-------: | ---------------------------------------------------------------------------------- |
 | `-d`  | `--dataDir=<dataDir>`       |     ✓     | Directory of your HCL Notes or Domino data                                         |
 | `-i`  | `--ini=<notesIni>`          |     ✓     | HCL Notes/Domino notes.ini file                                                    |
 | `-k`  | `--keepDir=<keepDir>`       |     ✓     | Directory for the KEEP binary installation                                         |
@@ -58,7 +62,7 @@ Notes and Domino install a JVM on your computer. You can use it for the installe
 Instead of providing all parameters on the command line, the KEEP installer can be called using a [response file](https://picocli.info/#AtFiles):
 
 ```bash
-java -jar keepinstaller.jar @responses.txt
+[sudo] java -jar keepinstaller.jar @responses.txt
 ```
 
 The file contains one parameter per line. Lines starting with `#` get ignored. Variables with `\` need to be escaped `\\`:
@@ -77,6 +81,8 @@ The file contains one parameter per line. Lines starting with `#` get ignored. V
 A typical use case for KEEP is to build a web UI with the flavor of the day web development framework like Angular, ReactJS, Swelte etc. These frameworks usually generate a `build` directory with a set of static files.
 
 You can copy that directory to `keepweb.d` in your Domino data directory and KEEP will serve them on the `/keepweb/` URL path. This eliminates the need for [CORS](../usingkeep/keepapplications) configuration.
+
+This is similar to Domino's functionality serving static files from its `domino/html` directory.
 
 ## Configuration & Security
 
