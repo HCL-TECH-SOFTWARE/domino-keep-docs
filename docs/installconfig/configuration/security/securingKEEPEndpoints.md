@@ -28,18 +28,18 @@ We recommend that you keep your configuration changes in the config.d directory 
 
 - Which ports to open and close:
 
-   - You must secure your admin port, 8889 and metrics port, 8890 from the outside world.
+  - You must secure your admin port, 8889 and metrics port, 8890 from the outside world.
 
--  How to handle HTTPS (via proxy or let KEEP handle it):
+- How to handle HTTPS (via proxy or let KEEP handle it):
 
-   - For configuring HTTPS via proxy, see the example under [HTTPS via Proxy](../httpsproxy).
-   - KEEP supports three different types of certificates: PEM, JKS, and PKS.
+  - For configuring HTTPS via proxy, see the example under [HTTPS via Proxy](../httpsproxy).
+  - KEEP supports three different types of certificates: PEM, JKS, and PKS.
 
 - How to handle JWT authentication token:
 
-   - Single server built-in, where each server issues and uses their own JWT token.
-   - Multi-server built-in, where a multi-server environment reacts to the same JWT token.
-   - External identify provider, for example, Active Directory, [Keycloak](https://www.keycloak.org/), etc.
+  - Single server built-in, where each server issues and uses their own JWT token.
+  - Multi-server built-in, where a multi-server environment reacts to the same JWT token.
+  - External identify provider, for example, Active Directory, [Keycloak](https://www.keycloak.org/), etc.
 
 - KEEP can access encrypted resources when Domino's ID vault is deployed and the [KEEP SAML](../keepsaml) configuration is set up correctly.
-   - Details are still being ironed out on how to do this. Will update this as soon as we have a solution.
+  - Details are still being ironed out on how to do this. Will update this as soon as we have a solution.

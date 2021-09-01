@@ -5,10 +5,15 @@ parent: Installing & configuring
 nav_order: 4
 ---
 
+{::options parse_block_html="true" /}
+
 ## Running KEEP with a Docker image
 
-The KEEP Docker image is built on top of an HCL Domino Docker image, inspired by [the open source templates](https://github.com/IBM/domino-docker).
+The KEEP Docker image is built **on top** of an HCL Domino Docker image, inspired by [the open source templates](https://github.com/IBM/domino-docker).
 All configuration options found there can be applied to the KEEP Docker image. You will need to decide if you want to run a standalone server or an additional server in an existing Domino domain.
+
+The KEEP Docker image **contains** a Domino server, you don't need a separate Domino installation. The image is completely self contained. KEEP is a Domino service, using the network free C API. So there is no scenario where a "only KEEP" container would work
+{: .alert .alert-info}
 
 ### Prerequisites
 
@@ -20,6 +25,13 @@ Running KEEP with a Docker image requires the following:
 - A valid Domino server id, when you want to run as additional server in your existing domain.
 - A Docker compose file from our [resources](../../../references/downloads). Select the matching one for either a standalone primary or a secondary server.
 - A `.env` file. Download the `sample.env` from our [resources](../../../references/downloads). You **must rename the file to `.env` and edit** the `.env` file and update your values!
+
+<div class="panel panel-danger">
+**Docker Desktop License**
+{: .panel-heading}
+<div class="panel-body">
+Docker desktop [recently](https://www.theregister.com/2021/08/31/docker_desktop_no_longer_free/) became subject to a [Docker subscription](https://www.docker.com/pricing), make sure you are compliant or use the command line.
+</div></div>
 
 ### Getting Ready
 
@@ -64,7 +76,7 @@ Please also refer to the official [List of One-touch environment variables](http
 | SERVERSETUP_ORG_ORGNAME                 | Stark Industries                                 | YOUR EXSISTING ORG                                                                                                                        |
 | SERVERSETUP_SERVER_DOMAINNAME           | MarvelPhase4                                     | YOUR EXSISTING NOTES DOMAIN                                                                                                               |
 | SERVERSETUP_SERVER_NAME                 | keep-server-01                                   |
-| SERVERSETUP_SERVER_SERVERTASKS          | replica,router,update,amgr,adminp,http,keep      | Refer to the [KEEP task](../../../usingkeep/keeptask) page.                                                                              |
+| SERVERSETUP_SERVER_SERVERTASKS          | replica,router,update,amgr,adminp,http,keep      | Refer to the [KEEP task](../../../usingkeep/keeptask) page.                                                                               |
 
 ## Running KEEP
 
@@ -74,24 +86,24 @@ Start KEEP using `docker-compose` on all supported platforms:
 docker-compose up
 ```
 
----
-
-> **Note:** Start in the directory where the files `server.id` and `docker-compose.yml` are located!
-
----
+**Note:** Start in the directory where the files `server.id` and `docker-compose.yml` are located!
+{: .alert .alert-danger}
 
 The setup can take a few minutes, depending on your hardware and the network speed to your primary server.
 
 ---
 
-> Pro Tip: When you don't have DNS setup, amend your hosts file for name resolution:
->
-> - `/etc/hosts` on Linux or macOS
-> - `C:\Windows\System32\drivers\etc\hosts` on Windows
+<div class="panel panel-success">
+Pro Tip: **DNS Setup**
+{: .panel-heading}
+<div class="panel-body">
 
----
+When you don't have DNS setup, amend your `hosts` file for name resolution:
 
-Note:
+- `/etc/hosts` on Linux or macOS
+- `C:\Windows\System32\drivers\etc\hosts` on Windows
+
+</div></div>
 
 - You can then use Docker desktop to start/stop the container.
 - Use `docker-compose up -d` to run docker in the background.
@@ -118,8 +130,10 @@ docker exec -it $containername /bin/bash
 - KEEP Management should be accessible on `http://$host:8889`.
 - Metrics should be accessible on `http://$host:8890/metrics`.
 
-## Alternate Docker cofiguration
-
+<div class="panel panel-success">
+**Alternate Docker cofiguration**
+{: .panel-heading}
+<div class="panel-body">
 When you run your Domino servers on Linux, you probably use the [Nashcom startup script](https://www.nashcom.de/nshweb/pages/startscript.htm) for Domino.
 On this foundation, the GitHub.com hosted [Domino Docker](https://github.com/IBM/domino-docker) project offers management scripts that allows easy management of your Docker container using a command `domino_container`.
 
@@ -135,3 +149,5 @@ Now you have the command `domino_container` at your disposal:
 - use `domino_container env` for the environment values
 - start Domino and KEEP using `domino_container start`
 - Learn more about the scripts using `domino_container help`
+
+</div></div>

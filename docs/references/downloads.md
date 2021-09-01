@@ -19,6 +19,15 @@ Downloadable assets to get you started.
 - [Docker compose file for additional servers](../../assets/downloads/docker-compose-secondary.yml)
 - [Docker compose sample.env file](../../assets/downloads/sample.env) (rename this to `.env` before use)
 
+### Postman
+
+- [Postman collection](../../assets/downloads/KeepTest.postman_collection.json) to exercise KEEP APIs and its [Sample environment](../../assets/downloads/KeepTest.postman_environment.json).
+- [Domino Admin API Postman collection](../../assets/downloads/KeepAdminTest.postman_collection.json) to exercise KEEP APIs and its [Sample environment](../../assets/downloads/KeepAdminTest.postman_environment.json).
+- [Demo.nsf](../../assets/downloads/Demo.nsf) - Demo database for the Postman and Tutorial examples.
+
+The scripts below are only for reference (and amusement). THey have been superceded by the scripts provided by the installer. So there's no need beyond satifying curiosity to download them.
+{: .alert .alert-danger}
+
 ### Linux
 
 These scripts are designed to work
@@ -38,15 +47,3 @@ with Daniel Nashed's [Domino Startup Script](https://www.nashcom.de/nshweb/pages
 
 - [Command file](../../assets/downloads/windows_run_keep.cmd) to start KEEP on a Windows client.
 - Windows [keep.cmd](../../assets/downloads/keep.cmd) command file to interact with KEEP.
-
-### Postman
-
-- [Postman collection](../../assets/downloads/KeepTest.postman_collection.json) to exercise KEEP APIs and its [Sample environment](../../assets/downloads/KeepTest.postman_environment.json).
-- [Domino Admin API Postman collection](../../assets/downloads/KeepAdminTest.postman_collection.json) to exercise KEEP APIs and its [Sample environment](../../assets/downloads/KeepAdminTest.postman_environment.json).
-- [Demo.nsf](../../assets/downloads/Demo.nsf) - Demo database for the Postman and Tutorial examples.
-
-A few notes:
-
-- Use the latest version, versions change frequently.
-- Windows server support is in the backlog, expect shakiness.
-- Check the start script carefully, adopt them to your needs!

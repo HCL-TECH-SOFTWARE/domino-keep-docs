@@ -18,7 +18,7 @@ KEEP uses certificates for up to three purposes:
 
 For HTTPs traffic we support jks, pem and pfx format for the certificate. For the public/private key pairs, we support RSA and EC. HTTPs certificates need to be accepted by your browser and http tool, so you want to get valid certificates using one of the following approaches:
 
-- Use [Let's Encrypt](https://letsencrypt.org/) with either Domino's cert manager or a proxy (e.g. nginx). 
+- Use [Let's Encrypt](https://letsencrypt.org/) with either Domino's cert manager or a proxy (e.g. nginx).
 - Ask your infrastructure or networking team (if you have one) for valid certificates.
 - Wanting the first two options, create your [own certificates using OpenSSL](https://gist.github.com/fntlnz/cf14feb5a46b2eda428e000157447309). You need to distribute the custom root CA to your users (Let's Encrypt preferred).
 - For public/private key generation (used for JWT), use the KEEP management API/UI and let it generate a public/private key file pair and a certificate.
@@ -39,15 +39,12 @@ Add the following JSON to a file in `keepconfig.d` (extension must be `.json`):
 }
 ```
 
----
-
-> Note: Such a file is automatically created for you when you use the KEEP management API (Port 8889) to create the files.
-
----
+**Note:** Such a file is automatically created for you when you use the KEEP management API (Port 8889) to create the files.
+{: .alert .alert-danger}
 
 ### Configuring certificates for JWT validation
 
-We support PEM formatted keys (RSA/EC) and JWK. Obtain the public key from your IdP provider and add it to a location that general users can't write to. Add a json file to `keepconfig.d`:
+We support PEM formatted keys (RSA/EC). Obtain the public key from your IdP provider and add it to a location that general users can't write to. Add a json file to `keepconfig.d`:
 
 ```json
 {
@@ -63,10 +60,6 @@ We support PEM formatted keys (RSA/EC) and JWK. Obtain the public key from your 
 
 ```
 
-When you have a JWK, the entries look like this:
-
-> TODO JWK entry
-
 ### Configuring a certificate for https
 
 The following entry configures TLS (jks, pem, pfx):
@@ -79,4 +72,4 @@ The following entry configures TLS (jks, pem, pfx):
 }
 ```
 
-We strongly suggest using the Domino certificate option (coming in 1.0.1) or a proxy for https termination.
+We strongly suggest using the Domino certificate option (coming in GA) or a proxy for https termination.

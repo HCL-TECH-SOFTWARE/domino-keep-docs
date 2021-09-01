@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Notes client
+title: Client config
 parent: Installing & configuring
 nav_order: 5
 ---
 
-## Notes client
+## Notes client config
 
 Try the KEEP Open API with a sample demo Notes database with your existing HCL Notes Desktop Client.
 
@@ -33,7 +33,7 @@ KEEP Open API install requires the following:
 
 3. Run either the Windows batch file, or Mac/Linux bash script that was installed by the installer in a terminal.
 
-   - On Mac/Linux, you may have to change file permission in order to execute the script. To do that, issue this command:
+   - On Mac/Linux, you may might have to change file permission in order to execute the script. To do that, issue this command:
 
    > e.g. chmod 755 startkeepmac.sh
 

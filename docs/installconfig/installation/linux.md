@@ -39,6 +39,25 @@ sudo java -jar keepinstaller.jar \
 
 The installer adds the `keep` task to the automatically starting tasks. If opted out using `-n` you can issue `load keep` manually in the Domino console.
 
+### Using a reponse file
+
+Instead of providing all parameters on the command line, the KEEP installer can be called using a [response file](https://picocli.info/#AtFiles):
+
+```bash
+sudo java -jar keepinstaller.jar @responses.txt
+```
+
+The file contains one parameter per line. Lines starting with `#` get ignored. :
+
+```properties
+# Sample of an installer response file
+--dataDir=/local/notesdata
+--ini=/local/notesdata/notes.ini
+--keepDir=/opt/hcl/keep
+--programDir=/opt/hcl/domino/notes/latest/linux
+--accept
+```
+
 Please refer to the [The KEEP Task](../../usingkeep/keeptask) detail page.
 
 ## Verifying the installation
@@ -57,6 +76,7 @@ The installer conducts a series of actions:
 ## File ownership and access rights
 
 On Linux you need to carefully check that your file and directory ownership and access rights are set correctly. The **strongly** recommended conventions are:
+{: .alert .alert-danger}
 
 - User to run the Domino server: `notes`
 - Domino installed in `/opt/hcl/domino` -> owned by `root`

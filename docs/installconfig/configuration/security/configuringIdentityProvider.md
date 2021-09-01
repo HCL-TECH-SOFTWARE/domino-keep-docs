@@ -24,6 +24,9 @@ KEEP supports identity providers, that can produce JWT access tokens e.g:
 - Auth0
 - [Roll your own](./customIdp)
 
+Check out the [Keycloak](./configuringKeycloak) example configuration
+{: .alert .alert-info}
+
 ### Example JWT
 
 ```bash
@@ -47,7 +50,7 @@ When decoded, this translates to-
 
 - **iss**: "Issuer" - Name of the IdP providing the claim.
 - **sub**: "Subject" - The full qualified X500 expanded Notes name, starting with `CN=`.
-- **scopes**: "Scopes" - Databases and services that the user accesses. See details on [the scopes page](../../../../howkeepworks/scopes).
+- **scope**: "Scopes" - Databases and services that the user accesses. See details on [the scopes page](../../../../howkeepworks/scopes).
 - **iat**: "Issued at" - Epoch time of creation.
 - **exp**: "Expiry" - Epoch time of expiration. Must fit into `maxJwtDuration` number of minutes.
 - **aud**: "Audience" - **MUST** be `Domino` (case-sensitive).

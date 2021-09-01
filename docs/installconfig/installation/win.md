@@ -5,21 +5,12 @@ parent: Installing & configuring
 nav_order: 1
 ---
 
+{::options parse_block_html="true" /}
+
 ## Windows installation
 
 KEEP is supported for installation on Windows for use with a HCL Notes client **or** a HCL Domino server, but not both. (Should you install both, you are on your own.)
-
-### Preparation
-
-Before you install KEEP, set the respective environment parameters:
-
-There are two system environment variables that need to be set.
-These can be accessed on Windows 10 by going to `Control Panel > System > Advanced system settings > Environment Variables....`
-
-You may be able to access the "Advanced system settings" dialog by just typing "Environment Variables" in the search bar in Windows.
-
-1. In the "User variables" section at the top, click New... and add a variable `DYLD_LIBRARY_PATH` with the value of the Domino program directory, e.g. `C:\Program Files\HCL\Domino` or `C:\Program Files (x86)\HCL\Notes`.
-2. In "System variables" at the bottom, double-click the "Path" variable and add a new entry pointing to the Domino program directory.
+{: .alert .alert-info}
 
 ### Server installation
 
@@ -33,7 +24,6 @@ java -jar keepinstaller.jar ^
  -p="C:\Program Files\HCL\Domino" ^
  -a
 ```
-
 
 ### All parameters
 
@@ -66,7 +56,6 @@ The installer conducts a series of actions:
 - copy `keep` into the Domino directory
 - update the `ServerTasks` variable in `notes.ini`, add `keep`
 - add a variable `KeepCmdLine` to the `notes.ini` pointing to `startKEEP.cmd`
-- update the `EXTMGR_ADDINS` variable in the `notes.ini`
 
 #### Server commands
 
@@ -78,11 +67,8 @@ The administrator needs to add the `keep` task to the automatically starting tas
 
 Please refer to the [The KEEP Task](../../usingkeep/keeptask) detail page.
 
----
-
-#### Note 1
-
 Use `tell keep quit` to shut down KEEP. To restart KEEP, use `tell keep restart`.
+{: .alert .alert-warning}
 
 ### Client installation
 
@@ -109,11 +95,16 @@ The installer conducts a series of actions:
 - copy all supporting jar files there
 - create `runKEEP.cmd` in the Keep directory
 
----
+<div class="panel panel-danger">
+**Limitations to client use**
+{: .panel-heading}
+<div class="panel-body">
 
-#### NOTE 2
+- Use is for evaluation only, don't use for production
+- R12 requires Notes client to run and have "Don't prompt for a password from other Notes-based programs" set.
+- You can't use a Notes client while you are running KEEP against your local Notes install.
+- You can't run KEEP while the Notes client is running. You only need Notes client running to boot KEEP.
 
-FIXME: R12 requires Notes client to run and have "Allow external parties to use Notes session".
+![Notes security](../../assets/images/NotesSecurity.png)
 
-You can't use a Notes client while you are running KEEP against your local Notes install.
-You can't run KEEP while the Notes client is running. You only need Notes to boot.
+</div></div>

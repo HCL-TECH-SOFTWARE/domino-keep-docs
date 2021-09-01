@@ -53,6 +53,9 @@ Check the details in [Security Configuration](../../installconfig/configuration/
 
 ### Server based applications
 
+**Note**: This section of KEEP will change. With the possibility to use an OAuth IdP and scope definitions, the application server will be upgraded to an OAuth application compliant registry with id, secret and callback
+{: .alert .alert-danger}
+
 In the Admin Client (or the [Admin API](administrationui.md)), we can define an "application" which consists of:
 
 - AppID, which is the Application ID
