@@ -1,11 +1,13 @@
 ---
 layout: default
-title: OData with Salesforce
+title: Domino data with Salesforce
 parent: Using KEEP
 nav_order: 7
 ---
 
-## Read/Write Domino data with Salesforce
+## Domino data with Salesforce
+
+Domino data can be read/written with Salesforce
 
 ![Salesforce1]({{ '/assets/images/Salesforce1.png' | relative_url }})
 ![Salesforce2]({{ '/assets/images/Salesforce2.png' | relative_url }})
