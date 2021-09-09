@@ -30,11 +30,11 @@ KEEP is designed with extensibity in mind. To extend KEEP, you should be familia
 </dependency>
 ```
 
-`keep.core.version` is here a property mapping to the version of KEEP you wish to use. Using properties means you can easily identify and update the versions of dependencies. All properties are grouped at the top of your pom.xml:
+`keep.core.version` is here a property mapping to the version of KEEP you wish to use. Using properties means you can easily identify and update the versions of dependencies. All properties are grouped at the top of your pom.xml (replace `1.0.38` with the current version):
 
 ```xml
 <properties>
-    <keep.core.version>1.0.0</keep.core.version>
+    <keep.core.version>1.0.38</keep.core.version>
 </properties>
 ```
 
@@ -106,7 +106,7 @@ You need to create an OpenAPI specification for your extensions. [Apicurio](http
 
 ### config.json
 
-You will need to set up your config.json for your extension, which you later store in the `keepconfig.d` directory. For more details, see [configuration](../installconfig/index). An example is:
+You will need to set up your `config/config.json` for your extension, stored in your `src/main/resources` folder (default location for resources in Maven projects). For more details, see [configuration](../installconfig/index). An example is:
 
 ```json
 {
@@ -146,6 +146,10 @@ You will need to set up your config.json for your extension, which you later sto
 - versions: defines a version name for this OpenAPI, marks it active and gives the path to find the jar in .json OpenAPI spec file. E.g. here it would look in `src/main/resources/openapi.exp.v0.json`. Ensuring a version number allows you to make breaking changes and route to different Java classes for each version.
 - verticles: defines a unique name for managing the NSFHandler verticle for this OpenAPI spec. Typically it does not need to be a worker thread and typically the class name to use for the verticle will be "com.hcl.domino.keep.verticles.DominoDefaultVerticle". You then define the tags to look for in the OpenAPI spec and the package in which to look for the NSFHandler classes.
 - RestAPI allows you to merge settings for the WebHandlers. You should not need to override the HttpListener class. But if you do, you can define the class to use here. The "route" defines the path to append to the server and port prior to the paths specified in the OpenAPI spec. A default database can be defined, if no "db" query parameter is passed, then you can manage maximum body size for ContentType as "application/json" and "multipart/form-data" (for files).
+
+### What to implement
+
+When your extension sends JSON on/out the HTTP interface, the only classes you need to implement are the [NSF Handlersc(a.k.a. dbRequest)](nsfhandler). Make sure you read about the security settings using `@Annotations`. When you expect other content, e.g. attachments or Office files or PDF, you will need a [Web Handler](webhandler) too. We took care of most of thee boiler plate, so adding an extension is fast, once you made peace with the KEEP architecture.
 
 ### Running and testing your code
 
