@@ -18,7 +18,6 @@ where significant is measured by cost of change._"
 {: .panel-heading}
 <div class="panel-body">
 "_Make Domino development and access available to a broad audience with diverse development backgrounds. Keep the barrier to entry low without sacrificing enterprise and container deployability. Ensure access control through declaration on the server and its databases, relieving end-user applications from that task_"
-
 </div></div>
 
 The following sections provide some insight into the architectural decisions that were made keeping in mind the objectives of KEEP. Listed here are the justifications, alternatives that were considered and the implications. The objective is to help you understand how KEEP was designed and implemented.
