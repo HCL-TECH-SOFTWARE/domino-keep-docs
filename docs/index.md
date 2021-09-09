@@ -7,17 +7,23 @@ permalink: /
 has_children: true
 ---
 
+{::options parse_block_html="true" /}
+
 # HCL Domino REST API
+
+HCL Domino REST API, a.k.a Domino KEEP, provides a secure REST API access into HCL Domino servers and databases.
+{: .alert .alert-info}
 
 {: .fs-9 }
 {{ site.version }}
 {: .fs-3 }
 
----
-
-> HCL Domino REST API, a.k.a Domino KEEP, provides a secure REST API access into HCL Domino servers and databases.
-
----
+<div class="panel panel-success">
+**KEEP objectives**
+{: .panel-heading}
+<div class="panel-body">
+"_Make Domino development and access available to a broad audience with diverse development backgrounds. Keep the barrier to entry low without sacrificing enterprise and container deployability. Ensure access control through declaration on the server and its databases, relieving end-user applications from that task_"
+</div></div>
 
 ![KEEP API]({{ '/assets/images/svg/DominoKeepAPI.svg' | relative_url }}){: .scale-img-seventy-five-percent }
 
@@ -25,7 +31,12 @@ has_children: true
 
 ---
 
-> Join us for questions, discussions, ideas and feedback over at [OpenNTF's KEEP chat](https://openntf.slack.com/archives/C0232M13WFQ).
+<div class="panel panel-warning">
+**We want to hear from you**
+{: .panel-heading}
+<div class="panel-body">
+Join us for questions, discussions, ideas and feedback over at [OpenNTF's KEEP chat](https://openntf.slack.com/archives/C0232M13WFQ) and/or participate in the [Early release forum](feedback).
+</div></div>
 
 ---
 
@@ -49,11 +60,8 @@ For example, the data in a Domino database that could earlier be viewed only in 
 
 The KEEP APIs are secure and standards-compliant, making them the right choice for your Notes and Domino ecosystem.
 
----
-
-> Much like the architectural keep that fortifies the castle, Domino KEEP adds to the existing functionalities provided by Notes and Domino.
-
----
+Much like the architectural keep that fortifies the castle, Domino KEEP adds to the existing functionalities provided by Notes and Domino.
+{: .alert .alert-info}
 
 KEEP can run on your developer desktop, where you can evaluate it from your Notes client. KEEP is available on Windows (client & server), Linux (server), Docker (server) and macOS (client) as add-on for Notes and Domino 12.0.1 and later.
 
