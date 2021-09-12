@@ -16,13 +16,22 @@ Only one must be reachable by users (humans or servers). Configure your firewall
 
 To be able to securely and efficiently deploy KEEP into a production environment, you must understand how KEEP configuration works. See the [configurating section](../../../index) for a deeper dive.
 
-The KEEP configuration includes the KEEP binary directory, config.d, and environment variables.
+The KEEP configuration includes the KEEP binary directory, `keepconfig.d`, and environment variables.
 
 ![The call hierarchy](../../../assets/images/ActualConfiguration.png)
 
 Examples of the default security settings are here, [security.json](../securityjson) and the default configuration settings are here, [config.json](../configjson). Whenever you do a new KEEP install, these two files and the projectkeep.jar file are overwritten.
 
-We recommend that you keep your configuration changes in the config.d directory so that they persist when you reinstall or update your KEEP version.
+We recommend that you keep your configuration changes in the `config.d` directory so that they persist when you reinstall or update your KEEP version.
+
+### Endpoint auth
+
+- The REST API endpoint (8880) is secured, requiring a valid JWT token for access. This token needs to be obtained from an IdP. For easy configuration Domino can act as this IdP.
+- The metrics endpoint (8890) uses BASIC authentication with the user name set in the configuration variable `metrics/metricsUser` and the salted and encrypted password in the configuration variable `metrics/metricsPassword`. It is strongly recommended to update this values and only share with the metrics owner. The metrics endpoin is read only
+- The management endpoint (8889) uses basic authentication. it can serve multiple users configured in the `managementAPI` key of the configuration.
+
+The credentials for the management endpoint are **deliberatly NOT** retrived from a directory service (Domino or otherwise) to be able to access the management API on failure of individual components (last code standing). Trying to link this API to a directory service would defeat the purpose of the management endpoint.
+{: .alert .alert-danger}
 
 ### Areas of security to assess and implement
 
