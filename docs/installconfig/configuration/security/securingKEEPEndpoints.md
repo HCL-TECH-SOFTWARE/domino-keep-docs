@@ -27,7 +27,7 @@ We recommend that you keep your configuration changes in the `config.d` director
 ### Endpoint auth
 
 - The REST API endpoint (8880) is secured, requiring a valid JWT token for access. This token needs to be obtained from an IdP. For easy configuration Domino can act as this IdP.
-- The metrics endpoint (8890) uses BASIC authentication with the user name set in the configuration variable `metrics/metricsUser` and the salted and encrypted password in the configuration variable `metrics/metricsPassword`. It is strongly recommended to update this values and only share with the metrics owner. The metrics endpoin is read only
+- TThe metrics endpoint (8890) uses BASIC authentication with the user name set in the configuration variable `metrics/metricsUser` and the salted and encrypted password in the configuration variable `metrics/metricsPassword`. It is strongly recommended to update these values and only share with the metrics owner. The metrics endpoint is read only.
 - The management endpoint (8889) uses basic authentication. it can serve multiple users configured in the `managementAPI` key of the configuration.
 
 The credentials for the management endpoint are **deliberatly NOT** retrived from a directory service (Domino or otherwise) to be able to access the management API on failure of individual components (last code standing). Trying to link this API to a directory service would defeat the purpose of the management endpoint.

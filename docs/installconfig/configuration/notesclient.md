@@ -15,7 +15,7 @@ Try the KEEP Open API with a sample demo Notes database with your existing HCL N
 **KEEP on Notes Client**
 {: .panel-heading}
 <div class="panel-body">
-The HCL Domino REST API is designed for use with the HCL Domino server. The ability to deploy it to a Notes client on Windows or macOS is provided for ypur convenience to enable you to evaluate and experiment. You can explore the API without the need to setup a HCL Domino server.
+The HCL Domino REST API is designed for use with the HCL Domino server. The ability to deploy it to a Notes client on Windows or macOS is provided for your convenience- to enable you to evaluate and experiment. You can explore the API without setting up a HCL Domino server.
 
 **It is not supported for any production use!**
 
