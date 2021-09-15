@@ -12,6 +12,9 @@ nav_order: 1
 KEEP is supported for installation on Windows for use with a HCL Notes client **or** a HCL Domino server, but not both. (Should you install both, you are on your own.)
 {: .alert .alert-info}
 
+Installation on a HCL Notes client is for serverless product evaluation. It is not supported for production use!
+{: .alert .alert-danger}
+
 ### Server installation
 
 Run the installer to deploy KEEP for Domino:

@@ -5,9 +5,21 @@ parent: Installing & configuring
 nav_order: 5
 ---
 
+{::options parse_block_html="true" /}
+
 ## Notes client config
 
 Try the KEEP Open API with a sample demo Notes database with your existing HCL Notes Desktop Client.
+
+<div class="panel panel-danger">
+**KEEP on Notes Client**
+{: .panel-heading}
+<div class="panel-body">
+The HCL Domino REST API is designed for use with the HCL Domino server. The ability to deploy it to a Notes client on Windows or macOS is provided for your convenience- to enable you to evaluate and experiment. You can explore the API without setting up a HCL Domino server.
+
+**It is not supported for any production use!**
+
+</div></div>
 
 ### Prerequisites
 
@@ -35,7 +47,7 @@ KEEP Open API install requires the following:
 
    - On Mac/Linux, you may might have to change file permission in order to execute the script. To do that, issue this command:
 
-   > e.g. chmod 755 startkeepmac.sh
+   > e.g. `chmod 755 startkeepmac.sh`
 
    Note: For different versions of Notes, the Notes JRE path in the script may vary. You may need to change the path in the script.
 
@@ -53,14 +65,14 @@ KEEP Open API install requires the following:
 
 Otherwise, see the [Troubleshooting guide]({{ '/docs/installation/troubleshooting' | relative_url }}) for any issues with the installations.
 
-6. KEEP starts and checks for errors. It creates the database `KeepConfig.nsf` which is crucial for its operation.
+KEEP starts and checks for errors. It creates the database `KeepConfig.nsf` which is crucial for its operation.
 
-   The database contains one local user **John Doe** who is deactivated.
+The database contains one local user **John Doe** who is deactivated.
 
-   When you want to run KEEP local on your Mac/PC, you need to activate that user.
+When you want to run KEEP local on your Mac/PC, you need to activate that user.
 
-   The activation button is available in the **Notes client**, under menu `File -> Open -> HCL Notes Applications`. Select `Domino KEEP Configuration` application. If you don't see this listed see the [Troubleshooting guide]({{ '/docs/installation/troubleshooting' | relative_url }}) for any issues with the installations.
+The activation button is available in the **Notes client**, under menu `File -> Open -> HCL Notes Applications`. Select `Domino KEEP Configuration` application. If you don't see this listed see the [Troubleshooting guide]({{ '/docs/installation/troubleshooting' | relative_url }}) for any issues with the installations.
 
-   ![Domino Keep Configuration]({{ '/assets/images/KeepConfigApp.png' | relative_url }}){: .scale-img-seventy-five-percent }
+![Domino Keep Configuration]({{ '/assets/images/KeepConfigApp.png' | relative_url }}){: .scale-img-seventy-five-percent }
 
-   ![John Doe]({{ '/assets/images/JohnDoeConfig.png' | relative_url }}){: .scale-img-seventy-five-percent }
+![John Doe]({{ '/assets/images/JohnDoeConfig.png' | relative_url }}){: .scale-img-seventy-five-percent }

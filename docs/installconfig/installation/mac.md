@@ -5,7 +5,16 @@ parent: Installing & configuring
 nav_order: 2
 ---
 
+{::options parse_block_html="true" /}
+
 ## macOS Installation
+
+<div class="panel panel-danger">
+**KEEP on macOS**
+{: .panel-heading}
+<div class="panel-body">
+The Domino server is not available for macOS, so you can use KEEP only with a Notes client. Notes client support is experimental and not supported for any production use. It is provided to ease evaluation of the Domino REST API and experimentation without the need to configure a Domino server.
+</div></div>
 
 On macOS the installer uses the HCL Notes client to install KEEP. The call to the installer looks like this:
 
