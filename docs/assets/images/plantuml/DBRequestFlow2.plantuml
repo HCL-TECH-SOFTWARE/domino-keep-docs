@@ -16,6 +16,7 @@ card continueAfterCompletedPreflight {
 card executeDominoOperation {
     : secondaryDB;
     note: Used in PIM for Calendars
+    : Access control check;
     : DbRequestParameters;
     : process;
     note: This where the\nactual processing happens\nwith the DbRequestParameters
