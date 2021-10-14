@@ -10,16 +10,18 @@ card  continueWithActualDbFileName {
 }
 card continueAfterCompletedPreflight {
     : Metrics-Timer;
-    : DominoThreadContext;
-    : KeeepJnxSession;
+    #Orange : DominoThreadContext;
+    #Orange : KeeepJnxSession;
 }
-card executeDominoOperation {
+
+card #lemonchiffon executeDominoOperation {
     : secondaryDB;
     note: Used in PIM for Calendars
-    : Access control check;
-    : DbRequestParameters;
-    : process;
+    #Orange : Access control check;
+    #Orange : DbRequestParameters;
+    #Orange : process;
     note: This where the\nactual processing happens\nwith the DbRequestParameters
+    #Red : ... emit(results);
 }
 end
 @enduml
