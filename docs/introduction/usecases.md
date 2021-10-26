@@ -7,7 +7,7 @@ nav_order: 2
 
 # Use cases
 
-KEEP APIs make the data in Notes databases available in a way that it can be used by any application, server, or middleware that speaks http(s). Let's take a look at a few examples.
+Domino REST APIs make the data in Notes databases available in a way that it can be used by any application, server, or middleware that speaks http(s). Let's take a look at a few examples.
 
 ### Web applications
 An engineering company stores the security data sheets of their products in a Notes database. These sheets contain information about the hazards of the products and the necessary safety precautions to take. Using KEEP APIs, all of this information can be made available on a web application, allowing someone who does not have access to a Notes client to view the security data sheets on the web. 
