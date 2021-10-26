@@ -5,7 +5,7 @@ parent: How KEEP Works
 nav_order: 4
 ---
 
-## The Barbican
+## The nice Barbican
 
 > _A [barbican](https://en.wikipedia.org/wiki/Barbican) (from Old French: barbacane) is a fortified outpost or gateway, such as an outer defense of a city or castle, or any tower situated over a gate or bridge which was used for defensive purposes._
 
