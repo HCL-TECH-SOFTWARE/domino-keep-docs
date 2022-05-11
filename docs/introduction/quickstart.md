@@ -7,7 +7,7 @@ nav_order: 1
 
 ## Quickstart
 
-[Download {{ site.version}} ]({{ site.flexnet_url }}).
+[Download {{ site.version}}]({{ site.flexnet_url }}).
 {: .alert .alert-info}
 
 ## What's New
@@ -17,6 +17,7 @@ Here's what's new in {{ site.version }}:
 - Dropped Domino versioning, switched to KEEP's internal version
 - Updated vert.x to 4.3.0
 - Updated all Java dependencies
+- Updated Log4J2 to version 2.17.2
 - Docker container uses Domino 12.0.1IF1
 - Database specific KEEP configurations now stored as design elements in database (thus also editable from Domino designer)
 - reworked configuration format, close to JSON schema

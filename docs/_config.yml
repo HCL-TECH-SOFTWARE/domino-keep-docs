@@ -1,4 +1,5 @@
 # Site settings
+theme: just-the-docs
 remote_theme: Stwissel/just-the-docs
 title: "HCL Domino KEEP"
 description: A modern take on REST interaction with Domino

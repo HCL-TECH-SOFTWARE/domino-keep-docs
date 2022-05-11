@@ -5,16 +5,74 @@ parent: Using KEEP
 nav_order: 2
 ---
 
-## Enabling a database
+## Enabling a Database
 
-If you have a database that you would like to use with KEEP, you'll need to ensure it is on the same Domino server as KEEP and configure it. Follow the tutorial for instructions on how to do it using [AdminUI](../../tutorial/adminui) or [Postman or curl](../../tutorial/postmancurl).
+By default KEEP does not expose databases on HTTPs. Enabling a database for REST access is a two (to three) step process:
+
+![From DB to schema to scope](../../assets/images/KeepAPISteps.png)
+
+1. **Create a KEEP Schema** in the NSF database to be enabled. A database can have one or more KEEP schemas for different access needs. A KEEP schema is stored as JSON file in the database's design file resources. A brave developer could use Domino designer to create or update one. The rest (pun intended) use the API or the "Schema and Scope Management UI" (colloquially known as AdminUI).
+
+2. **Link a schema to a scope** THis link is stored in the directory next to the internet sites and is the responsibility of the administrators. The scope is party of the url that will get used from the outside and hence hard to change later. Therefore a schema can be linked to more than one scope.
+
+3. Optional **Create an OAuth application** When you use KEEP as your IdP, you can create one or more OAuth applications that can access one or more of the defined scopes.
+
+## The KEEP Schema
+
+defines what views, folders, document and agents can be accessed through the KEEP API. Access to documents is controlled by accessing their `Form` item and use the value to lookup access definitions, called `Mode` in KEEP's lingo that define the item names and properties accessible read- or writeable.
+
+Since the exact terminology is long winded and colloquially often no distinction is made between document/item and form/field, the short version is: The KEEP schema controls accesss to forms and fields.
+
+![From DB to schema to scope](../../assets/images/KeepSchemaToApp.png)
+
+While the AdminUI helps to generate a KEEP schema from an exisitng form, there no technical need for a form to be present, other than the possibility to open the Notes document in a Notes client too. Creating such a Schema requires direct post to the API.
+
+### Schema components
+
+**Note** | Please refer to the OpenAPI sspecification running on your server. It is the definite guide for your deployed version.
+{: .alert .alert-danger}
+
+The high level entry contains a few properties and the collection of forms, views and agents made avaiable:
+
+![High Level schema components](../../assets/images/SchemaTopLevel.png)
+
+| Entry                       | Description                                                                              |
+| --------------------------- | ---------------------------------------------------------------------------------------- |
+| **apiName**                 | public name mapped to the schema, a.k.a `scope` or `?dataSource=`                        |
+| **schemaName**              | internal name, matches the JSON file name in Domino design                               |
+| **description**             | visible in AdminUI                                                                       |
+| **filePath**                | path to nsf relative to data directory                                                   |
+| **iconName**                | name of the icon (fixed set) used in the UI. Alternative `icon` can contain a Base64 svg |
+| **isActive**                | Can the API be used now                                                                  |
+| **requireRevisionToUpdate** | Measure to prevent overwrite conflicts                                                   |
+| **allowDecryption**         | WHen also the user hass the permission, decrypt documents                                |
+| **formulaEngine**           | domino (current only option)                                                             |
+| **openAccess**              | true - allow acces when user has $DATA scope, false: require exact scope                 |
+| **allowCode**               | Run supplied external code                                                               |
+| **dqlAccess**               | allow DQL queries                                                                        |
+| **views**                   | collection of available views                                                            |
+| **agents**                  | collection of available agentd                                                           |
+| **forms**                   | collection of available forms                                                            |
+| **formAliases**             | defined aliases to avoid duplicate definitions                                           |
+
+#### Views
+
+#### Agents
+
+#### Forms & Mode
+
+### Form aliases
+
+## Deployment Steps
+
+Follow the tutorial for instructions on how to do it using [AdminUI](../../tutorial/adminui) or [Postman or curl](../../tutorial/postmancurl).
 
 It is worth noting that all the actions that you can do using the Admin UI can also be done using Postman, curl or any similar tool.
 Below are some examples to perform additional actions for database, people and application management, like adding a database, listing views, agents and forms, listing and adding application and listing and adding person.
 
 A group of API requests is known as a collection. Each collection may have subfolders and multiple requests. Request URL or the endpoint is used to identify the link to where the API will communicate with.
 
-**Note**: when using the code snippets provided, replace `$Bearer` with actual Bearer value.
+**Note** | when using the code snippets provided, replace `$Bearer` with actual Bearer value.
 {: .alert .alert-success}
 
 ### Add a database

@@ -1,0 +1,20 @@
+@startjson SchemaTopLevel
+{
+	"apiName": "demo",
+	"schemaName": "demoschema",
+	"description": "Explaining how the API works",
+	"filePath": "samples/explainer.nsf",
+	"iconName": "weather",
+	"isActive": true,
+	"requireRevisionToUpdate": false,
+    "allowDecryption": true,
+    "formulaEngine": "domino",
+	"openAccess": true,
+	"allowCode": false,
+	"dqlAccess": true,
+	"views": [],
+	"agents": [],
+	"forms": [	],
+	"formAliases": {}
+}
+@endjson
