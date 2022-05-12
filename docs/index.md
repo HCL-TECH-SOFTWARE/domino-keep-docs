@@ -1,17 +1,17 @@
 ---
 layout: default
-title: Domino REST API
+title: HCL Domino KEEP
 nav_order: 1
-description: "HCL Domino KEEP"
+description: "HCL Domino KEEP REST API"
 permalink: /
 has_children: true
 ---
 
 {::options parse_block_html="true" /}
 
-# HCL Domino REST API
+# HCL Domino KEEP
 
-HCL Domino REST API, a.k.a Domino KEEP, provides a secure REST API access into HCL Domino servers and databases.
+HCL Domino KEEP, a.k.a Domino REST API, provides a secure REST API access into HCL Domino servers and databases.
 {: .alert .alert-info}
 
 {: .fs-9 }
@@ -40,9 +40,9 @@ Join us for questions, discussions, ideas and feedback over at [OpenNTF's KEEP c
 
 ---
 
-Domino REST API is designed to re-establish Domino as a world class, modern, standards-complaint, cloud native and enterprise-level collaboration platform. It adds contemporary [REST APIs](https://www.redhat.com/en/topics/api/what-is-a-rest-api) to Notes and Domino, enabling a modern programming experience with the tools of your choice.
+Domino REST API is designed to re-establish Domino as a world class, modern, standards-compliant, cloud native and enterprise-level collaboration platform. It adds contemporary [REST APIs](https://www.redhat.com/en/topics/api/what-is-a-rest-api) to Notes and Domino, enabling a modern programming experience with the tools of your choice.
 
-Classic Domino applications are document-oriented and based on an approval model: documents flow through a business lifecyle and are approved at each stage. Domino developers develop a separate user interface for each approval state that is used by the people who perform the actions for that state.
+Classic Domino applications are document-oriented and often based on an approval model: documents flow through a business lifecyle and are approved at each stage. Domino developers develop a separate user interface for each approval state that is used by the people who perform the actions for that state.
 
 KEEP moves access control out of the code and into the configuration. But it means control stays with those who need to support the data, not those who consume the data. KEEP grants granular access for actions like read or write depending on what the document data is and who is viewing it. This approach ensures that the correct person can perform the correct action on the document and its data. Most importantly, it means control over data quality remains with those who need to support the data, not those who provide and consume the data.
 

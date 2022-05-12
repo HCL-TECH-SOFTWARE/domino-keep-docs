@@ -1,32 +1,34 @@
 ---
 layout: default
 title: Quickstart
-parent: Domino REST API
+parent: HCL Domino KEEP
 nav_order: 1
 ---
 
 ## Quickstart
 
-[Download {{ site.version}} ]({{ site.flexnet_url }}).
+[Download {{ site.version}}]({{ site.flexnet_url }}).
 {: .alert .alert-info}
 
 ## What's New
 
 Here's what's new in {{ site.version }}:
 
-- Java based installer that works on all platforms (bugs fixed)
-- Docker container uses Domino 12.0.1 Beta
-- New endpoints
-  - bulk/create
-  - bulk/update
-  - bulk/delete
-  - vcalendar/{calid}/{unid}
-- Updated Postman test
-- Start script fixes
-- vert.x updated to 4.2.0
-- Dependencies updated
-- Reworked KEEP task (no more pipe errors)
-- Updated templates
+- Dropped Domino versioning, switched to KEEP's internal version
+- Updated vert.x to 4.3.0
+- Updated all Java dependencies
+- Updated Log4J2 to version 2.17.2
+- Docker container uses Domino 12.0.1IF1
+- Database specific KEEP configurations now stored as design elements in database (thus also editable from Domino designer)
+- reworked configuration format, close to JSON schema
+- New end point `/listpivot` for server side pivot operations
+- Updated admin UI
+- Consistency enforcement for JSON. Fields defined as multi-value will always return array regardless of note content. Fields defined as single value will never return an array
+- KEEP Schema caters to Names, Readers, Authors
+- OAuth IdP functiionality for KEEP applications
+- extended info in JWT token
+- related multi-value fields can be configured to return combined records
+- updated templates
 
 ## Let's get started
 
@@ -49,7 +51,7 @@ You can use the built-in Swagger API, curl, or the [KEEP Admin UI](../../usingke
 - Similar to the previous one, but from the viewpoint of a [skilled web developer](https://opensource.hcltechsw.com/domino-keep-tutorials/pages/domino-new/index#pre-requisites)
 - Explore on your own using a [Postman collection](../../references/downloads)
 
-![OpenAPI](../assets/images/postman.png)
+![OpenAPI](../../assets/images/postman.png)
 
 The [Postman collection](../../references/downloads) has sample interactions with the local sample `Demo.nsf`, go check it out
 
@@ -65,6 +67,7 @@ Bring up a browser and verify that you can hit these endpoints:
 | [Admin UI](http://localhost:8880/admin/ui)      | 8880  | Login with an admin user. LocalDomainAdmin member                                                                                                                                                                                                                                                                                                                     | ![Admin Login]({{ '/assets/images/AdminLogin.png' | relative_url }}){: .img-zoom %} |
 | [Management API](http://localhost:8889/)        | 8889  | Access to the log and runtime info                                                                                                                                                                                                                                                                                                                                    | ![Server Info]({{ '/assets/images/ServerInfo.png' | relative_url }}){: .img-zoom %} |
 | [Prometheus Metrics](http://localhost:8890/)    | 8890  | Performance info in Prometheus format. Protected with basic authentication (metrics/metrics)                                                                                                                                                                                                                                                                          |
+| [Health check endpoint](http://localhost:8887/) | 8887  | Server healthcheck endpoint as used by Kubernetes or Openshift                                                                                                                                                                                                                                                                                                        |
 | [Auth](http://localhost:8880/api/v1/auth)       | 8880  | The endpoint, `[POST] http/s://${HOST}:8880/api/v1/auth`, is the default end point to exchange Domino web credentials for a JWT access token. For example, use the token in Postman request headers as a Bearer authentication header. You also can use your [own IdP](../../installconfig/configuration/security/configuringIdentityProvider/) to gain access tokens |
 
 ### What's next?

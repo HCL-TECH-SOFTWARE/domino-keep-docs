@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Planning your application
-parent: Domino REST API
-nav_order: 3
+parent: HCL Domino KEEP
+nav_order: 4
 ---
 
 ## Planning your application
