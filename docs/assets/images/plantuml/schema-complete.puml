@@ -12,6 +12,10 @@
 	"openAccess": true,
 	"allowCode": false,
 	"dqlAccess": true,
+    "dqlFormula" : {
+        "formulaType" : "domino",
+        "formula" : "@IsMember(@UserName,[\"DQLUsers\"])"
+    }, 
 	"views": [
         {
             "name": "($All)",

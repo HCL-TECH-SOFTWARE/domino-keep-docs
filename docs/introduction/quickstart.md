@@ -51,7 +51,7 @@ You can use the built-in Swagger API, curl, or the [KEEP Admin UI](../../usingke
 - Similar to the previous one, but from the viewpoint of a [skilled web developer](https://opensource.hcltechsw.com/domino-keep-tutorials/pages/domino-new/index#pre-requisites)
 - Explore on your own using a [Postman collection](../../references/downloads)
 
-![OpenAPI](../../assets/images/postman.png)
+![OpenAPI](../assets/images/postman.png)
 
 The [Postman collection](../../references/downloads) has sample interactions with the local sample `Demo.nsf`, go check it out
 

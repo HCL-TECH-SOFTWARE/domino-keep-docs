@@ -68,7 +68,7 @@ openssl ec -in privatekey.pem -pubout -out publickey.pem
 
 The management UI offers convenience functions for encryption and certificate related activities.
 
-![KEEP Management Console](../../../assets/images/KeepManagementConsole.png)
+![KEEP Management Console](../../assets/images/KeepManagementConsole.png)
 
 ### Hasshing a salted password
 

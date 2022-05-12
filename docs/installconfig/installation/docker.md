@@ -37,7 +37,7 @@ Docker desktop [recently](https://www.theregister.com/2021/08/31/docker_desktop_
 
 A Domino server uses one persistent volume to store its data. This volume also stores log files and the server’s ID file. When you remove the container that volume remains and is reused when you start a new container instance.
 
-![Docker Consumption](../../assets/images/DominoKeepContainers.png)
+![Docker Consumption](../assets/images/DominoKeepContainers.png)
 
 When you want to run multiple servers, create separate volumes for each. DO NOT share volumes between running instances.
 
