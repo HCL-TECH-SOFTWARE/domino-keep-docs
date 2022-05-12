@@ -8,7 +8,7 @@ logo: "/assets/images/svg/HCL_Domino_KEEP_light.svg"
 flexnet_url: "https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/entitledDownloadFile.action?downloadPkgId=HCL_Domino_REST_API_EAP"
 baseurl: "/pages/HCL-Janus/domino-keep-plus-docs/" # the subpath of your site, e.g. /blog
 git_url: "https://opensource.hcltechsw.com/domino-keep-docs" # the base hostname & protocol for your site, e.g. http://example.com
-permalink: pretty
+#permalink: pretty
 exclude:
   [
     "*.gemspec",

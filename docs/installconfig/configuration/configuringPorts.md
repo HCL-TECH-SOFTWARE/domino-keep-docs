@@ -7,7 +7,7 @@ nav_order: 7
 
 ## Configuring ports
 
-![Ports in use]({{ '/assets/images/PortUse.png' | relative_url }})
+![Ports in use](../../assets/images/PortUse.png)
 
 KEEP uses three ports which have different purposes and warrant different access/security settings. By dividing KEEP access across more than one port, an administrator can take advantage of access security provided by the operating system and/or firewall.
 

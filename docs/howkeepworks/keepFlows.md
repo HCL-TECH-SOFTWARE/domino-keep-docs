@@ -15,13 +15,13 @@ To fully understand KEEP, it is helpful to know the main flows, KEEP has three o
 
 ## KEEP Boot
 
-[![Keep Boot](../assets/images/LaunchFlow.png)](../../assets/images/plantuml/LaunchFlow.plantuml)
+[![Keep Boot](../assets/images/LaunchFlow.png)](../assets/images/plantuml/LaunchFlow.plantuml)
 
-[![DBVerticle](../assets/images/DBVerticleFlow.png)](../../assets/images/plantuml/DBVerticleFlow.plantuml)
+[![DBVerticle](../assets/images/DBVerticleFlow.png)](../assets/images/plantuml/DBVerticleFlow.plantuml)
 
 ## Loading of OpenAPI defined routes
 
-[![OpenAPI](../assets/images/HttpLaunchFlow.png)](../../assets/images/plantuml/HttpLaunchFlow.plantuml)
+[![OpenAPI](../assets/images/HttpLaunchFlow.png)](../assets/images/plantuml/HttpLaunchFlow.plantuml)
 
 ## Serving requests on the loaded routes
 
@@ -29,12 +29,12 @@ To fully understand KEEP, it is helpful to know the main flows, KEEP has three o
 
 Request get put on the EventBus after successful acceptance
 
-[![HTTPRequest](../assets/images/HttpRequestFlow.png)](../../assets/images/plantuml/HttpRequestFlow.plantuml)
+[![HTTPRequest](../assets/images/HttpRequestFlow.png)](../assets/images/plantuml/HttpRequestFlow.plantuml)
 
 ### Processing requests from EventBus
 
 Actual database communication happens here
 
-[![DBRequest](../assets/images/DBRequestFlow.png)](../../assets/images/plantuml/DBRequestFlow.plantuml)
+[![DBRequest](../assets/images/DBRequestFlow.png)](../assets/images/plantuml/DBRequestFlow.plantuml)
 
-[![DBRequest2](../assets/images/DBRequestFlow2.png)](../../assets/images/plantuml/DBRequestFlow2.plantuml)
+[![DBRequest2](../assets/images/DBRequestFlow2.png)](../assets/images/plantuml/DBRequestFlow2.plantuml)

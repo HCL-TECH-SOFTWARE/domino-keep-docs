@@ -108,6 +108,6 @@ The installer conducts a series of actions:
 - You can't use a Notes client while you are running KEEP against your local Notes install.
 - You can't run KEEP while the Notes client is running. You only need Notes client running to boot KEEP.
 
-![Notes security](../../assets/images/NotesSecurity.png)
+![Notes security](../assets/images/NotesSecurity.png)
 
 </div></div>
