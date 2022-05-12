@@ -75,7 +75,7 @@ back_to_top_text: "Back to top"
 
 next_page: true
 
-footer_content: "HCL Domino REST API (Domino KEEP)"
+footer_content: "HCL Domino KEEP (REST API)"
 
 # Footer last edited timestamp
 # last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
