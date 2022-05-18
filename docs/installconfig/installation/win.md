@@ -46,7 +46,7 @@ java -jar keepinstaller.jar ^
 
 The installer adds the `keep` task to the automatically starting tasks. If opted out using `-n` you can issue `load keep` manually in the Domino console.
 
-Please refer to the [KEEP task](../../../usingkeep/keeptask) page.
+Please refer to the [KEEP task](../../usingkeep/keeptask) page.
 
 ### Verifying the installation
 
