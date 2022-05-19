@@ -46,7 +46,7 @@ java -jar keepinstaller.jar ^
 
 The installer adds the `keep` task to the automatically starting tasks. If opted out using `-n` you can issue `load keep` manually in the Domino console.
 
-Please refer to the [KEEP task](../../usingkeep/keeptask) page.
+Please refer to [the KEEP task](../../usingkeep/keeptask) page.
 
 ### Verifying the installation
 
@@ -68,7 +68,7 @@ When you issue the console command `sh ta`, you will then see a task for "keep".
 
 The administrator needs to add the `keep` task to the automatically starting tasks or issue `load keep` manually in the Domino console.
 
-Please refer to the [The KEEP Task](../../usingkeep/keeptask) detail page.
+Please refer to the [the KEEP task](../../usingkeep/keeptask) detail page.
 
 Use `tell keep quit` to shut down KEEP. To restart KEEP, use `tell keep restart`.
 {: .alert .alert-warning}
