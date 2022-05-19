@@ -27,7 +27,7 @@ KEEP Open API install requires the following:
 
 - HCL Notes Desktop Client installed
 - KEEP installed using the keepinstaller.jar from flexnet
-- Demo.nsf from the [resources](../../references/downloads)
+- Demo.nsf from the [resources](../../references/downloads.md)
 
 ### Instructions
 
