@@ -78,7 +78,7 @@ KEEP is designed to work with:
 - Application-server-based applications (e.g. [NodeJS](https://loopback.io/), [HCL DX](https://www.hcltechsw.com/dx) , [Spring](https://spring.io/projects/spring-framework), [SpringBoot](https://spring.io/projects/spring-boot), [Vaadin](https://vaadin.com), [Vert.x](https://vertx.io), [Quarkus](https://quarkus.io), [PHP](https://www.php.net/), [Wordpress](https://wordpress.com/) etc).
 - Command Line Interfaces (CLI), starting with but not limited to [curl](references/usertools/curl.md).
 - [OData](https://www.odta.org) aware applications (e.g. SAP, Salesforce, Microsoft Excel, [Tableau](https://help.tableau.com/current/pro/desktop/en-us/examples_odata.htm) etc).
-- LowCode environments like [HCL Volt MX](https://www.hcltechsw.com/volt-mx), [NodeRED](https://wwww.nodered.org) or others.
+- LowCode environments like [HCL Volt MX](https://www.hcltechsw.com/volt-mx), [NodeRED](https://nodered.org/) or others.
 
 ## Domino KEEP features
 
@@ -86,7 +86,7 @@ KEEP is based on industry standards, allows Notes and Domino to be accessed from
 
 ### KEEP is secure
 
-KEEP is secure by default since it inherits all the [security features](installconfig/configuration/security/index.md) of Notes and Domino. All access to the database is authenticated using [JSON Web Token (JWT)](https://www.jwt.io) and [Scopes](installconfig/configuration/security/authentication.md). Identity can be provided using Domino credentials and/or your Enterprise IdP (Identity Provider) like Keycloak or Active Directory. The databases or forms and views that can be accessed are explicitly listed. Security extends to a field level read/write control by [The Barbican](howkeepworks/barbican.md)
+KEEP is secure by default since it inherits all the [security features](installconfig/configuration/security/index.md) of Notes and Domino. All access to the database is authenticated using [JSON Web Token (JWT)](https://jwt.io/) and [Scopes](installconfig/configuration/security/authentication.md). Identity can be provided using Domino credentials and/or your Enterprise IdP (Identity Provider) like Keycloak or Active Directory. The databases or forms and views that can be accessed are explicitly listed. Security extends to a field level read/write control by [The Barbican](howkeepworks/barbican.md)
 
 ### Modern Java API (Java 8++)
 
