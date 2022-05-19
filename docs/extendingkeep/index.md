@@ -15,7 +15,7 @@ KEEP is designed with extensibity in mind. To extend KEEP, you should be familia
 - The OpenAPI **OperationId** is used to identify all actions, based on the package definition in the [config](../installconfig/configuration/security/configjson).
 - HTTP request and database operation are separated by the [EventBus](../howkeepworks/eventbus). This allows to distribute load and/or add additional protocols (e.g. gRPC).
 - We follow a consistent use of [REST syntax](restprinciples.md).
-- We value [Testing](testing/testingindex).
+- We value [Testing](testing/index.md).
 - The application provides metrics.
 
 ![OperationId and packages](../assets/images/RequestClassNames.png)
