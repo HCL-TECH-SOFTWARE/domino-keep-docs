@@ -31,7 +31,7 @@ For basic **JavaScript**, **TypeScript**, and **React** tutorials, I've always l
 
 Udemy is also a good resource for JavaScript / React tutorials, and includes a 6 hour course on ES6: [Udemy](https://hclsoftwarelearning.udemy.com/organization/home/)
 
-I wouldn't spend too much time on **Immer**, but if you want to understand how it works with Redux read the [Intrduction to Immer](https://immerjs.github.io/immer/docs/introduction).
+I wouldn't spend too much time on **Immer**, but if you want to understand how it works with Redux read the [Intrduction to Immer](https://immerjs.github.io/immer/).
 
 The NPM home page is a good spot to find [NPM Documentation](https://docs.npmjs.com/).  There are also dozens of tutorials available.
 
