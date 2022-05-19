@@ -30,7 +30,7 @@ Next under **System variables**, edit the **Path** variable and add a new entry 
 
 ### Run KEEP
 
-1. Get the file "demo.nsf" from the [Downloads](../../references/downloads/) and copy it to your Notes data folder (for example: c:\notes\data).
+1. Get the file "demo.nsf" from the [Downloads](../../references/downloads.md/) and copy it to your Notes data folder (for example: c:\notes\data).
 
 2. Next get the file **windows_run_keep.cmd** from the domino-keep repo [TODO Link](#) and copy it to your new KEEP folder (for example c:\Notes\data\keep)
 
