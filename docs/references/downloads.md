@@ -40,10 +40,16 @@ with Daniel Nashed's [Domino Startup Script](https://www.nashcom.de/nshweb/pages
 
 ### Mac
 
-- [Shell script](../assets/downloads/startkeepmac.sh) to start KEEP on MacOS.
-- Mac [keep](../assets/downloads/keep) shell script to interact with KEEP on the command line.
+- [Shell script](../assets/downloads/macClient.sh) to start KEEP on MacOS.
+- Modify the script and replace all instances in the Shell script before using as follows
+    - programDir with the directory Notes is located in.
+    - dataDir with the directory the Notes Data is located in.
+    - keepDir with the directory Keep is located in.
 
 ### Windows
 
-- [Command file](../assets/downloads/windows_run_keep.cmd) to start KEEP on a Windows client.
-- Windows [keep.cmd](../assets/downloads/keep.cmd) command file to interact with KEEP.
+- [Command file](../assets/downloads/winClient.cmd) to start KEEP on a Windows client.
+-  Modify the script and replace all instances in the Command file before using as follows
+     - programDir with the directory Notes is located in.
+     - dataDir with the directory the Notes Data is located in.
+     - keepDir with the directory Keep is located in.
