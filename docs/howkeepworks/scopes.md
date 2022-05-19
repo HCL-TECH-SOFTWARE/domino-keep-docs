@@ -7,7 +7,7 @@ nav_order: 5
 
 ## Scopes
 
-When a KEEP API access presents its [JWT](https://www.jwt.io) claim, it includes a `scopes` element.
+When a KEEP API access presents its [JWT](https://jwt.io/) claim, it includes a `scopes` element.
 This element determines what resources the API access intends to use.
 
 Scopes are a space-separated lists of values. By default, a user who authenticates with Domino to gain a JWT token has three scope values in the claim:
