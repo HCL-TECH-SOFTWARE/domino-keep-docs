@@ -11,7 +11,13 @@ By default KEEP does not expose databases on HTTPs. Enabling a database for REST
 
 ![From DB to schema to scope](../assets/images/KeepAPISteps.png)
 
-1. **Create a KEEP Schema** in the NSF database to be enabled. A database can have one or more KEEP schemas for different access needs. A KEEP schema is stored as JSON file in the database's design file resources. A brave developer could use Domino designer to create or update one. The rest (pun intended) use the API or the "Schema and Scope Management UI" (colloquially known as AdminUI).
+1. **Create a KEEP Schema** in the NSF database to be enabled. A database can have one or more KEEP schemas for different access needs. A KEEP schema is stored as JSON file in the database's design file resources.
+
+![Domino Designer with KEEP](../assets/images/KeepSchemaFileResource1.png)
+
+![Domino Designer with KEEP](../assets/images/KeepSchemaFileResource2.png)
+
+A brave developer could use Domino designer to create or update one. The rest (pun intended) use the API or the "Schema and Scope Management UI" (colloquially known as AdminUI).
 
 2. **Link a schema to a scope** THis link is stored in the directory next to the internet sites and is the responsibility of the administrators. The scope is party of the url that will get used from the outside and hence hard to change later. Therefore a schema can be linked to more than one scope.
 
@@ -121,6 +127,12 @@ By assigning the fields `Name`, `age` and `fruit` the **fieldGroup** `LostBoys`,
 ![KEEP Fields](../assets/images/SampleJsonFieldGroup.png)
 
 ### Form aliases
+
+The form aliases object allows to specify additional values in the form item to be mapped to the form configuration in the schema. The AdminUI will use form alias information extracted from the database design, but the API is not bound to these settings
+
+### Sample Schema
+
+[![KEEP Fields](../assets/images/SchemaComplete.png)](../assets/images/SchemaComplete.png)
 
 ## Deployment Steps
 
