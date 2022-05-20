@@ -11,7 +11,7 @@ nav_order: 7
 
 KEEP uses three ports which have different purposes and warrant different access/security settings. By dividing KEEP access across more than one port, an administrator can take advantage of access security provided by the operating system and/or firewall.
 
-The ports are specified in `config.json` but can be overwritten using enviroment variables. See the page on [configuration](../security/configjson) for details.
+The ports are specified in `config.json` but can be overwritten using enviroment variables. See the page on [configuration](./security/configjson) for details.
 
 ### Data PORT (8880)
 
@@ -30,5 +30,5 @@ KEEP provides metrics in Prometheus format on Port 8890. When you don't collect 
 
 To make all ports accessible on Port 443, an https proxy server (Ingress on Kubernetes) can be used. This documentation provides two examples:
 
-- [Proxy using multiple sub-domains](../security/httpsproxy)
-- [Proxy using URL path access](../security/httpsproxy2)
+- [Proxy using multiple sub-domains](./security/httpsproxy)
+- [Proxy using URL path access](./security/httpsproxy2)

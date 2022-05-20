@@ -19,12 +19,13 @@ The KEEP Docker image **contains** a Domino server, you don't need a separate Do
 
 Running KEEP with a Docker image requires the following:
 
-- A Docker installation, both **Docker** (for servers) or **Docker Desktop** are suitable. Download and install [Docker desktop](https://docs.docker.com/get-docker/) for your environment (Linux, Windows or macOS).
-- **[Docker Compose](https://docs.docker.com/compose/install/)**. When you install a Docker Desktop version (Windows, macOS), Docker compose is already included. For servers, it is an [additional install](https://docs.docker.com/compose/install/).
-- Login to HCL's instance of [FlexNet](https://hclsoftware.flexnetoperations.com/) using your credentials and download the [KEEP Docker image](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/entitledDownloadFile.action?downloadPkgId=HCL_Domino_REST_API_EAP) as an archive file.
-- A valid Domino server id, when you want to run as additional server in your existing domain.
-- A Docker compose file from our [resources](../../../references/downloads). Select the matching one for either a standalone primary or a secondary server.
-- A `.env` file. Download the `sample.env` from our [resources](../../../references/downloads). You **must rename the file to `.env` and edit** the `.env` file and update your values!
+- **[Docker Desktop](https://docs.docker.com/get-docker/)**. A Docker installation, both **Docker** (for servers) or **Docker Desktop** are suitable. Download and install **Docker Desktop** for your environment (Linux, Windows or macOS).
+- **[Docker Compose](https://docs.docker.com/compose/install/)**. When you install a Docker Desktop version (Windows, macOS), Docker compose is already included. 
+For servers, it is an [additional install](https://docs.docker.com/compose/install/).
+- Login to HCL's instance of **[FlexNet](https://hclsoftware.flexnetoperations.com/)** using your credentials and download the [KEEP Docker image](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/entitledDownloadFile.action?downloadPkgId=HCL_Domino_REST_API_EAP) as an archive file.
+- A valid **Domino server id**, when you want to run as additional server in your existing domain.
+- A **Docker compose file** from our [resources](../../references/downloads). Select the matching one for either a standalone primary or an additional server.
+- A **`.env` file.** Download the `sample.env` from our [resources](../../references/downloads). You **must rename the file to `.env`, update** the `.env` file with your values!
 
 <div class="panel panel-danger">
 **Docker Desktop License**
@@ -37,13 +38,19 @@ Docker desktop [recently](https://www.theregister.com/2021/08/31/docker_desktop_
 
 A Domino server uses one persistent volume to store its data. This volume also stores log files and the server’s ID file. When you remove the container that volume remains and is reused when you start a new container instance.
 
-![Docker Consumption](../assets/images/DominoKeepContainers.png)
+![Docker Consumption](../../assets/images/DominoKeepContainers.png)
 
-When you want to run multiple servers, create separate volumes for each. DO NOT share volumes between running instances.
+---
 
-- Make sure that your server id file is named `server.id`.
-- Rename the compose file you downloaded from [resources](../../../references/downloads) to `docker-compose.yml`.
-- Edit the `.env` file to update your values. You need to replace all values after the equal (`=`) sign.
+**Note** When you want to run multiple servers, create separate volumes for each. DO NOT share volumes between running instances.
+
+---
+
+#### Store the following files in a folder:
+
+- **server id**. Make sure that your server id file is named `server.id`.
+- **docker-compose.yml**. Rename the compose file you downloaded from [resources](../../references/downloads) to `docker-compose.yml`.
+- **.env** . Edit the `.env` file from [resources](../../references/downloads) to update your values. You need to replace all values after the equal (`=`) sign.
 
 You can configure multiple Domino servers in a single compose file. For details, check the [Docker compose](https://docs.docker.com/compose/) documentation. Keep in mind, each server needs its own volume.
 
