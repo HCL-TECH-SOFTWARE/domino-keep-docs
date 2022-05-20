@@ -2,7 +2,7 @@
 layout: default
 title: Troubleshooting
 parent: Installing & configuring
-nav_order: 10
+nav_order: 40
 ---
 
 ## Troubleshooting common errors with the installing and running the KEEP API service

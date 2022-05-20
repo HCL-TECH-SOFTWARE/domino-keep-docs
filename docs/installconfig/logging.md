@@ -2,7 +2,7 @@
 layout: default
 title: Logging
 parent: Installing & configuring
-nav_order: 11
+nav_order: 50
 ---
 
 ## Understanding Logging

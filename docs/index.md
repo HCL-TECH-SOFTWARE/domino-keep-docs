@@ -22,10 +22,10 @@ HCL Domino KEEP, a.k.a Domino REST API, provides a secure REST API access into H
 **KEEP objectives**
 {: .panel-heading}
 <div class="panel-body">
-"_Make Domino development and access available to a broad audience with diverse development backgrounds. Keep the barrier to entry low without sacrificing enterprise and container deployability. Ensure access control through declaration on the server and its databases, relieving end-user applications from that task_"
+"_Make Domino development and access available to a broad audience with diverse development backgrounds. Keep the barrier to entry low without sacrificing enterprise and container deployability. Ensure access control through declaration on the server and its databases, relieving end-user applications from that task_!"
 </div></div>
 
-![KEEP API]({{ '/assets/images/svg/DominoKeepAPI.svg' | relative_url }}){: .scale-img-seventy-five-percent }
+![KEEP API](assets/images/svg/DominoKeepAPI.svg){: .scale-img-seventy-five-percent }
 
 [Get started now]({{ 'introduction/quickstart' | relative_url }}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub]({{ site.github.repository_url }}){: .btn .fs-5 .mb-4 .mb-md-0 } [Download {{ site.version}} ]({{ site.flexnet_url }}){: .btn .fs-5 .mb-4 .mb-md-0 }
 

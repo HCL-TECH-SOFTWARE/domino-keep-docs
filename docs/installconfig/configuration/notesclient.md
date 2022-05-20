@@ -2,7 +2,7 @@
 layout: default
 title: Client config
 parent: Installing & configuring
-nav_order: 5
+nav_order: 10
 ---
 
 {::options parse_block_html="true" /}
