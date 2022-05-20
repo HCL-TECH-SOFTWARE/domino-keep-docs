@@ -17,7 +17,7 @@ Downloadable assets to get you started.
 
 - [Docker compose file for primary server](../assets/downloads/docker-compose-primary.yml)
 - [Docker compose file for additional servers](../assets/downloads/docker-compose-secondary.yml)
-- [Docker compose sample.env file](../assets/downloads/sample.env) (rename this to `.env` before use)
+- [Docker compose `sample.env` file](../assets/downloads/sample.env) (**NOTE:** rename this file to `.env` and update your values before use)
 
 ### Postman
 
@@ -28,7 +28,7 @@ Downloadable assets to get you started.
 The scripts below are only for reference (and amusement). THey have been superceded by the scripts provided by the installer. So there's no need beyond satifying curiosity to download them.
 {: .alert .alert-danger}
 
-### Linux
+<!-- ### Linux
 
 These scripts are designed to work
 with Daniel Nashed's [Domino Startup Script](https://www.nashcom.de/nshweb/pages/startscript.htm).
@@ -36,7 +36,7 @@ with Daniel Nashed's [Domino Startup Script](https://www.nashcom.de/nshweb/pages
 - [Pre Startup Script](../assets/downloads/pre_startup_script)
 - [Post Startup Script](../assets/downloads/post_startup_script)
 - [Pre Shutdown Script](../assets/downloads/pre_shutdown_script)
-- [Post Shutdown Script](../assets/downloads/post_shutdown_script)
+- [Post Shutdown Script](../assets/downloads/post_shutdown_script) -->
 
 ### Mac
 

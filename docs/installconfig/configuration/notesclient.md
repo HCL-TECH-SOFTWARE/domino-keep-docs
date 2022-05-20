@@ -25,9 +25,15 @@ The HCL Domino REST API is designed for use with the HCL Domino server. The abil
 
 KEEP Open API install requires the following:
 
+<<<<<<< HEAD
+- **HCL Notes** Desktop Client installed
+- **KEEP** installed using the keepinstaller.jar from flexnet
+- `Demo.nsf` from the [resources](../../references/downloads)
+=======
 - HCL Notes Desktop Client installed
 - KEEP installed using the keepinstaller.jar from flexnet
 - Demo.nsf from the [resources](../../references/downloads.md)
+>>>>>>> main
 
 ### Instructions
 
@@ -51,7 +57,11 @@ KEEP Open API install requires the following:
 
    Note: For different versions of Notes, the Notes JRE path in the script may vary. You may need to change the path in the script.
 
+<<<<<<< HEAD
+4. You'll be prompted for a password for your notes.id file. Once the script is done, you'll have to stop the running process (kill -9 for Mac/Linux) and restart the script again, see [Troubleshooting guide](../troubleshooting).
+=======
 4. You'll be prompted for a password for your notes.id file. Once the script is done, you'll have to stop the running process (kill -9 for Mac/Linux) and restart the script again, see [Troubleshooting guide]({{ '/installconfig/troubleshooting.md' | relative_url }}).
+>>>>>>> main
 
    Hint: To avoid being prompted for the password each time you start KEEP, check this setting in your HCL Notes Client, under menu `File -> Security -> User Security` and under Security Basics menu in the dialog.
 
@@ -63,7 +73,11 @@ KEEP Open API install requires the following:
         *** Domino KEEP API open for business ***
 ```
 
+<<<<<<< HEAD
+Otherwise, see the [Troubleshooting guide](../troubleshooting) for any issues with the installations.
+=======
 Otherwise, see the [Troubleshooting guide]({{ '/installconfig/troubleshooting.md' | relative_url }}) for any issues with the installations.
+>>>>>>> main
 
 KEEP starts and checks for errors. It creates the database `KeepConfig.nsf` which is crucial for its operation.
 

@@ -56,7 +56,7 @@ Also, in KEEP, we built modern REST APIs that are designed to bring Notes and Do
 
 ![Basic KEEP Diagram]({{'/assets/images/svg/Basic_KEEP_Diagram.svg' | relative_url }})
 
-For example, the data in a Domino database that could earlier be viewed only in a Notes client, can now be viewed on mobile applications as well using the KEEP APIs. Refer to the [use cases](introduction/usecases.md) for more examples.
+For example, the data in a Domino database that could earlier be viewed only in a Notes client, can now be viewed on mobile applications as well using the KEEP APIs. Refer to the [use cases](./introduction/usecases) for more examples.
 
 The KEEP APIs are secure and standards-compliant, making them the right choice for your Notes and Domino ecosystem.
 
@@ -75,7 +75,7 @@ KEEP is designed to work with:
 
 - Desktop applications with direct access to the Domino server, written in any language (e.g. Java, C#, Rust, [Electron](https://www.electronjs.org/), [Jupyter](https://jupyter.org/), [Python](https://www.python.org/) etc).
 - Browser-based applications hosted on KEEP or elsewhere, written in HTML and JavaScript (e.g. [ReactJS](https://reactjs.org/), [VueJS](https://vuejs.org/), [Svelte](https://svelte.dev/), [Angular](https://angular.io/), [VanillaJS](http://vanilla-js.com/) etc).
-- Application-server-based applications (e.g. [NodeJS](https://loopback.io/), [HCL DX](https://www.hcltechsw.com/dx) , [Spring](https://spring.io/projects/spring-framework), [SpringBoot](https://spring.io/projects/spring-boot), [Vaadin](https://vaadin.com), [Vert.x](https://vertx.io), [Quarkus](https://quarkus.io), [PHP](https://www.php.net/), [Wordpress](https://wordpress.com/) etc).
+- Application-server-based applications (e.g. [NodeJS](https://nodejs.org/en/), [HCL DX](https://www.hcltechsw.com/dx) , [Spring](https://spring.io/projects/spring-framework), [SpringBoot](https://spring.io/projects/spring-boot), [Vaadin](https://vaadin.com), [Vert.x](https://vertx.io), [Quarkus](https://quarkus.io), [PHP](https://www.php.net/), [Wordpress](https://wordpress.com/) etc).
 - Command Line Interfaces (CLI), starting with but not limited to [curl](references/usertools/curl.md).
 - [OData](https://www.odta.org) aware applications (e.g. SAP, Salesforce, Microsoft Excel, [Tableau](https://help.tableau.com/current/pro/desktop/en-us/examples_odata.htm) etc).
 - LowCode environments like [HCL Volt MX](https://www.hcltechsw.com/volt-mx), [NodeRED](https://nodered.org/) or others.
@@ -86,7 +86,11 @@ KEEP is based on industry standards, allows Notes and Domino to be accessed from
 
 ### KEEP is secure
 
+<<<<<<< HEAD
+KEEP is secure by default since it inherits all the [security features](./installconfig/configuration/security/index) of Notes and Domino. All access to the database is authenticated using [JSON Web Token (JWT)](https://jwt.io/) and [Scopes](./installconfig/configuration/security/authentication). Identity can be provided using Domino credentials and/or your Enterprise IdP (Identity Provider) like Keycloak or Active Directory. The databases or forms and views that can be accessed are explicitly listed. Security extends to a field level read/write control by [The Barbican](./howkeepworks/barbican)
+=======
 KEEP is secure by default since it inherits all the [security features](installconfig/configuration/security/index.md) of Notes and Domino. All access to the database is authenticated using [JSON Web Token (JWT)](https://jwt.io/) and [Scopes](installconfig/configuration/security/authentication.md). Identity can be provided using Domino credentials and/or your Enterprise IdP (Identity Provider) like Keycloak or Active Directory. The databases or forms and views that can be accessed are explicitly listed. Security extends to a field level read/write control by [The Barbican](howkeepworks/barbican.md)
+>>>>>>> main
 
 ### Modern Java API (Java 8++)
 
@@ -98,11 +102,11 @@ We follow the [API first](https://swagger.io/resources/articles/adopting-an-api-
 
 ### Extensible architecture
 
-KEEP has an [extensible architecture](extendingkeep/index.md) that allows it to serve multiple API versions from a Domino server. We currently support admin, core, CI/CD and PIM APIs but KEEP can be extended to add more APIs.
+KEEP has an [extensible architecture](./extendingkeep/index) that allows it to serve multiple API versions from a Domino server. We currently support admin, core, CI/CD and PIM APIs but KEEP can be extended to add more APIs.
 
 ### Web admin GUI
 
-We provide a Web [Admin UI](usingkeep/administrationui) that facilitates admin actions.
+We provide a Web [Admin UI](./usingkeep/administrationui) that facilitates admin actions.
 
 ### Design, admin and data
 

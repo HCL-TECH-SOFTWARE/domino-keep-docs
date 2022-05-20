@@ -11,7 +11,7 @@ This tutorial is designed to familiarize KEEP administrators and Notes or Web de
 
 ---
 
-> **Note** KEEP must be [installed](../installconfig/index) and running.
+**Note** KEEP must be [installed](../installconfig/index) and running.
 
 ---
 
