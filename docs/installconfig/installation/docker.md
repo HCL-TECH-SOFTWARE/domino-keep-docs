@@ -83,7 +83,7 @@ Please also refer to the official [List of One-touch environment variables](http
 | SERVERSETUP_ORG_ORGNAME                 | Stark Industries                                 | YOUR EXSISTING ORG                                                                                                                        |
 | SERVERSETUP_SERVER_DOMAINNAME           | MarvelPhase4                                     | YOUR EXSISTING NOTES DOMAIN                                                                                                               |
 | SERVERSETUP_SERVER_NAME                 | keep-server-01                                   |
-| SERVERSETUP_SERVER_SERVERTASKS          | replica,router,update,amgr,adminp,http,keep      | Refer to the [KEEP task](../../../usingkeep/keeptask) page.                                                                               |
+| SERVERSETUP_SERVER_SERVERTASKS          | replica,router,update,amgr,adminp,http,keep      | Refer to the [KEEP task](../../usingkeep/keeptask) page.                                                                               |
 
 ## Running KEEP
 
