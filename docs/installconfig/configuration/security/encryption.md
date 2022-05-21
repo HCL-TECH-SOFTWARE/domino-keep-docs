@@ -14,7 +14,7 @@ There are three areas in KEEP where encryption keys are needed:
 - JSON Web Token (JWT) signing
 - ID vault signing requests
 
-This page documents the creation of those keys. Check the [security](../security.html) page for configuration details.
+This page documents the creation of those keys. Check the [security](./index) page for configuration details.
 
 ## HTTPs certificates for KEEP ports
 
@@ -37,7 +37,7 @@ Again: **It's generally better to use [LetsEncrypt](https://letsencrypt.org/)**.
 
 KEEP uses JWT for authentication. When you get started with KEEP, you probably log in with a Domino user name and password. KEEP, out of the box, uses an ephidermal symmetric encryption key to sign requests. Since you can't see the key or share it, this configuration is reasonably secure. When you restart KEEP, a new key is used.
 
-To use a key that can be deployed to an external identity provider (IdP) or used to send requests to the Domino ID vault service, you must generate a public/private key pair and configure the [security](../security.html) settings. Never share the private key!
+To use a key that can be deployed to an external identity provider (IdP) or used to send requests to the Domino ID vault service, you must generate a public/private key pair and configure the [security](./index) settings. Never share the private key!
 
 Use the [OpenSSL](https://www.openssl.org/) tool to generate a key. The key is an [RSA](<https://en.wikipedia.org/wiki/RSA_(cryptosystem)>) key:
 
@@ -57,7 +57,7 @@ The parameter `-name secp521r1` defines the **ES512** encryption algorithm. Don'
 
 ## Encryption key to sign ID vault requests
 
-The required key is an ES512 elliptic-curve as described above. Keep the private key safe and configure it in [security](../security.html). The public key must be imported into the ID vault. Check the documentation there.
+The required key is an ES512 elliptic-curve as described above. Keep the private key safe and configure it in [security](./index). The public key must be imported into the ID vault. Check the documentation there.
 
 ```bash
 openssl ecparam -genkey -name secp521r1 -noout -out privatekey.pem
@@ -68,7 +68,7 @@ openssl ec -in privatekey.pem -pubout -out publickey.pem
 
 The management UI offers convenience functions for encryption and certificate related activities.
 
-![KEEP Management Console](../../assets/images/KeepManagementConsole.png)
+![KEEP Management Console](../../../assets/images/KeepManagementConsole.png)
 
 ### Hasshing a salted password
 
@@ -76,7 +76,7 @@ The shutdown key, as well as the metrics credential password are stored salted a
 
 ### Generate keys and certificates for SAML and JWT
 
-KEEP used X509 certificates and a public/private key pair for [SAML](../keepsaml) interaction with the Domino R12 [IDVault](# TODO: link to vault). The management console offers a convenient way to generate those and the needed configuration entries.
+KEEP used X509 certificates and a public/private key pair for [SAML](./keepsaml) interaction with the Domino R12 [IDVault](# TODO: link to vault). The management console offers a convenient way to generate those and the needed configuration entries.
 
 Note: You need access to the Domino server's file system to collect the keys/cert
 {: .alert .alert-danger}
