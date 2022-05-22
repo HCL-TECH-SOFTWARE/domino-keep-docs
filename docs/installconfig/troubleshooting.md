@@ -13,7 +13,7 @@ If Domino is not up and running, follow the steps for [Troubleshooting one-touch
 
 ### Address already in use error
 
-You get this error when you run the [sample script](../../references/downloads) with the sample Notes database:
+You get this error when you run the [sample script](../references/downloads) with the sample Notes database:
 
 > 2021-01-28 15:39:07 ERROR Launch:707 - Management server failed to launch on 0.0.0.0:8889  
 > 2021-01-28 15:39:07 ERROR Launch:258 - Fatal  
@@ -37,7 +37,7 @@ The following error is shown:
 
 ![KeepConfigDBError]({{ '/assets/images/KeepConfigError.png' | relative_url }}){: .scale-img-fifty-percent }
 
-**Solution**: Delete the `KeepConfig.nsf` from the Notes data directory and restart the [sample script](../../references/downloads).
+**Solution**: Delete the `KeepConfig.nsf` from the Notes data directory and restart the [sample script](../references/downloads).
 
 > e.g. On Mac, the data directory path is `/Users/[userid]/Library/Application Support/HCL Notes Data/`
 

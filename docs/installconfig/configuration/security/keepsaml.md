@@ -93,7 +93,7 @@ Add or remove administrators who can access vault.
 ![Administrator](../../../assets/images/SAML-Administrator.png)
 
 You can also add or remove organizations.
-![Organization](../../assets/images/SAML-Organization.png)
+![Organization](../../../assets/images/SAML-Organization.png)
 
 You can specify who is authorized to reset passwords.
 ![Password Reset](../../../assets/images/SAML-PasswordReset.png)
