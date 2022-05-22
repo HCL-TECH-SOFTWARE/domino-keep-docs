@@ -10,7 +10,7 @@ nav_order: 9
 
 When the installation requires limiting to a single Domain, routing needs to be configured on a path basis.
 Again, Domino would run on port 81, but this version uses path settings instead of subdomains. When you prefer to use subdomains,
-check [these instructions](httpsproxy.md) instead.
+check [these instructions](./httpsproxy) instead.
 
 The path assignment looks like this:
 
@@ -130,4 +130,4 @@ The resulting system layout looks as follows. KEEP can also be installed togethe
 
 ![Proxy system diagram]({{ '/assets/images/ProxySetup.png' | relative_url }})
 
-As you can see, the flow is the same as [multi-subdomain flow](httpsproxy.md). The key is the nginx configuration.
+As you can see, the flow is the same as [multi-subdomain flow](./httpsproxy). The key is the nginx configuration.

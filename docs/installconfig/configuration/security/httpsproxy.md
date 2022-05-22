@@ -18,7 +18,7 @@ Domino's own http runs on Port 81 and https is handled by the nginx proxy. The p
 - domino.someserver.keep - access to Domino
 - quatto.someserver.keep - access to an application
 
-Alternatively, the proxy can be configured to use a single Domain and [use location routing](../httpsproxy2) to achive the same result.
+Alternatively, the proxy can be configured to use a single Domain and [use location routing](./httpsproxy2) to achive the same result.
 
 We start with a Port 80 configuration and then let [CertBot](https://certbot.eff.org/) handle the SSL configuration thereafter.
 
@@ -121,4 +121,4 @@ The resulting system layout looks as follows. KEEP can also be installed togethe
 
 ![Proxy system diagram]({{ '/assets/images/ProxySetup.png' | relative_url }})
 
-The flow is the same as [single domain flow](../httpsproxy2). The key is the nginx configuration.
+The flow is the same as [single domain flow](./httpsproxy2). The key is the nginx configuration.
