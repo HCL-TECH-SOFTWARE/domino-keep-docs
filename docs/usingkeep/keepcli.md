@@ -100,13 +100,13 @@ apipath=api/v1
 execute_http $@
 ```
 
-#### Using the CLI
+## Using the CLI
 
 First you need to login, call: `keep login`.
 Thereafter use "keep HTTPKEYWORD urlpath" e.g. `keep get databases` or `keep pim get inbox` to access the API.
 For the http keywords `POST`, `PUT` and `PATCH` you must provide the `Content-Type` header and a body - see `man curl` for details
 
-#### Windows version - keeplogin.cmd
+## Windows version - keeplogin.cmd
 
 ```bash
 :: # KEEPLOGIN
@@ -128,7 +128,7 @@ echo %server% > %TEMP%\keepserver.txt
 exit /B
 ```
 
-#### keep.cmd
+## keep.cmd
 
 ```bash
 :: # KEEP
@@ -162,7 +162,7 @@ if %ERRORLEVEL% EQU 0 (
 echo Command "%httpcommand% %urlpath%" failed!  (check %TEMP%\keepcurl.log for details)
 ```
 
-#### keeppim.cmd
+## keeppim.cmd
 
 ```bash
 :: # KEEPPIM
@@ -197,6 +197,6 @@ if %ERRORLEVEL% EQU 0 (
 
 echo Command "%httpcommand% %urlpath%" failed!  (check %TEMP%\keepcurl.log for details)
 
-
-
 ```
+
+YMMV
