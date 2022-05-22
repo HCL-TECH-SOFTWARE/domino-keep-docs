@@ -2,7 +2,7 @@
 layout: default
 title: Configuring ports
 parent: Installing & configuring
-nav_order: 7
+nav_order: 11
 ---
 
 ## Configuring ports

@@ -9,7 +9,7 @@ nav_order: 4
 
 ## Running KEEP with a Docker image
 
-The KEEP Docker image is built **on top** of an HCL Domino Docker image, inspired by [the open source templates](https://github.com/IBM/domino-docker).
+The KEEP Docker image is built **on top of an HCL Domino Docker image**, inspired by [the open source templates](https://github.com/IBM/domino-docker).
 All configuration options found there can be applied to the KEEP Docker image. You will need to decide if you want to run a standalone server or an additional server in an existing Domino domain.
 
 The KEEP Docker image **contains** a Domino server, you don't need a separate Domino installation. The image is completely self contained. KEEP is a Domino service, using the network free C API. So there is no scenario where a "only KEEP" container would work

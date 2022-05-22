@@ -150,7 +150,7 @@
   "disableDominoLogin": false,
   "disableJwtExpiryCheck": false,
   "JwtAlgorithm": "RSA",
-  "JwtIssuer": "Domino Keep RANDOM",
+  "JwtIssuer": "Project KEEP RANDOM",
   "JwtDuration": 60,
   "maxJwtDuration": 360,
   "JwtPrivateKey": "***",
@@ -222,7 +222,7 @@
   "PEMCert": "***",
   "PEMKey": "***",
   "Keep Properties": {
-    "keep-name": "Domino Keep API",
+    "keep-name": "Project KEEP API",
     "keep-desc": "Next generation APIs for HCL Domino",
     "keep-version": "0.9.20-SNAPSHOT",
     "keep-vendor": "HCL Labs"

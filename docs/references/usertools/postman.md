@@ -22,7 +22,7 @@ After Postman is up and running, it needs to be configured to run the KEEP APIs.
 
 1. Click the **Import** button in the upper left, followed by **Choose Files**.
 
-2. To access the resources, click [downloads](../../downloads) to view the collections information. 
+2. To access the resources, click [downloads](../../downloads) to view the collections information.
 
 #### Environments
 
@@ -38,7 +38,7 @@ After Postman is up and running, it needs to be configured to run the KEEP APIs.
 
 Nearly all the KEEP APIs fail if your login credentials are not authenticated. Logging with valid authentication is the first step. There are a couple of approaches:
 
-1. Expand **Domino KEEP API \ authentication** in the left nav.
+1. Expand **Project KEEP API \ authentication** in the left nav.
 
 2. Select **Admin Login** and open up the Body section. You will see this:
 
