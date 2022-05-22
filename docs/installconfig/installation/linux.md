@@ -58,7 +58,7 @@ The file contains one parameter per line. Lines starting with `#` get ignored. :
 --accept
 ```
 
-Please refer to the [The KEEP Task](../../usingkeep/keeptask.md) detail page.
+Please refer to the [the KEEP task](../../usingkeep/keeptask) detail page.
 
 ## Verifying the installation
 
