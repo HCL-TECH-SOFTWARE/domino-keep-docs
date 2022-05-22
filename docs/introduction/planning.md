@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Planning your application
-parent: HCL Domino KEEP
+parent: HCL Project KEEP
 nav_order: 4
 ---
 

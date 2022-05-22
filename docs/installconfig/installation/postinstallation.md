@@ -7,6 +7,8 @@ nav_order: 6
 
 # Post installation tasks
 
+// TODO: [PJAN-1310] Make this shine
+
 ## securing ports
 
 ## enable database

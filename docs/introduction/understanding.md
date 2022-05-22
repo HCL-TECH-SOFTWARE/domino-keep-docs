@@ -1,11 +1,11 @@
 ---
 layout: default
 title: Understanding KEEP
-parent: HCL Domino KEEP
+parent: HCL Project KEEP
 nav_order: 2
 ---
 
-# Understanding Domino KEEP
+# Understanding Project KEEP
 
 KEEP is the middleware connecting Notes & Domino to a contemporary REST like API consuming and producing mostly JSON data. Each element has its own set op properties, you might call them quirks, that required considerations and decisions. After all, designing functionality is balancing tradeoffs between competing approaches
 

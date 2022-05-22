@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Use cases
-parent: HCL Domino KEEP
+parent: HCL Project KEEP
 nav_order: 3
 ---
 

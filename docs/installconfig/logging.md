@@ -7,7 +7,7 @@ nav_order: 50
 
 ## Understanding Logging
 
-Domino KEEP uses the Apache [Log4J2](https://logging.apache.org/log4j/2.x/) logging framework. We configued it with reasonable defaults in the `log4j2.properties` file. It uses output to console and a logging file. The content looks like this:
+Project KEEP uses the Apache [Log4J2](https://logging.apache.org/log4j/2.x/) logging framework. We configued it with reasonable defaults in the `log4j2.properties` file. It uses output to console and a logging file. The content looks like this:
 
 ```properties
 # Root logger option
@@ -89,23 +89,23 @@ logger.keep.appenderRef.stdout.ref=STDOUT
 
 Depending on your interest, you can specify alternete log levels for Java packages. Potential package of interest (there are more) are listed below. Packages always include sub-packages unless they have their own specification.
 
-| Package                       | Description                                                         |
-| ----------------------------- | ------------------------------------------------------------------- |
-| com.hcl.domino                | All of HCL's Domino interaction including DominoJNX and Domino KEEP |
-| com.hcl.domino.data           | DominoJNX data interactions                                         |
-| com.hcl.domino.dql            | DominoJNX DQL access                                                |
-| com.hcl.domino.security       | DominoJNX ACL & ECL                                                 |
-| com.hcl.domino.calendar       | DominoJNX Calendar API                                              |
-| com.hcl.domino.keep           | All Domino KEEP interactions                                        |
-| com.hcl.domino.keep.verticles | Domino KEEP vert.x verticles                                        |
-| com.hcl.domino.keep.dbrequest | Domino KEEP database interactions                                   |
-| com.hcl.domino.keep.handlers  | Domino KEEP http interactions                                       |
-| com.hcl.domino.keep.security  | Domino KEEP ACL & ECL                                               |
-| io.vertx.core                 | vert.x foundation classes                                           |
-| io.vertx.core.eventbus        | vert.x EventBus interactions                                        |
-| io.vertx.core.http            | vert.x HTTP basic operations                                        |
-| io.vertx.ext.web              | vert.x Web server functionality                                     |
-| io.vertx.ext.web.openapi      | vert.x OpenAPI support                                              |
+| Package                       | Description                                                          |
+| ----------------------------- | -------------------------------------------------------------------- |
+| com.hcl.domino                | All of HCL's Domino interaction including DominoJNX and Project KEEP |
+| com.hcl.domino.data           | DominoJNX data interactions                                          |
+| com.hcl.domino.dql            | DominoJNX DQL access                                                 |
+| com.hcl.domino.security       | DominoJNX ACL & ECL                                                  |
+| com.hcl.domino.calendar       | DominoJNX Calendar API                                               |
+| com.hcl.domino.keep           | All Project KEEP interactions                                        |
+| com.hcl.domino.keep.verticles | Project KEEP vert.x verticles                                        |
+| com.hcl.domino.keep.dbrequest | Project KEEP database interactions                                   |
+| com.hcl.domino.keep.handlers  | Project KEEP http interactions                                       |
+| com.hcl.domino.keep.security  | Project KEEP ACL & ECL                                               |
+| io.vertx.core                 | vert.x foundation classes                                            |
+| io.vertx.core.eventbus        | vert.x EventBus interactions                                         |
+| io.vertx.core.http            | vert.x HTTP basic operations                                         |
+| io.vertx.ext.web              | vert.x Web server functionality                                      |
+| io.vertx.ext.web.openapi      | vert.x OpenAPI support                                               |
 
 ## Logger destinations
 

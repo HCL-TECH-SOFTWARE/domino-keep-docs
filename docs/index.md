@@ -1,17 +1,17 @@
 ---
 layout: default
-title: HCL Domino KEEP
+title: HCL Project KEEP
 nav_order: 1
-description: "HCL Domino KEEP REST API"
+description: "HCL Project KEEP REST API"
 permalink: /
 has_children: true
 ---
 
 {::options parse_block_html="true" /}
 
-# HCL Domino KEEP
+# HCL Project KEEP
 
-HCL Domino KEEP, a.k.a Domino REST API, provides a secure REST API access into HCL Domino servers and databases.
+HCL Project KEEP, a.k.a Domino REST API, provides a secure REST API access into HCL Domino servers and databases.
 {: .alert .alert-info}
 
 {: .fs-9 }
@@ -60,7 +60,7 @@ For example, the data in a Domino database that could earlier be viewed only in 
 
 The KEEP APIs are secure and standards-compliant, making them the right choice for your Notes and Domino ecosystem.
 
-Much like the architectural keep that fortifies the castle, Domino KEEP adds to the existing functionalities provided by Notes and Domino.
+Much like the architectural keep that fortifies the castle, Project KEEP adds to the existing functionalities provided by Notes and Domino.
 {: .alert .alert-info}
 
 KEEP can run on your developer desktop, where you can evaluate it from your Notes client. KEEP is available on Windows (client & server), Linux (server), Docker (server) and macOS (client) as add-on for Notes and Domino 12.0.1 and later.
@@ -80,7 +80,7 @@ KEEP is designed to work with:
 - [OData](https://www.odta.org) aware applications (e.g. SAP, Salesforce, Microsoft Excel, [Tableau](https://help.tableau.com/current/pro/desktop/en-us/examples_odata.htm) etc).
 - LowCode environments like [HCL Volt MX](https://www.hcltechsw.com/volt-mx), [NodeRED](https://nodered.org/) or others.
 
-## Domino KEEP features
+## Project KEEP features
 
 KEEP is based on industry standards, allows Notes and Domino to be accessed from other platforms, follows standard APIs, is extendable and uses the Notes and Domino security model. KEEP also puts the power in the hands of the developer to work using their preferred programming language.
 
@@ -90,7 +90,7 @@ KEEP is secure by default since it inherits all the [security features](installc
 
 ### Modern Java API (Java 8++)
 
-Domino KEEP uses redesigned Java APIs named Domino JNX (Domino Java Next), which follow industry standards and best practices.
+Project KEEP uses redesigned Java APIs named Domino JNX (Domino Java Next), which follow industry standards and best practices.
 
 ### Public API based on OpenAPI 3.0
 
