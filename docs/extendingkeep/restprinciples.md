@@ -93,7 +93,7 @@ within the context of the specific package. The other key piece of information f
 
 **Pattern**:  `Package`.*O*perationId
 
-The [configuration](../../installconfig/index) defines where to find the package.
+The [configuration](../installconfig/index) defines where to find the package.
 
 **WebHandler**: Note the version mapping to this OpenAPI file in "versions" parameter in the config. Look under the "RestAPI.versions" parameter for this version.and look for the "package" parameter. If there is no class with the operationId in that package, the class in the "defaultClass" parameter will be used. Example: `getAnswerToAllQuestions`, package set as `com.hcl.domino.keep.handlers.experimentalv0` -> com.hcl.domino.keep.handlers.**experimentalv0**.**GetAnswerToAllQuestions**.
 
