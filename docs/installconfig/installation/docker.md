@@ -54,7 +54,7 @@ A Domino server uses one persistent volume to store its data. This volume also s
 
 You can configure multiple Domino servers in a single compose file. For details, check the [Docker compose](https://docs.docker.com/compose/) documentation. Keep in mind, each server needs its own volume.
 
-Load the docker image that you've downloaded from [prerequisites](#prerequisites) above:
+Load the docker image that you've downloaded from [prerequisites](#prerequisites) above. Make sure you [unzip the tar.gz file](https://linuxize.com/post/how-to-extract-unzip-tar-gz-file/) first. :
 
 ```bash
 docker load -i [name_of_tar_file].tar
