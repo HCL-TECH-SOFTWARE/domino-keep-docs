@@ -96,7 +96,7 @@ When you have a valid SSL cert, you also might need
 
 6. When you wish to start debugging, select **Run** \ **Debug Configurations...** from the top menu. Make sure your KEEP Debug configuration is selected (**KEEP Server** in this example), and press **Debug** to begin debugging. If you've done everything correctly you should see **Project KEEP API open for business** at the bottom of the console window.
 
-**Note** There is a separate setting for debugging [a KEEP server in a container](../../../installconfig/installation/docker).
+**Note** There is a separate setting for debugging [a KEEP server in a container](../../installconfig/installation/docker).
 
 ### Java editor preferences
 
