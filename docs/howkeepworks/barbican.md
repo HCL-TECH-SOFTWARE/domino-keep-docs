@@ -82,4 +82,4 @@ This assigning of access to documents to different users, based on their roles, 
 
 ### Further readings
 
-Check the pages about the [Admin UI](../../usingkeep/administrationui) and go through the [Tutorials](../../tutorial/index).
+Check the pages about the [Admin UI](../usingkeep/administrationui) and go through the [Tutorials](../tutorial/index).
