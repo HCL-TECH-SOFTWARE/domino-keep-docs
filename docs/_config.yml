@@ -1,6 +1,6 @@
 # Site settings
 theme: just-the-docs
-remote_theme: Stwissel/just-the-docs
+remote_theme: just-the-docs/just-the-docs
 title: "HCL Project KEEP"
 description: A modern take on REST interaction with Domino
 version: 1.5.1 Beta EARLY ACCESS
