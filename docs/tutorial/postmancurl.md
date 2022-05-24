@@ -19,7 +19,7 @@ Download demo.nsf. Then, use the following command to copy demo.nsf to the serve
 docker cp Demo.nsf $Server:/local/notesdata
 ```
 
-to check if you have copied it successfulyy, you may try to run this command
+to check if you have copied it successfully, you may try to run this command
 
 ```
 docker exec -it `$Server` /bin/bash

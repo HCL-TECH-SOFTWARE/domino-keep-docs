@@ -73,4 +73,4 @@ To log out, tap on the profile icon on the bottom left and click 'Logout'.
 
 ![Logout](../assets/images/AdminUILogout.png)
 
-Refer to the [SwaggerUI tutorial](./swagger.md) for UI driven tutorial for creating a document and more.
+Refer to the [SwaggerUI tutorial](./swagger) for UI driven tutorial for creating a document and more.
