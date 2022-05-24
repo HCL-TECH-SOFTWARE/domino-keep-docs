@@ -1,5 +1,6 @@
 # Site settings
-theme: just-the-docs
+# Github switched to an Action for Gihub pages that turns the warning into an error
+# theme: just-the-docs
 remote_theme: Stwissel/just-the-docs
 title: "HCL Project KEEP"
 description: A modern take on REST interaction with Domino
