@@ -10,10 +10,10 @@ has_children: true
 
 - Unit testing is done using [JUnit 5](https://junit.org/junit5/) and [Mockito](https://site.mockito.org/) is used for mocking calls to Domino. The versions currently in use can be found in the main pom.xml.
 - [Postman](https://www.postman.com/) and [Newman](https://learning.postman.com/docs/postman/collection-runs/command-line-integration-with-newman/) are used for integration testing.
-- [PMD](https://pmd.github.io/) is used to check the quality of generated code. Results are put in [PMD Results]({{ '/master/pmd.html' | relative_url }}) report.
-- [Spot Bugs](https://spotbugs.github.io/) is used to generate bug reports. The result is in the [Spot Bugs Report](https://github01.hclpnp.com/stephan-wissel/keep-documentation/blob/master/spotbugs.html).
+- [PMD](https://pmd.github.io/) is used to check the quality of generated code. Results are put in PMD Results report.
+- [Spot Bugs](https://spotbugs.github.io/) is used to generate bug reports. The result is in the Spot Bugs Report.
 - [CheckStyle](https://checkstyle.sourceforge.io/index.html) with the Google ruleset is used to generate style reports and the Google ruleset. Results are put in CheckStyle (TODO: ADD LINK) report.
-- Copy Paste Detection (CPD), part of PMD, is used to detect duplicate code. Results are put in [CPD Result]({{'/keep-core/cpd.html' | relative_url }}) reports.
+- Copy Paste Detection (CPD), part of PMD, is used to detect duplicate code. Results are put in CPD Results report.
 
 ### JUnit 5
 
