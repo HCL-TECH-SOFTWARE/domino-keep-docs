@@ -9,7 +9,7 @@ nav_order: 4
 
 ## Running KEEP with a Docker image
 
-The KEEP Docker image is built **on top** of an HCL Domino Docker image, inspired by [the open source templates](https://github.com/IBM/domino-docker).
+The KEEP Docker image is built **on top of an HCL Domino Docker image**, inspired by [the open source templates](https://github.com/IBM/domino-docker).
 All configuration options found there can be applied to the KEEP Docker image. You will need to decide if you want to run a standalone server or an additional server in an existing Domino domain.
 
 The KEEP Docker image **contains** a Domino server, you don't need a separate Domino installation. The image is completely self contained. KEEP is a Domino service, using the network free C API. So there is no scenario where a "only KEEP" container would work
@@ -19,12 +19,13 @@ The KEEP Docker image **contains** a Domino server, you don't need a separate Do
 
 Running KEEP with a Docker image requires the following:
 
-- A Docker installation, both **Docker** (for servers) or **Docker Desktop** are suitable. Download and install [Docker desktop](https://docs.docker.com/get-docker/) for your environment (Linux, Windows or macOS).
-- **[Docker Compose](https://docs.docker.com/compose/install/)**. When you install a Docker Desktop version (Windows, macOS), Docker compose is already included. For servers, it is an [additional install](https://docs.docker.com/compose/install/).
-- Login to HCL's instance of [FlexNet](https://hclsoftware.flexnetoperations.com/) using your credentials and download the [KEEP Docker image](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/entitledDownloadFile.action?downloadPkgId=HCL_Domino_REST_API_EAP) as an archive file.
-- A valid Domino server id, when you want to run as additional server in your existing domain.
-- A Docker compose file from our [resources](../../../references/downloads). Select the matching one for either a standalone primary or a secondary server.
-- A `.env` file. Download the `sample.env` from our [resources](../../../references/downloads). You **must rename the file to `.env` and edit** the `.env` file and update your values!
+- **[Docker Desktop](https://docs.docker.com/get-docker/)**. A Docker installation, both **Docker** (for servers) or **Docker Desktop** are suitable. Download and install **Docker Desktop** for your environment (Linux, Windows or macOS).
+- **[Docker Compose](https://docs.docker.com/compose/install/)**. When you install a Docker Desktop version (Windows, macOS), Docker compose is already included. 
+For servers, it is an [additional install](https://docs.docker.com/compose/install/).
+- Login to HCL's instance of **[FlexNet](https://hclsoftware.flexnetoperations.com/)** using your credentials and download the [KEEP Docker image](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/entitledDownloadFile.action?downloadPkgId=HCL_Domino_REST_API_EAP) as an archive file.
+- A valid **Domino server id**, when you want to run as additional server in your existing domain.
+- A **Docker compose file** from our [resources](../../references/downloads). Select the matching one for either a standalone primary or an additional server.
+- A **`.env` file.** Download the `sample.env` from our [resources](../../references/downloads). You **must rename the file to `.env`, update** the `.env` file with your values!
 
 <div class="panel panel-danger">
 **Docker Desktop License**
@@ -39,15 +40,21 @@ A Domino server uses one persistent volume to store its data. This volume also s
 
 ![Docker Consumption](../../assets/images/DominoKeepContainers.png)
 
-When you want to run multiple servers, create separate volumes for each. DO NOT share volumes between running instances.
+---
 
-- Make sure that your server id file is named `server.id`.
-- Rename the compose file you downloaded from [resources](../../../references/downloads) to `docker-compose.yml`.
-- Edit the `.env` file to update your values. You need to replace all values after the equal (`=`) sign.
+**Note** When you want to run multiple servers, create separate volumes for each. DO NOT share volumes between running instances.
+
+---
+
+#### Store the following files in a folder:
+
+- **server id**. Make sure that your server id file is named `server.id`.
+- **docker-compose.yml**. Rename the compose file you downloaded from [resources](../../references/downloads) to `docker-compose.yml`.
+- **.env** . Edit the `.env` file from [resources](../../references/downloads) to update your values. You need to replace all values after the equal (`=`) sign.
 
 You can configure multiple Domino servers in a single compose file. For details, check the [Docker compose](https://docs.docker.com/compose/) documentation. Keep in mind, each server needs its own volume.
 
-Load the docker image that you've downloaded from [prerequisites](#prerequisites) above:
+Load the docker image that you've downloaded from [prerequisites](#prerequisites) above. Make sure you [unzip the tar.gz file](https://linuxize.com/post/how-to-extract-unzip-tar-gz-file/) first. :
 
 ```bash
 docker load -i [name_of_tar_file].tar
@@ -76,7 +83,7 @@ Please also refer to the official [List of One-touch environment variables](http
 | SERVERSETUP_ORG_ORGNAME                 | Stark Industries                                 | YOUR EXSISTING ORG                                                                                                                        |
 | SERVERSETUP_SERVER_DOMAINNAME           | MarvelPhase4                                     | YOUR EXSISTING NOTES DOMAIN                                                                                                               |
 | SERVERSETUP_SERVER_NAME                 | keep-server-01                                   |
-| SERVERSETUP_SERVER_SERVERTASKS          | replica,router,update,amgr,adminp,http,keep      | Refer to the [KEEP task](../../../usingkeep/keeptask) page.                                                                               |
+| SERVERSETUP_SERVER_SERVERTASKS          | replica,router,update,amgr,adminp,http,keep      | Refer to the [KEEP task](../../usingkeep/keeptask) page.                                                                               |
 
 ## Running KEEP
 

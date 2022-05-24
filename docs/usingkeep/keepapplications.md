@@ -49,7 +49,7 @@ Frameworks like Angular, ReactJS, Swelte etc. usually generate a `build` directo
 
 You can copy that directory to `keepweb.d` in your Domino data directory and KEEP will serve them on the `/keepweb/` URL path. This eliminates the need for CORS configuration
 
-Check the details in [Security Configuration](../../installconfig/configuration/security).
+Check the details in [Security Configuration](../installconfig/configuration/security).
 
 ### Server based applications
 

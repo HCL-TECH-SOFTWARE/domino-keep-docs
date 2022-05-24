@@ -10,7 +10,7 @@ nav_order: 2
 
 ### Configuration
 
-Domino KEEP comes with reasonable default configuration settings. They allow you to start evaluating and testing out-of-the-box. For an actual deployment, you want to understand the details as outlined here.
+Project KEEP comes with reasonable default configuration settings. They allow you to start evaluating and testing out-of-the-box. For an actual deployment, you want to understand the details as outlined here.
 
 ### Understanding configuration
 

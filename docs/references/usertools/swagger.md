@@ -20,14 +20,15 @@ The OpenAPI Specification is a set of rules that symantically describes APIs.  I
 
 ### Swagger UI
 
-The OpenAPI Specification provides us a complete interactive user interface. The user interface for KEEP can be found here: **<http://localhost:8880/openapi/index.html>*** and it looks like this:
+The OpenAPI Specification provides us a complete interactive user interface. The user interface for KEEP can be found here: **<http://localhost:8880>***  and it looks like this:
 
 ![Swagger UI]({{ '/assets/images/SwaggerUI.png' | relative_url }})
 
 ### References
 
-KEEP Swagger UI: <http://localhost:8880/openapi/index.html>
+KEEP Swagger UI: <http://localhost:8880>
+
 Swagger UI Homepage: <https://swagger.io/tools/swagger-ui/>
 
 
-> *You need a KEEP server running to open localhost links_
+> *You need a KEEP server running to open localhost links*

@@ -5,13 +5,14 @@ parent: Development Environment
 grand_parent: Extending KEEP
 nav_order: 8
 ---
+
 ## Run KEEP with Docker
 
-This section describes how to setup KEEP to run as part of a Docker image.  As the image also includes a complete Domino server, it will enable you to run all the KEEP APis, including the ones that require a server instance of Domino. 
+This section describes how to setup KEEP to run as part of a Docker image. As the image also includes a complete Domino server, it will enable you to run all the KEEP APis, including the ones that require a server instance of Domino.
 
-**Please also check [this page](../docker.html)**
+**Please also check [this page](../../installconfig/installation/docker)**
 
-While the installation instructions may seem a bit intimidatingly at first, if you follow them carefully they *will* work. And once a Docker environment has been setup, it is easy to both use and maintain.
+While the installation instructions may seem a bit intimidatingly at first, if you follow them carefully they _will_ work. And once a Docker environment has been setup, it is easy to both use and maintain.
 
 ### Install and prepare Docker
 
@@ -21,7 +22,7 @@ While the installation instructions may seem a bit intimidatingly at first, if y
 
 ### Creating the KEEP image
 
-See [Running KEEP with a Docker Image](../../../installconfig/installation/docker).
+See [Running KEEP with a Docker Image](../../installconfig/installation/docker).
 
 ### Scripts
 
@@ -44,10 +45,10 @@ export CLASSPATH=.:$V_PATH:$CLASSPATH
 export NOTES_ENV=SERVER
 export LOG_DIR=$NOTESDATA/logs
 [ -d $LOG_DIR ] || mkdir -p $LOG_DIR
-# This is important - must be writable -otherwise the docker blows 
+# This is important - must be writable -otherwise the docker blows
 cd $NOTESDATA
 $JAVA_HOME/bin/java -XX:+HeapDumpOnOutOfMemoryError -XX:+UseG1GC -XX:+UseStringDeduplicationJVM -cp $CLASSPATH -jar projectkeep.jar > $LOG_DIR/vertx.log 2>&1 &
-``` 
+```
 
 When you installed the expanded version of KEEP (not the fat JAR) the launch line needs to look like this:
 
@@ -56,7 +57,6 @@ $JAVA_HOME/bin/java -XX:+HeapDumpOnOutOfMemoryError -XX:+UseG1GC -XX:+UseStringD
 
 ```
 
-
 **pre_shutdown_script**
 
 ```bash
@@ -64,8 +64,7 @@ $JAVA_HOME/bin/java -XX:+HeapDumpOnOutOfMemoryError -XX:+UseG1GC -XX:+UseStringD
 # Before she shutdown domino we shutdown KEEP
 export ADMINPORT=8889
 curl --max-time 10 -d '{"shutdownkey" : "The End is near!!"}' -H "Content-Type: application/json" -X POST http://localhost:$ADMINPORT/shutdown
-``` 
-
+```
 
 **post_shutdown_script**
 
@@ -73,14 +72,12 @@ curl --max-time 10 -d '{"shutdownkey" : "The End is near!!"}' -H "Content-Type: 
 #!/bin/bash
 # After shutdown - kill the Java task if it is still there
 pkill -9 -f projectkeep
-``` 
-
+```
 
 ### Debugging with Docker
 
-There is also more Docker documentation available here: [Docker Documentation](../docker.html).  Some of the information is a bit dated, in particular don't worry about building your own Docker images as that now happens automatically.  Instead focus on the section for setting up a Docker debugging environment.
+There is also more Docker documentation available here: [Docker Documentation](../../installconfig/installation/docker). Some of the information is a bit dated, in particular don't worry about building your own Docker images as that now happens automatically. Instead focus on the section for setting up a Docker debugging environment.
 
 ### Creating Docker users and test data
 
-Once you have your Docker image up and running, you'll need to create test users and test data for the KEEP APIs to run against.  You'll find instructions here: [Docker Test Data](../testdata.html)
-
+Once you have your Docker image up and running, you'll need to create test users and test data for the KEEP APIs to run against. You'll find instructions here: [Docker Test Data](./testdata)

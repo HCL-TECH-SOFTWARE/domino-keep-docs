@@ -9,7 +9,7 @@ nav_order: 2
 
 We use a set of helpers to make the testing easier:
 
-- Mockito is used to copy objects see [Testing]({{'/extendingkeep/testing/testingindex/' | relative_url }}).
+- Mockito is used to copy objects see [Testing]({{'/extendingkeep/testing/index' | relative_url }}).
 
 - Custom annotations: `@UnitTest`, `@IntegrationTest` and `@PerformanceTest`
 - Class KeepTestUtils: is used to retrieve the test specific sources.

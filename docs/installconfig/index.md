@@ -90,7 +90,7 @@ KEEP is preconfigured with settings that allow you to get started right away. Ho
 
 ### Understanding configuration
 
-The configuration follows the concept of [an Overlay File System](https://www.datalight.com/blog/2016/01/27/explaining-overlayfs-%E2%80%93-what-it-does-and-how-it-works/). The base configuration is retrieved from the installation directory or `jar` files.
+The configuration follows the concept of [an Overlay File System](https://en.wikipedia.org/wiki/OverlayFS). The base configuration is retrieved from the installation directory or `jar` files.
 
 When jar files contain a resource `/config/config.json`, that configuration file is added to total configuration
 

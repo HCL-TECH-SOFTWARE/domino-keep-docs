@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Planning your application
-parent: Domino REST API
-nav_order: 3
+parent: HCL Project KEEP
+nav_order: 4
 ---
 
 ## Planning your application
@@ -45,6 +45,6 @@ The KEEP configuration allows you to fine tune access permissions. KEEP allows y
 - Specify which views to expose on the API.
 - Specify which agents to expose on the API.
 - Specify which forms to expose on the API.
-  Here, [the Barbican's capabilities](../../howkeepworks/barbican) is used to tailor field access based on document data and current user, allowing for API-based data integrity.
+  Here, [the Barbican's capabilities](../howkeepworks/barbican) is used to tailor field access based on document data and current user, allowing for API-based data integrity.
 
 ![KEEP Properties](../assets/images/access/KEEPproperties.png)

@@ -7,23 +7,35 @@ nav_order: 2
 
 ## Using Postman and curl
 
-This tutorial shows how to configure and use a database using Postman and curl. Download the database `Demo.nsf` from [Resources](../../references/downloads) and follow along. We also have a Postman collection under [Resources](../../references/downloads) to download and used for quick learning.
+This tutorial shows how to configure and use a database using Postman and curl. Download the database `Demo.nsf` from [Resources](../references/downloads) and follow along. We also have a Postman collection under [Resources](../references/downloads) to download and used for quick learning.
 
 ### Prepare database access
 
 First, copy the demo database to the server.
 
-Download demo.nsf. Then, use the following command to copy demo.nsf to the server. Replace `$Server` with actual server name.
+Download demo.nsf. Then, use the following command to copy demo.nsf to the server. Replace `$Server` with actual docker container name/ server name.
 
 ```
-docker cp Demo.nsf $Server:/local/notesdata/Demo.nsf
+docker cp Demo.nsf $Server:/local/notesdata
 ```
+
+to check if you have copied it successfully, you may try to run this command
+
+```
+docker exec -it `$Server` /bin/bash
+```
+
+```
+cd local/notesdata
+```
+
+You can use `ls` command to check Demo.nsf among the lists of files in notesdata directory
 
 ### Login
 
 Provide the user name and password for login.
 
-![Login]({{ '/assets/images/PostmanLogin.png' | relative_url }})
+![Login](../assets/images/PostmanLogin.png)
 
 #### Curl code snippet
 
