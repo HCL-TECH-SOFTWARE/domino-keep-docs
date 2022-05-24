@@ -12,7 +12,7 @@ has_children: true
 - [Postman](https://www.postman.com/) and [Newman](https://learning.postman.com/docs/postman/collection-runs/command-line-integration-with-newman/) are used for integration testing.
 - [PMD](https://pmd.github.io/) is used to check the quality of generated code. Results are put in [PMD Results]({{ '/master/pmd.html' | relative_url }}) report.
 - [Spot Bugs](https://spotbugs.github.io/) is used to generate bug reports. The result is in the [Spot Bugs Report](https://github01.hclpnp.com/stephan-wissel/keep-documentation/blob/master/spotbugs.html).
-- [CheckStyle](https://checkstyle.sourceforge.io/index.html) with the Google ruleset is used to generate style reports and the Google ruleset. Results are put in CheckStyle (TODO: ADD LINK) report.
+- [CheckStyle](https://checkstyle.sourceforge.io/index.html) with the Google ruleset is used to generate style reports and the Google ruleset. Results are put in CheckStyle report.
 - Copy Paste Detection (CPD), part of PMD, is used to detect duplicate code. Results are put in [CPD Result]({{'/keep-core/cpd.html' | relative_url }}) reports.
 
 ### JUnit 5
