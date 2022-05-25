@@ -9,12 +9,12 @@ nav_order: 6
 
 // TODO: [PJAN-1310] Make this shine
 
-## securing ports
+## [securing ports](../configuration/configuringPorts)
 
-## enable database
+## [enable database](../../usingkeep/enablingadb)
 
-## configure jwt
+## [configure jwt](../configuration/security/authentication)
 
-## Sharing JWT between servers
+## [Sharing JWT between servers](../configuration/security/encryption)
 
-## Configure apps
+## [Configure apps](../../tutorial/adminui)

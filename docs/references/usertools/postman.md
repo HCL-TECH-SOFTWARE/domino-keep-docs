@@ -22,7 +22,7 @@ After Postman is up and running, it needs to be configured to run the KEEP APIs.
 
 1. Click the **Import** button in the upper left, followed by **Choose Files**.
 
-2. To access the resources, click [downloads](../../downloads) to view the collections information.
+2. To access the resources, click [downloads](../downloads) to view the collections information.
 
 #### Environments
 
@@ -30,7 +30,7 @@ After Postman is up and running, it needs to be configured to run the KEEP APIs.
 
 1. Click the **Import** button on the upper left, followed by **Choose Files**.
 
-2. To access the resources, click [downloads](../../downloads) to view the environments information.
+2. To access the resources, click [downloads](../downloads) to view the environments information.
 
 3. You only need to add variables to the environment, if they need default values.
 
