@@ -11,12 +11,12 @@ The Admin UI provides a user interface to a number of KEEP APIs. It thus serves 
 
 This is what the Login page looks like.
 
-![KEEP API]({{ '/assets/images/AdminLogin.png' | relative_url }})
+![KEEP API](../assets/images/AdminLogin.png)
 (Image: Castle [Johannisburg](https://en.wikipedia.org/wiki/Schloss_Johannisburg), Aschaffeburg, Germany)
 
 You'll need the administrator username and password to access the server.
 
-To use a Domino database in KEEP, it must be configured for use in the API. Download `Demo.nsf` from [Resources](../references/downloads) and save it in the Notes data directory. Then login to the [KEEP Admin UI](http://localhost:8880/admin/ui) using the administrator user name and password.
+To use a Domino database in KEEP, it must be configured for use in the API. Download `Demo.nsf` from [Resources](../references/downloads) and save it in the Notes data directory. Then login to the [KEEP Admin UI](http://localhost:8880/admin/ui/) using the administrator user name and password.
 
 ### Application Management
 
@@ -110,9 +110,10 @@ To make changes to the configuration, select the Form. This will load the Accces
 
 It is here that you can set the Read or Write access formulae for each of the fields in the form.
 
+<!--
 ---
 
-### People Management Tutorial
+ ### People Management Tutorial
 
 Select [KEEP People Management](http://localhost:8880/admin/ui/people) from the home page.
 
@@ -163,4 +164,4 @@ In the upper right corner of the landing page is the 'Add Group' button to add a
 
 Fill in the form and hit Add.
 
-Under the Actions column are the options to edit or delete the group.
+Under the Actions column are the options to edit or delete the group. -->
