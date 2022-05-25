@@ -3,7 +3,7 @@ layout: default
 title: Custom IdP
 parent: Security
 grand_parent: Installing & configuring
-nav_order: 10
+nav_order: 13
 ---
 
 ## Custom Identity Provider (IdP)
