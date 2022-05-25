@@ -90,4 +90,4 @@ A SPA (Single Page App) or a mobile client can't keep a client secret. For those
 
 ![Keycloak Application scope](../../../assets/images/Keycloak-08d.png)
 
-It is **SECURITY** so learn about [Keycloak](https://www.keycloak.org/getting-started)!
+It is **SECURITY** so learn about [Keycloak](https://www.keycloak.org/guides#getting-started/)!
