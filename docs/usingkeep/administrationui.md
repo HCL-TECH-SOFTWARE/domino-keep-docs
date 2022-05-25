@@ -16,7 +16,7 @@ This is what the Login page looks like.
 
 You'll need the administrator username and password to access the server.
 
-To use a Domino database in KEEP, it must be configured for use in the API. Download `Demo.nsf` from [Resources](../references/downloads) and save it in the Notes data directory. Then login to the [KEEP Admin UI](http://localhost:8880/admin/ui) using the administrator user name and password.
+To use a Domino database in KEEP, it must be configured for use in the API. Download `Demo.nsf` from [Resources](../references/downloads) and save it in the Notes data directory. Then login to the [KEEP Admin UI](http://localhost:8880/admin/ui/) using the administrator user name and password.
 
 ### Application Management
 
