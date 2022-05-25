@@ -27,7 +27,7 @@ Select [KEEP Application Management](http://localhost:8880/admin/ui/apps).
 #### List Available Applications
 
 The landing page shows the list of all available applications.
-![List Applications]({{ '/assets/images/ListOfApplications.png' | relative_url }})
+![List Applications](../assets/images/ListOfApplications.png)
 
 This applications can be dragged and dropped to change their state - Requested/Active/Approved/Inactive.
 
@@ -36,13 +36,13 @@ This applications can be dragged and dropped to change their state - Requested/A
 #### Add An Application
 
 In the upper right corner of the landing page is the 'Add Application' button to add an application.
-![Add Application]({{ '/assets/images/AddApplication.png' | relative_url }}){: .scale-img-eighty-five-percent }
+![Add Application](../assets/images/AddApplication.png){: .scale-img-eighty-five-percent }
 
 Fill in the form and hit Add.
-![Application Form]({{ '/assets/images/AddApplicationForm.png' | relative_url }})
+![Application Form](../assets/images/AddApplicationForm.png)
 
 Hovering over the application tile, gives the options to generate Application Secret, edit and delete the application.
-![Edit Application]({{ '/assets/images/EditApplication.png' | relative_url }})
+![Edit Application](../assets/images/EditApplication.png)
 
 ---
 
@@ -55,7 +55,7 @@ Select [KEEP Database Management](http://localhost:8880/admin/ui/databases) from
 #### List Available Databases
 
 The landing page shows the list of all available databases.
-![List Databases]({{ '/assets/images/AllDatabases.png' | relative_url }})
+![List Databases](../assets/images/AllDatabases.png)
 
 The database names can be arranged in either list or grid view or can be sorted alphabetically. There is also a provision to search through the list.
 
@@ -64,10 +64,10 @@ The database names can be arranged in either list or grid view or can be sorted 
 #### Add A Database
 
 In the upper right corner of the landing page is the 'Create Database' button to add a database.
-![Create Database]({{ '/assets/images/CreateDatabaseBlue.png' | relative_url }}){: .scale-img-eighty-five-percent }
+![Create Database](../assets/images/CreateDatabaseBlue.png){: .scale-img-eighty-five-percent }
 
 Fill in the form and hit Create.
-![Configure Database]({{ '/assets/images/AddNewDatabase.png' | relative_url }})
+![Configure Database](../assets/images/AddNewDatabase.png)
 
 This creates the Alias. You can use this to access the database via the KEEP API. One NSF can be made available under more than one alias (e.g. with different security settings).
 
@@ -77,7 +77,7 @@ This creates the Alias. You can use this to access the database via the KEEP API
 
 Select a database from the list of databases and the details for it will load. Select 'Database Views' from the blue menu bar. This lists all the Views for the selected database.
 
-![List Views]({{ '/assets/images/ListOfViews.png' | relative_url }})
+![List Views](../assets/images/ListOfViews.png)
 
 Click on the View that you would like to activate. This will move it to the 'Activated Views' section. Hit 'Save' to save the selections. If no View is selected, then all the Views will be active.
 
@@ -89,7 +89,7 @@ Clicking on a View from the 'Activated Views' section, undos the selection.
 
 Select a database from the list of databases and the details for it will load. Select 'Database Agents' from the blue menu bar. This lists all the Agents for the selected database.
 
-![List Agents]({{ '/assets/images/ListOfAgents.png' | relative_url }})
+![List Agents](../assets/images/ListOfAgents.png)
 
 Click on the Agent that you would like to activate. This will move it to the 'Activated Agents' section. Hit 'Save' to save the selections. If no Agent is selected, then all the Agents will be active.
 
@@ -101,12 +101,12 @@ Clicking on an Agent from the 'Activated Agents' section, undos the selection.
 
 Select a database from the list of databases and the details for it will load. Select 'Database Forms' from the blue menu bar. This lists all the Forms for the selected database.
 
-![List Forms]({{ '/assets/images/ListOfForms.png' | relative_url }})
+![List Forms](../assets/images/ListOfForms.png)
 
 From the list of Unconfigured Forms, click on the Form that you would like to configure. Select 'Yes' on the popup. This will configure the form with default settings. The selected Form will now be listed under the Configured Form.
 
 To make changes to the configuration, select the Form. This will load the Acccess Mode for the Form.
-![Access Mode]({{ '/assets/images/AccessMode.png' | relative_url }})
+![Access Mode](../assets/images/AccessMode.png)
 
 It is here that you can set the Read or Write access formulae for each of the fields in the form.
 
