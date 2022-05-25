@@ -2,7 +2,7 @@
 layout: default
 title: Encryption Keys
 parent: Security
-nav_order: 6
+nav_order: 8
 grandparent: Installing & configuring
 ---
 

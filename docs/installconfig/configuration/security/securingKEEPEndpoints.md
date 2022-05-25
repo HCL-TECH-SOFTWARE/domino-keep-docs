@@ -3,7 +3,7 @@ layout: default
 title: Securing KEEP endpoints
 parent: Security
 grand_parent: Installing & configuring
-nav_order: 5
+nav_order: 6
 ---
 
 ## Securing KEEP endpoints

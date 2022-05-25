@@ -3,7 +3,7 @@ layout: default
 title: config.json
 parent: Security
 grand_parent: Installing & configuring
-nav_order: 6
+nav_order: 7
 ---
 
 ## config.json

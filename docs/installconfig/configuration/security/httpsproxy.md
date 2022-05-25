@@ -3,7 +3,7 @@ layout: default
 title: HTTPS - multi domain
 parent: Security
 grand_parent: Installing & configuring
-nav_order: 8
+nav_order: 11
 ---
 
 ## Configuring nginx as an HTTPS proxy with subdomains
