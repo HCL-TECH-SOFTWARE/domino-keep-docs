@@ -11,7 +11,7 @@ The Admin UI provides a user interface to a number of KEEP APIs. It thus serves 
 
 This is what the Login page looks like.
 
-![KEEP API]({{ '/assets/images/AdminLogin.png' | relative_url }})
+![KEEP API](../assets/images/AdminLogin.png)
 (Image: Castle [Johannisburg](https://en.wikipedia.org/wiki/Schloss_Johannisburg), Aschaffeburg, Germany)
 
 You'll need the administrator username and password to access the server.
