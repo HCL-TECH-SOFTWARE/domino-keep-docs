@@ -86,11 +86,7 @@ KEEP is based on industry standards, allows Notes and Domino to be accessed from
 
 ### KEEP is secure
 
-<<<<<<< HEAD
 KEEP is secure by default since it inherits all the [security features](./installconfig/configuration/security/index) of Notes and Domino. All access to the database is authenticated using [JSON Web Token (JWT)](https://jwt.io/) and [Scopes](./installconfig/configuration/security/authentication). Identity can be provided using Domino credentials and/or your Enterprise IdP (Identity Provider) like Keycloak or Active Directory. The databases or forms and views that can be accessed are explicitly listed. Security extends to a field level read/write control by [The Barbican](./howkeepworks/barbican)
-=======
-KEEP is secure by default since it inherits all the [security features](installconfig/configuration/security/index.md) of Notes and Domino. All access to the database is authenticated using [JSON Web Token (JWT)](https://jwt.io/) and [Scopes](installconfig/configuration/security/authentication.md). Identity can be provided using Domino credentials and/or your Enterprise IdP (Identity Provider) like Keycloak or Active Directory. The databases or forms and views that can be accessed are explicitly listed. Security extends to a field level read/write control by [The Barbican](howkeepworks/barbican.md)
->>>>>>> main
 
 ### Modern Java API (Java 8++)
 

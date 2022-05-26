@@ -37,7 +37,7 @@ Check the details to [setup the development environment](../../extendingkeep/dev
 
 ### Documentation
 
-We use [Markdown](https://en.wikipedia.org/wiki/Markdown) to render this documentation in [GitHub Pages](https://pages.github.com/) using the custom [Just-The-Docs](https://pmarsceill.github.io/just-the-docs/) theme.
+We use [Markdown](https://en.wikipedia.org/wiki/Markdown) to render this documentation in [GitHub Pages](https://pages.github.com/) using the custom [Just-The-Docs](https://just-the-docs.github.io/just-the-docs/) theme.
 
 Images used here are created in multiple ways:
 
