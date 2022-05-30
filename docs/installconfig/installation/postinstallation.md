@@ -1,19 +1,19 @@
 ---
 layout: default
-title: Post installation tasks
+title: Post Installation Tasks
 parent: Installing & configuring
 nav_order: 6
 ---
 
-# Post installation tasks
+# Post Installation Tasks
 
-// TODO: [PJAN-1310] Make this shine
+This chapter describes tasks you can perform after installing an instance of KEEP.
 
-## [securing ports](../configuration/configuringPorts)
+## [Securing ports](../configuration/configuringPorts)
 
-## [enable database](../../usingkeep/enablingadb)
+## [Enable a database](../../usingkeep/enablingadb)
 
-## [configure jwt](../configuration/security/authentication)
+## [Configure JWT](../configuration/security/authentication)
 
 ## [Sharing JWT between servers](../configuration/security/encryption)
 
