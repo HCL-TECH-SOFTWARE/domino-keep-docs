@@ -29,15 +29,14 @@ HCL Project KEEP, a.k.a Domino REST API, provides a secure REST API access into 
 
 [Get started now]({{ 'introduction/quickstart' | relative_url }}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub]({{ site.github.repository_url }}){: .btn .fs-5 .mb-4 .mb-md-0 } [Download {{ site.version}} ]({{ site.flexnet_url }}){: .btn .fs-5 .mb-4 .mb-md-0 }
 
----
 
 <div class="panel panel-success">
 **Note**
 {: .panel-heading}
 <div class="panel-body">
-Before downloading KEEP using the above button, make sure you're logged in to [Flexnet](https://hclsoftware.flexnetoperations.com/)
+Log in to [Flexnet](https://hclsoftware.flexnetoperations.com/) before downloading KEEP using the above button.
 
-To troubleshoot error "The account ID or package ID is missing. Please provide it and try again.", search for "HCL Domino REST API Early Access" in the Product list.
+To troubleshoot error "The account ID or package ID is missing. Please provide it and try again.", search for "HCL Domino REST API Early Access" in the product list.
 </div></div>
 
 ---
