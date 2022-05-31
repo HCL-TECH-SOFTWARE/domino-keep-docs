@@ -16,14 +16,12 @@ Parameters are **case sensitive**
 - PORT : 8880 - HTTP(S) port for the KEEP service.
 - ADMINPORT : 8889 - HTTP port for the Admin listener. Should not be reachable from outside.
 - METRICSPORT: 8890 - Endpoint for [Prometheus](https://prometheus.io/) metrics.
-- GodeMode: true/false -> Whether local users in KeepConfig are recognized.
 - JwtDuration: Lifetime in minutes for the internal JWT provider - default 60min.
 - JwtMaxDuration: Maximum lifetime in minutes JWT tokens get accepted.
 - DEBUG: true/false Debug mode. Creates more console output.
 - PEMCert: If your TLS is PEM format (e.g. LetsEncrypt), path to certificate file.
 - TLSFile: TLS file with key for jks, pem or pfx.
 - TLSPassword: Password for jks and pfx key file.
-- shutdownkey: Passphrase for posting to `http://localhost:adminport/shutdown` to shut down KEEP.
 
 ### Parameters in JSON files
 
@@ -32,8 +30,7 @@ A configuration can have the following top-level properties. These properties ar
 | Property          | Type                                           | Description                                                                                                                                                                                                                              |
 | :---------------- | :--------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ADMINPORT         | int (0 to 65353)                               | (default 8889) Commands regarding the runtime, e.g. config and shutdown. Should only be exposed to an admin network/workstation.                                                                                                         |
-| AllowJwtMail      | Boolean                                        | true to allow email to be sent via a JWT token.                                                                                                                                                                                          |
-| LOG_DIR           | String                                         | Directory in which to write logs.                                                                                                                                                                                                        |
+| AllowJwtMail      | Boolean                                        | true to allow email to be sent via a JWT token.                                                                                                                                                                                          |                                                                                                                                         |
 | METRICSPORT       | int (0 to 65353)                               | (default 8890) Port for Prometheus metrics.                                                                                                                                                                                              |
 | PORT              | int (0 to 65353)                               | (default 8880) Port for regular API access.                                                                                                                                                                                              |
 | prometheusMetrics | [prometheusParameters](#prometheus-parameters) | Parameters to hand over to the prometheus task from vert.x.                                                                                                                                                                              |
@@ -66,7 +63,7 @@ The name of the entries must match the name used in versions of the RestAPI vert
 
 | Property | Type                                     | Description                  |
 | :------- | :--------------------------------------- | :--------------------------- |
-| metrics  | [metricsParameters](#metrics-parameters) | Parameter for vert.x metrics |
+| metric   | [metricsParameters](#metrics-parameters) | Parameter for vert.x metrics |
 
 #### Metrics parameters
 
