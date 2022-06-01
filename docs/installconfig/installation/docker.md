@@ -9,7 +9,7 @@ nav_order: 4
 
 ## Running KEEP with a Docker image
 
-The KEEP Docker image is built **on top of an HCL Domino Docker image**, inspired by [the open source templates](https://github.com/IBM/domino-docker).
+The KEEP Docker image is built **on top of an HCL Domino Docker image**, inspired by [the open source templates](https://github.com/HCL-TECH-SOFTWARE/domino-container).
 All configuration options found there can be applied to the KEEP Docker image. You will need to decide if you want to run a standalone server or an additional server in an existing Domino domain.
 
 The KEEP Docker image **contains** a Domino server, you don't need a separate Domino installation. The image is completely self contained. KEEP is a Domino service, using the network free C API. So there is no scenario where a "only KEEP" container would work
@@ -142,11 +142,11 @@ docker exec -it $containername /bin/bash
 {: .panel-heading}
 <div class="panel-body">
 When you run your Domino servers on Linux, you probably use the [Nashcom startup script](https://www.nashcom.de/nshweb/pages/startscript.htm) for Domino.
-On this foundation, the GitHub.com hosted [Domino Docker](https://github.com/IBM/domino-docker) project offers management scripts that allows easy management of your Docker container using a command `domino_container`.
+On this foundation, the GitHub.com hosted [Domino Docker](https://github.com/HCL-TECH-SOFTWARE/domino-container) project offers management scripts that allows easy management of your Docker container using a command `domino_container`.
 
 Installation steps are as follows:
 
-1. Clone the [domino-docker](https://github.com/IBM/domino-docker) repository: `git clone https://github.com/IBM/domino-docker.git`
+1. Clone the [domino-docker](https://github.com/HCL-TECH-SOFTWARE/domino-container) repository: `git clone https://github.com/HCL-TECH-SOFTWARE/domino-container`
 2. Change into the installations directory: `cd start_script`
 3. Run the installer `./install_domino_container` (You might need `sudo`)
 

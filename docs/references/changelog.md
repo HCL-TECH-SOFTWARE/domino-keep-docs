@@ -14,7 +14,7 @@ This page lists the changes in each release.
 - Dropped Domino versioning, switched to KEEP's internal version
 - Updated vert.x to 4.3.0
 - Updated all Java dependencies
-- Docker container uses Domino 12.0.1IF1
+- Docker container uses Domino 12.0.2 BETA
 - Database specific KEEP configurations now stored as design elements in database (thus also editable from Domino designer)
 - reworked configuration format, close to JSON schema
 - New end point `/listpivot` for server side pivot operations

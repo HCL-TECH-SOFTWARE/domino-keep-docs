@@ -3,7 +3,7 @@ layout: default
 title: HTTPS - single domain
 parent: Security
 grand_parent: Installing & configuring
-nav_order: 9
+nav_order: 12
 ---
 
 ## Configuring nginx as an HTTPS proxy - single domain

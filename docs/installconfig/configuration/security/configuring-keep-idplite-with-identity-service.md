@@ -3,7 +3,7 @@ layout: default
 title: KEEP IdP & Foundry
 parent: Security
 grand_parent: Installing & configuring
-nav_order: 11
+nav_order: 14
 ---
 
 # Configuring Keep IDP with VoltMX Foundry Identity Service

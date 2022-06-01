@@ -29,6 +29,16 @@ HCL Project KEEP, a.k.a Domino REST API, provides a secure REST API access into 
 
 [Get started now]({{ 'introduction/quickstart' | relative_url }}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub]({{ site.github.repository_url }}){: .btn .fs-5 .mb-4 .mb-md-0 } [Download {{ site.version}} ]({{ site.flexnet_url }}){: .btn .fs-5 .mb-4 .mb-md-0 }
 
+
+<div class="panel panel-success">
+**Note**
+{: .panel-heading}
+<div class="panel-body">
+Log in to [Flexnet](https://hclsoftware.flexnetoperations.com/) before downloading KEEP using the above button.
+
+To troubleshoot error "The account ID or package ID is missing. Please provide it and try again.", search for "HCL Domino REST API Early Access" in the product list.
+</div></div>
+
 ---
 
 <div class="panel panel-warning">
@@ -86,11 +96,7 @@ KEEP is based on industry standards, allows Notes and Domino to be accessed from
 
 ### KEEP is secure
 
-<<<<<<< HEAD
 KEEP is secure by default since it inherits all the [security features](./installconfig/configuration/security/index) of Notes and Domino. All access to the database is authenticated using [JSON Web Token (JWT)](https://jwt.io/) and [Scopes](./installconfig/configuration/security/authentication). Identity can be provided using Domino credentials and/or your Enterprise IdP (Identity Provider) like Keycloak or Active Directory. The databases or forms and views that can be accessed are explicitly listed. Security extends to a field level read/write control by [The Barbican](./howkeepworks/barbican)
-=======
-KEEP is secure by default since it inherits all the [security features](installconfig/configuration/security/index.md) of Notes and Domino. All access to the database is authenticated using [JSON Web Token (JWT)](https://jwt.io/) and [Scopes](installconfig/configuration/security/authentication.md). Identity can be provided using Domino credentials and/or your Enterprise IdP (Identity Provider) like Keycloak or Active Directory. The databases or forms and views that can be accessed are explicitly listed. Security extends to a field level read/write control by [The Barbican](howkeepworks/barbican.md)
->>>>>>> main
 
 ### Modern Java API (Java 8++)
 
