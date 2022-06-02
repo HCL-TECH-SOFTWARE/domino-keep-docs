@@ -13,8 +13,8 @@ Parameters are **case sensitive**
 
 ### Environment
 
-- MANAGEMENTPORT : 8880 - HTTP(S) port for the KEEP service.
-- ADMINPORT : 8889 - HTTP port for the Admin listener. Should not be reachable from outside.
+- PORT : 8880 - HTTP(S) port for the KEEP service.
+- MANAGEMENTPORT : 8889 - HTTP port for the Admin listener. Should not be reachable from outside.
 - METRICSPORT: 8890 - Endpoint for [Prometheus](https://prometheus.io/) metrics.
 - Firehoseport:42424 - Port for Deliver data to custom HTTP endpoints
 - JwtDuration: Lifetime in minutes for the internal JWT provider - default 60min.
@@ -103,6 +103,7 @@ Verticles defines a separate unit of work for particular tags. For the RestAPI v
 | active         | Boolean | Whether to load this verticle.                                                                                                                                                                                                                                                   |
 | className      | String  | Class to use for the verticle. Typically this is `com.hcl.domino.keep.verticles.DominoDefaultVerticle`, unless you need to extend that class.                                                                                                                                    |
 | tags           | Object  | Tags from OpenAPI specs to allocate to this verticle and the package in which to find the NSFHandlers.                                                                                                                                                                           |
+| instances      | int     | Relevant only for RestAPI verticle, loads multiple instances that each use a thread pool. You will need to be aware of the number of cores available and scalability, see the [Vert.x documentation](https://vertx.io/docs/vertx-core/java/#_specifying_number_of_verticle_instances)           |
 | threadPoolName | String  | If a worker verticle should use a dedicated pool, a required thread pool name. By default it is assigned 10 threads, but this can be overritten with threadPoolSize. If the same threadPoolName is used by multiple verticles, the thread pool is shared across those verticles. |
 | threads        | int     | This will only be used for worker threads with a specific threadPoolName. The default is 10, but this can be overritten.                                                                                                                                                         |
 | worker         | Boolean | To make this a [worker verticle](https://medium.com/@levon_t/java-vert-x-starter-guide-part-2-worker-verticles-c49866df44ab). Worker verticles do not run on the event loop thread, but on worker threads from a preconfigured pool of 20 threads. Use for heavy-duty verticles. |
