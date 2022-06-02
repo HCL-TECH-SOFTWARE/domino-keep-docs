@@ -13,6 +13,10 @@ Downloadable assets to get you started.
 
 - [{{ site.version}} ]({{ site.flexnet_url }})
 
+### Presentations
+
+- [Engage 2022 Presentation](../assets/downloads/De22%20Project%20KEEP.pdf)
+
 ### Docker
 
 - [Docker compose file for primary server](../assets/downloads/docker-compose-primary.yml)
