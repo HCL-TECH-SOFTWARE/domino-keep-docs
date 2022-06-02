@@ -13,10 +13,31 @@ KEEP reads all config.json from KEEP core and deployed extensions. Here is a sam
 ```json
 {
   "PORT": 8880,
-  "ADMINPORT": 8889,
+  "MANAGMENTPORT": 8889,
   "METRICSPORT": 8890,
-  "shutdownkey": "The End is near!!",
+  "FIREHOSEPORT": 42424,
+  "shutdownkey": "D9E4C56F6DBD5AE39059510CEEC68CDEDAB2CE712126B8F2D5ED8B0F5952FB21:635168471E02C70291C0FBDBFA7A37A0268FECDAE219F82FFE361AF529B67EF3552D57191E0D5E9CC4EC0F4E5A1699F9D4DCC171E67A140461A7D280824D16A6",
+  "CalendarTemplateFileName": "mail12.ntf",
   "AllowJwtMail": true,
+  "AllowLocalMailFile": true,
+  "ServerDirectDBAccess": true,
+  "createKeepDBfromTemplate": true,
+  "useJnxDesigns": false,
+  "singleDbMode": {
+    "active": true,
+    "singleDbModeUsers": {
+      "Joshua Falken": "08413E9B14C10541E64DB87C9341C20C9F0508140991448850E703D024D4CBE0:C7DAB4322DC56F3C9F8710B724E244DE3BE0E654CE79E5E00BF73B182C0FC05E035654FF9FE0BD67F51AA837549379C6C222B0F846BAC5496CB826F7AC3C1584"
+    }
+  },
+  "oauth": {
+    "active": true,
+    "database": "oauth.nsf",
+    "url": "http://localhost:8880",
+    "authCodeExpiresIn": 120,
+    "accessTokenExpiresIn": 3600,
+    "refreshTokenExpiresIn": 525600
+  },
+  "dropMethodsWithMissingVersions": false,
   "versions": {
     "core": {
       "path": "/schema/openapi.core.json",
@@ -24,10 +45,6 @@ KEEP reads all config.json from KEEP core and deployed extensions. Here is a sam
     },
     "admin": {
       "path": "/schema/openapi.admin.json",
-      "active": true
-    },
-    "quattro": {
-      "path": "/schema/openapi.quattro.json",
       "active": true
     }
   },
@@ -57,34 +74,40 @@ KEEP reads all config.json from KEEP core and deployed extensions. Here is a sam
       },
       "active": true
     },
-    "PIM": {
+    "KeepOAuth": {
       "worker": true,
-      "className": "com.hcl.domino.keep.verticles.DominoDefaultVerticle",
-      "tags": {
-        "calendar": "com.hcl.domino.keep.dbrequests.pim",
-        "settings": "com.hcl.domino.keep.dbrequests.pim",
-        "mail": "com.hcl.domino.keep.dbrequests.pim",
-        "meta": "com.hcl.domino.keep.dbrequests.pim",
-        "contacts": "com.hcl.domino.keep.dbrequests.pim",
-        "tasks": "com.hcl.domino.keep.dbrequests.pim"
+      "className": "com.hcl.domino.keep.verticles.DominoOAuthVerticle",
+      "messages": {
+        "keep.oauth.getAccessToken": "com.hcl.domino.keep.dbrequests.oauth.GetAccessToken",
+        "keep.oauth.createAuthorization": "com.hcl.domino.keep.dbrequests.oauth.CreateAuthorization"
       },
       "active": true
     },
-    "Admin": {
+    "KeepAdmin": {
       "worker": false,
       "className": "com.hcl.domino.keep.verticles.DominoDefaultVerticle",
       "tags": {
-        "admin": "com.hcl.domino.keep.dbrequests.admin",
-        "admin-database": "com.hcl.domino.keep.admin",
-        "admin-user": "com.hcl.domino.keep.admin"
+        "admin": "com.hcl.domino.keep.dbrequests.keepadmin"
+      },
+      "active": true
+    },
+    "OhmAdmin": {
+      "worker": false,
+      "className": "com.hcl.domino.keep.verticles.DominoDefaultVerticle",
+      "tags": {
+        "admin-database": "com.hcl.domino.keep.dbrequests.admin",
+        "admin-user": "com.hcl.domino.keep.dbrequests.admin",
+        "directory-assistance": "com.hcl.domino.keep.dbrequests.admin",
+        "admin-tls": "com.hcl.domino.keep.dbrequests.admin",
+        "saml": "com.hcl.domino.keep.dbrequests.admin",
+        "smtp": "com.hcl.domino.keep.dbrequests.admin"
       },
       "active": true
     },
     "RestAPI": {
       "className": "com.hcl.domino.keep.verticles.HttpListener",
       "worker": true,
-      "threadPoolName": "httpThreads",
-      "threadPoolSize": 20,
+      "instances": 2,
       "versions": {
         "core": {
           "package": "com.hcl.domino.keep.handlers.core",
@@ -95,18 +118,10 @@ KEEP reads all config.json from KEEP core and deployed extensions. Here is a sam
           "filesBodyLimit": 10000000
         },
         "admin": {
-          "package": "com.hcl.domino.keep.handlers.core",
+          "package": "com.hcl.domino.keep.handlers.admin",
           "route": "/api/admin-v1",
           "defaultClass": "com.hcl.domino.keep.handlers.core.DefaultJsonHandler",
           "defaultDatabase": "names",
-          "jsonBodyLimit": 5000000,
-          "filesBodyLimit": 10000000
-        },
-        "quattro": {
-          "package": "com.hcl.domino.keep.handlers.pim",
-          "route": "/api/pim-v1",
-          "defaultClass": "com.hcl.domino.keep.handlers.pim.DefaultPimHandler",
-          "defaultDatabase": "MAIL",
           "jsonBodyLimit": 5000000,
           "filesBodyLimit": 10000000
         }
@@ -116,22 +131,34 @@ KEEP reads all config.json from KEEP core and deployed extensions. Here is a sam
     "AsyncAgentScheduler": {
       "worker": true,
       "className": "com.hcl.domino.keep.verticles.AgentSchedulerServiceVerticle",
-      "tags": {},
       "active": true,
       "threadPoolName": "AgentScheduler",
-      "threadPoolSize": 10,
+      "threads": 10,
       "agentDefaultMaxDurationSeconds": 3600,
       "logFrequencyMs": 30000
     }
   },
-  "vertx": {
-    "metric": {}
+  "cache": {
+    "KeepRequest": "off",
+    "NameLookup": "Java",
+    "JWTLogout": "Java"
   },
+  "webapps": {
+    "active": true,
+    "appRoot": "/keepweb",
+    "appSource": "keepweb.d"
+  },
+  "vertx": {},
   "prometheusMetrics": {
-    "embeddedServerEndpoint": "/metrics",
+    "endpoint": "/metrics",
     "enabled": true,
-    "publishQuantiles": true,
-    "startEmbeddedServer": true
+    "publishQuantiles": true
+  },
+  "metrics": {
+    "enabled": true,
+    "jvmMetricsEnabled": false,
+    "metricsUser": "metrics",
+    "metricsPassword": "13549ED65AD8760294B9DC898C44F8ABEED399ABB1CA7DC51E8CCFF461D56D13:32BDC8A5DF60FCE424299543DFFF408F500DB1B1EEC4FAB848AA0ED794F5D89AA65A5449EC36BF9CBF53980E4B7DF2B3A3581186E409F5B69BC0C16E51237CC8"
   }
 }
 ```
