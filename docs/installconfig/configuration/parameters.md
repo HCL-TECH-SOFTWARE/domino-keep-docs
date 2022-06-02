@@ -13,9 +13,10 @@ Parameters are **case sensitive**
 
 ### Environment
 
-- PORT : 8880 - HTTP(S) port for the KEEP service.
+- MANAGEMENTPORT : 8880 - HTTP(S) port for the KEEP service.
 - ADMINPORT : 8889 - HTTP port for the Admin listener. Should not be reachable from outside.
 - METRICSPORT: 8890 - Endpoint for [Prometheus](https://prometheus.io/) metrics.
+- Firehoseport:42424 - Port for Deliver data to custom HTTP endpoints
 - JwtDuration: Lifetime in minutes for the internal JWT provider - default 60min.
 - JwtMaxDuration: Maximum lifetime in minutes JWT tokens get accepted.
 - DEBUG: true/false Debug mode. Creates more console output.
@@ -27,26 +28,32 @@ Parameters are **case sensitive**
 
 A configuration can have the following top-level properties. These properties are case-sensitive.
 
-| Property          | Type                                           | Description                                                                                                                                                                                                                              |
-| :---------------- | :--------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ADMINPORT         | int (0 to 65353)                               | (default 8889) Commands regarding the runtime, e.g. config and shutdown. Should only be exposed to an admin network/workstation.                                                                                                         |
-| AllowJwtMail      | Boolean                                        | true to allow email to be sent via a JWT token.                                                                                                                                                                                          |                                                                                                                                         
-| METRICSPORT       | int (0 to 65353)                               | (default 8890) Port for Prometheus metrics.                                                                                                                                                                                              |
-| PORT              | int (0 to 65353)                               | (default 8880) Port for regular API access.                                                                                                                                                                                              |
-| prometheusMetrics | [prometheusParameters](#prometheus-parameters) | Parameters to hand over to the prometheus task from vert.x.                                                                                                                                                                              |
-| shutdownkey       | String                                         | Key to be passed to trigger a server shutdown. This is hashed out in the "/config" endpoint and only accessible by looking at the relevant config files. Note, this may have been overloaded in a config file in the config.d directory. |
-| versions          | [versionParameters](#version-parameters)       | List of the OpenAPI definition files to load.                                                                                                                                                                                            |
-| verticles         | [verticlesParameters](#restapi-verticle)       | Verticles to load.                                                                                                                                                                                                                       |
-| vertx             | [vertxParameters](#vertx-parameters)           | Parameters to hand to the start of vert.x, see [the vert.x documentation](https://vertx.io/docs/apidocs/io/vertx/core/VertxOptions.html) for details.                                                                                    |
+| Property                 | Type                                           | Description                                                                                                                                                                                                                              |
+| :----------------------- | :--------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| MANAGEMENTPORT           | int (0 to 65353)                               | (default 8889) Commands regarding the runtime, e.g. config and shutdown, should only be exposed to an admin network workstation.                                                                                                         |
+| METRICSPORT              | int (0 to 65353)                               | (default 8890) Port for Prometheus metrics                                                                                                                                                                                               |
+| Firehoseport             | int (0 to 65353)                               | (default 42424) Port for Firehose to successfully deliver data to custom HTTP endpoints                                                                                                                                          |
+| PORT                     | int (0 to 65353)                               | (default 8880) The port for regular API access.                                                                                                                                                                                          |
+| prometheusMetrics        | [prometheusParameters](#prometheus-parameters) | Parameters to hand over to the Prometheus task from vert.x.                                                                                                                                                                              |
+| versions                 | [versionParameters](#version-parameters)       | List of the OpenAPI definition files to load.                                                                                                                                                                                            |
+| verticles                | [verticlesParameters](#restapi-verticle)       | The verticles to load.                                                                                                                                                                                                                   |
+| vertx                    | [vertxParameters](#vertx-parameters)           | Parameters to hand to the start of vert.x, see [the vert.x documentation](https://vertx.io/docs/apidocs/io/vertx/core/VertxOptions.html) for details.                                                                                    |
+| ServerDirectDBAccess     | Boolean                                        | True to allow Direct Database access for server                                                                                                                                                                                          |
+| createKeepDBfromTemplate | Boolean                                        | True to allow create keep Database from template                                                                                                                                                                                         |
+| useJnxDesigns            | Boolean                                        | False to stop the use of Jnx Designs                                                                                                                                                                                                     |
+| AllowJwtMail             | Boolean                                        | True to allow email to be sent via a JWT token.                                                                                                                                                                                          |
+| AllowLocalMailFile       | Boolean                                        | True to allow local mail file                                                                                                                                                                                                            |
+| shutdownkey              | String                                         | Key to be passed to trigger a server shutdown. This is hashed out in the "/config" endpoint and only accessible by looking at the relevant config files. Note, this may have been overloaded in a config file in the config.d directory. |
+
 
 ### Prometheus Parameters
 
 | Property               | Type    | Description                        |
 | :--------------------- | :------ | :--------------------------------- |
-| embeddedServerEndpoint | String  | Route path to metrics.             |
+| Endpoint               | String  | Route path to metrics.             |
 | enabled                | Boolean | true to enable metrics collection. |
 | publishQuantiles       | Boolean | true to publish Qantiles.          |
-| startEmbeddedServer    | Boolean | true to start embedded server.     |
+
 
 ### Version parameters
 
@@ -71,12 +78,10 @@ Here is a JSON representation of the resource:
 
 ```json
 {
-  "disabledMetricsCategories": [],
+  
   "enabled": true,
   "jvmMetricsEnabled": true,
-  "labels": ["HTTP_METHOD", "HTTP_CODE", "EB_SIDE", "POOL_TYPE"],
-  "labelMatches": [],
-  "registryName": "default"
+  "metricuser": "metrics"
 }
 ```
 
@@ -99,7 +104,7 @@ Verticles defines a separate unit of work for particular tags. For the RestAPI v
 | className      | String  | Class to use for the verticle. Typically this is `com.hcl.domino.keep.verticles.DominoDefaultVerticle`, unless you need to extend that class.                                                                                                                                    |
 | tags           | Object  | Tags from OpenAPI specs to allocate to this verticle and the package in which to find the NSFHandlers.                                                                                                                                                                           |
 | threadPoolName | String  | If a worker verticle should use a dedicated pool, a required thread pool name. By default it is assigned 10 threads, but this can be overritten with threadPoolSize. If the same threadPoolName is used by multiple verticles, the thread pool is shared across those verticles. |
-| threadPoolSize | int     | This will only be used for worker threads with a specific threadPoolName. The default is 10, but this can be overritten.                                                                                                                                                         |
+| threads        | int     | This will only be used for worker threads with a specific threadPoolName. The default is 10, but this can be overritten.                                                                                                                                                         |
 | worker         | Boolean | To make this a [worker verticle](https://medium.com/@levon_t/java-vert-x-starter-guide-part-2-worker-verticles-c49866df44ab). Worker verticles do not run on the event loop thread, but on worker threads from a preconfigured pool of 20 threads. Use for heavy-duty verticles. |
 
 The following are types of verticles with additional parameters:
