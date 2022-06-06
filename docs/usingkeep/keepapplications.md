@@ -53,16 +53,16 @@ Check the details in [Security Configuration](../installconfig/configuration/sec
 
 ### Server based applications
 
-**Note**: This section of KEEP will change. With the possibility to use an OAuth IdP and scope definitions, the application server will be upgraded to an OAuth application compliant registry with id, secret and callback
+**Note**: The application server is upgraded to an OAuth application compliant registry with id, secret and callback
 {: .alert .alert-danger}
 
 In the Admin Client (or the [Admin API](administrationui.md)), we can define an "application" which consists of:
 
-- AppID, which is the Application ID
-- AppSecret, which is the secret defined for the application
-- Databases, which is the list of KEEP database that the application wants to access
+- ClientID, which is the Application ID
+- ClientSecret, which is the secret defined for the application
+- Scopes, which is the list of KEEP database that the application wants to access
 
-When the application presents AppID and AppSecret in the header of a request, it can access the databases,
+When the application presents ClientID and ClientSecret in the header of a request, it can access the databases,
 even when they are not defined as "Open Access". Thus, an application server can have more access than a browser application.
 
 The point to note here is that there is "no security bypass". The access to the databases is still governed by their ACL. So, when a user accesses databases via the app but has no access privileges, access to the database will be denied.
