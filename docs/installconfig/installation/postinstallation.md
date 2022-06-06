@@ -18,3 +18,13 @@ This chapter describes tasks you can perform after installing an instance of KEE
 ## [Sharing JWT between servers](../configuration/security/encryption)
 
 ## [Configure apps](../../tutorial/adminui)
+
+## [Setup functional Accounts](./functionalUsers)
+
+There are a series of endpoints that are not associated with regular user ids:
+
+- Management console (Port 8889)
+- Metrics endpoint (Port 8890)
+- Health check (Port 8886)
+
+To enable access to those, you need functional accounts
