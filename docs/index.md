@@ -45,7 +45,7 @@ To troubleshoot error "The account ID or package ID is missing. Please provide i
 **We want to hear from you**
 {: .panel-heading}
 <div class="panel-body">
-Join us for questions, discussions, ideas and feedback over at [OpenNTF's KEEP chat](https://openntf.slack.com/archives/C0232M13WFQ) and/or participate in the [Early release forum](feedback).
+Join us for questions, discussions, ideas and feedback over at [OpenNTF's KEEP chat](https://openntf.slack.com/archives/C0232M13WFQ) , [Discord](https://discord.com/invite/jmRHpDRnH4) and/or participate in the [Early release forum](feedback).
 </div></div>
 
 ---
