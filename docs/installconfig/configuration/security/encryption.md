@@ -68,9 +68,9 @@ openssl ec -in privatekey.pem -pubout -out publickey.pem
 
 The management UI offers convenience functions for encryption and certificate related activities.
 
-![KEEP Management Console](../../../assets/images/KeepManagementConsole.png)
+![KEEP Management Console](../../../assets/images/KeepManagementConsole_New.png)
 
-### Hasshing a salted password
+### Hashing a salted password
 
 The shutdown key, as well as the metrics credential password are stored salted and hashed in the KEEP configuration ini files. To change one of them, the `salt` button can be used to compute a replacement value. Enter the password, it isn't hidden here, click on `Salt` and the salted and hashed version will be shown in the UI, where you can copy & paste it for use in a configuration json file.
 
