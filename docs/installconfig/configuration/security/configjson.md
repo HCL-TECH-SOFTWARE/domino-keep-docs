@@ -218,7 +218,7 @@ The name of the entries must match the name used in versions of the RestAPI vert
 
 | Property | Type                                     | Description                  |
 | :------- | :--------------------------------------- | :--------------------------- |
-| metric   | [metricsParameters](#metrics-parameters) | Parameter for vert.x metrics |
+| metric   | [metricsParameters](https://vertx.io/docs/vertx-micrometer-metrics/java/) | Parameter for vert.x metrics |
 
 #### Metrics parameters
 
