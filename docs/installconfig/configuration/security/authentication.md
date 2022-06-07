@@ -67,11 +67,11 @@ The JWT requires the following format (Additional entries get ignored):
 
 ```json
 {
-  "iss": "Issuer Name",
-  "sub": "CN=Common Name/OU=Unit/O=Org",
-  "scope": "MAIL $DATA $DECRYPT",
-  "iat": 1619554552,
-  "exp": 1619558152,
+  "iss": "The Demo Wizzard",
+  "sub": "CN=Doctor Notes/O=ProjectKeep",
+  "scopes": "MAIL $DATA",
+  "iat": 1618506339,
+  "exp": 1618509939,
   "aud": "Domino"
 }
 ```
@@ -80,7 +80,7 @@ All elements need to be present. “Audience” must be set to “Domino” and 
 
 - MAIL allows a request to attempt to access the mail file of a given user. Access is limited by Domino’s ACL entries.
 - $DATA allows a request to attempt to access any database configured for KEEP access. Access is limited by Domino’s ACL entries. Users can only access databases that grant them access in the ACL.
-- $DECRYPT (WIP) Allow to decrypt documents secured with encryption. Without that parameter no access to an ID in the ID vault is attempted.
+<!-- - $DECRYPT (WIP) Allow to decrypt documents secured with encryption. Without that parameter no access to an ID in the ID vault is attempted. -->
 - [KeepDBAliasName] allows a request to attempt to access a database configured under that alias name. Access is limited by Domino’s ACL.
 
 ### KEEP and OAuth
