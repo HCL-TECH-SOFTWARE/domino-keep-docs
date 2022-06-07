@@ -12,154 +12,163 @@ KEEP reads all config.json from KEEP core and deployed extensions. Here is a sam
 
 ```json
 {
-  "PORT": 8880,
-  "MANAGMENTPORT": 8889,
-  "METRICSPORT": 8890,
-  "FIREHOSEPORT": 42424,
-  "shutdownkey": "D9E4C56F6DBD5AE39059510CEEC68CDEDAB2CE712126B8F2D5ED8B0F5952FB21:635168471E02C70291C0FBDBFA7A37A0268FECDAE219F82FFE361AF529B67EF3552D57191E0D5E9CC4EC0F4E5A1699F9D4DCC171E67A140461A7D280824D16A6",
-  "CalendarTemplateFileName": "mail12.ntf",
-  "AllowJwtMail": true,
-  "AllowLocalMailFile": true,
-  "ServerDirectDBAccess": true,
-  "createKeepDBfromTemplate": true,
-  "useJnxDesigns": false,
-  "singleDbMode": {
-    "active": true,
-    "singleDbModeUsers": {
-      "Joshua Falken": "08413E9B14C10541E64DB87C9341C20C9F0508140991448850E703D024D4CBE0:C7DAB4322DC56F3C9F8710B724E244DE3BE0E654CE79E5E00BF73B182C0FC05E035654FF9FE0BD67F51AA837549379C6C222B0F846BAC5496CB826F7AC3C1584"
-    }
-  },
-  "oauth": {
-    "active": true,
-    "database": "oauth.nsf",
-    "url": "http://localhost:8880",
-    "authCodeExpiresIn": 120,
-    "accessTokenExpiresIn": 3600,
-    "refreshTokenExpiresIn": 525600
-  },
-  "dropMethodsWithMissingVersions": false,
-  "versions": {
-    "core": {
-      "path": "/schema/openapi.core.json",
-      "active": true
+    "PORT": 8880,
+    "MANAGMENTPORT": 8889,
+    "METRICSPORT": 8890,
+    "HEALTHCHECKPORT": 8886,
+    "FIREHOSEPORT": 42424,
+    "CalendarTemplateFileName": "mail12.ntf",
+    "AllowJwtMail": true,
+    "AllowLocalMailFile": true,
+    "ServerDirectDBAccess": false,
+    "createKeepDBfromTemplate": true,
+    "useJnxDesigns": false,
+    "singleDbMode": {
+        "active": false
     },
-    "admin": {
-      "path": "/schema/openapi.admin.json",
-      "active": true
-    }
-  },
-  "verticles": {
-    "Design": {
-      "worker": false,
-      "className": "com.hcl.domino.keep.verticles.DominoDefaultVerticle",
-      "tags": {
-        "design": "com.hcl.domino.keep.dbrequests.designcode",
-        "code": "com.hcl.domino.keep.dbrequests.designcode"
-      },
-      "threadPoolName": "codeThreads",
-      "active": true
+    "oauth": {
+        "active": true,
+        "database": "oauth.nsf",
+        "url": "http://localhost:8880",
+        "authCodeExpiresIn": 120,
+        "accessTokenExpiresIn": 3600,
+        "refreshTokenExpiresIn": 525600
     },
-    "Data": {
-      "className": "com.hcl.domino.keep.verticles.DominoDefaultVerticle",
-      "tags": {
-        "data": "com.hcl.domino.keep.dbrequests.data"
-      },
-      "active": true
-    },
-    "Identity": {
-      "worker": false,
-      "className": "com.hcl.domino.keep.verticles.DominoDefaultVerticle",
-      "tags": {
-        "authentication": "com.hcl.domino.keep.dbrequests.identity"
-      },
-      "active": true
-    },
-    "KeepOAuth": {
-      "worker": true,
-      "className": "com.hcl.domino.keep.verticles.DominoOAuthVerticle",
-      "messages": {
-        "keep.oauth.getAccessToken": "com.hcl.domino.keep.dbrequests.oauth.GetAccessToken",
-        "keep.oauth.createAuthorization": "com.hcl.domino.keep.dbrequests.oauth.CreateAuthorization"
-      },
-      "active": true
-    },
-    "KeepAdmin": {
-      "worker": false,
-      "className": "com.hcl.domino.keep.verticles.DominoDefaultVerticle",
-      "tags": {
-        "admin": "com.hcl.domino.keep.dbrequests.keepadmin"
-      },
-      "active": true
-    },
-    "OhmAdmin": {
-      "worker": false,
-      "className": "com.hcl.domino.keep.verticles.DominoDefaultVerticle",
-      "tags": {
-        "admin-database": "com.hcl.domino.keep.dbrequests.admin",
-        "admin-user": "com.hcl.domino.keep.dbrequests.admin",
-        "directory-assistance": "com.hcl.domino.keep.dbrequests.admin",
-        "admin-tls": "com.hcl.domino.keep.dbrequests.admin",
-        "saml": "com.hcl.domino.keep.dbrequests.admin",
-        "smtp": "com.hcl.domino.keep.dbrequests.admin"
-      },
-      "active": true
-    },
-    "RestAPI": {
-      "className": "com.hcl.domino.keep.verticles.HttpListener",
-      "worker": true,
-      "instances": 2,
-      "versions": {
+    "keepVersion": 1,
+    "dropMethodsWithMissingVersions": true,
+    "versions": {
         "core": {
-          "package": "com.hcl.domino.keep.handlers.core",
-          "route": "/api/v1",
-          "defaultClass": "com.hcl.domino.keep.handlers.core.DefaultJsonHandler",
-          "defaultDatabase": "keepconfig",
-          "jsonBodyLimit": 5000000,
-          "filesBodyLimit": 10000000
+            "path": "/schema/openapi.core.json",
+            "active": true
         },
         "admin": {
-          "package": "com.hcl.domino.keep.handlers.admin",
-          "route": "/api/admin-v1",
-          "defaultClass": "com.hcl.domino.keep.handlers.core.DefaultJsonHandler",
-          "defaultDatabase": "names",
-          "jsonBodyLimit": 5000000,
-          "filesBodyLimit": 10000000
+            "path": "/schema/openapi.admin.json",
+            "active": true
         }
-      },
-      "active": true
     },
-    "AsyncAgentScheduler": {
-      "worker": true,
-      "className": "com.hcl.domino.keep.verticles.AgentSchedulerServiceVerticle",
-      "active": true,
-      "threadPoolName": "AgentScheduler",
-      "threads": 10,
-      "agentDefaultMaxDurationSeconds": 3600,
-      "logFrequencyMs": 30000
+    "bodyHandler": {
+        "uploadsDirectory": "keep-file-uploads.d",
+        "bodyLimit": 10000000
+    },
+    "verticles": {
+        "Design": {
+            "worker": true,
+            "className": "com.hcl.domino.keep.verticles.DominoDefaultVerticle",
+            "tags": {
+                "design": "com.hcl.domino.keep.dbrequests.designcode",
+                "code": "com.hcl.domino.keep.dbrequests.designcode",
+                "schema": "com.hcl.domino.keep.dbrequests.schema"
+            },
+            "threadPoolName": "codeThreads",
+            "active": true
+        },
+        "Data": {
+            "worker": true,
+            "className": "com.hcl.domino.keep.verticles.DominoDefaultVerticle",
+            "tags": {
+                "data": "com.hcl.domino.keep.dbrequests.data",
+                "scope": "com.hcl.domino.keep.dbrequests.scope"
+            },
+            "threadPoolName": "dataThreads",
+            "active": true
+        },
+        "OData": {
+            "worker": true,
+            "className": "com.hcl.domino.keep.verticles.DominoDefaultVerticle",
+            "tags": {
+                "odata": "com.hcl.domino.keep.dbrequests.odata"
+            },
+            "threadPoolName": "odataThreads",
+            "active": true
+        },
+        "Identity": {
+            "worker": false,
+            "className": "com.hcl.domino.keep.verticles.DominoDefaultVerticle",
+            "tags": {
+                "authentication": "com.hcl.domino.keep.dbrequests.identity"
+            },
+            "active": true
+        },
+        "KeepOAuth": {
+            "worker": false,
+            "className": "com.hcl.domino.keep.verticles.DominoOAuthVerticle",
+            "messages": {
+                "keep.oauth.getAccessToken": "com.hcl.domino.keep.dbrequests.oauth.GetAccessToken",
+                "keep.oauth.createAuthorization": "com.hcl.domino.keep.dbrequests.oauth.CreateAuthorization"
+            },
+            "active": true
+        },
+        "KeepAdmin": {
+            "worker": false,
+            "className": "com.hcl.domino.keep.verticles.DominoDefaultVerticle",
+            "tags": {
+                "admin": "com.hcl.domino.keep.dbrequests.keepadmin"
+            },
+            "active": true
+        },
+        "OhmAdmin": {
+            "worker": false,
+            "className": "com.hcl.domino.keep.verticles.DominoDefaultVerticle",
+            "tags": {
+                "admin-database": "com.hcl.domino.keep.dbrequests.admin",
+                "admin-user": "com.hcl.domino.keep.dbrequests.admin",
+                "directory-assistance": "com.hcl.domino.keep.dbrequests.admin",
+                "admin-tls": "com.hcl.domino.keep.dbrequests.admin",
+                "saml": "com.hcl.domino.keep.dbrequests.admin",
+                "smtp": "com.hcl.domino.keep.dbrequests.admin"
+            },
+            "active": true
+        },
+        "RestAPI": {
+            "className": "com.hcl.domino.keep.verticles.HttpListener",
+            "worker": false,
+            "instances": 1,
+            "versions": {
+                "core": {
+                    "package": "com.hcl.domino.keep.handlers.core",
+                    "route": "/api/v1",
+                    "defaultClass": "com.hcl.domino.keep.handlers.core.DefaultJsonHandler",
+                    "defaultDatabase": "keepconfig"
+                },
+                "admin": {
+                    "package": "com.hcl.domino.keep.handlers.admin",
+                    "route": "/api/admin-v1",
+                    "defaultClass": "com.hcl.domino.keep.handlers.core.DefaultJsonHandler",
+                    "defaultDatabase": "names"
+                }
+            },
+            "active": true
+        },
+        "AsyncAgentScheduler": {
+            "worker": true,
+            "className": "com.hcl.domino.keep.verticles.AgentSchedulerServiceVerticle",
+            "active": true,
+            "threadPoolName": "AgentScheduler",
+            "threads": 10,
+            "agentDefaultMaxDurationSeconds": 3600,
+            "logFrequencyMs": 30000
+        }
+    },
+    "cache": {
+        "KeepRequest": "off",
+        "NameLookup": "Java",
+        "JWTLogout": "Java"
+    },
+    "webapps": {
+        "active": true,
+        "appRoot": "/keepweb",
+        "appSource": "keepweb.d"
+    },
+    "vertx": {},
+    "prometheusMetrics": {
+        "endpoint": "/metrics",
+        "enabled": true,
+        "publishQuantiles": true
+    },
+    "metrics": {
+        "enabled": true,
+        "jvmMetricsEnabled": false
     }
-  },
-  "cache": {
-    "KeepRequest": "off",
-    "NameLookup": "Java",
-    "JWTLogout": "Java"
-  },
-  "webapps": {
-    "active": true,
-    "appRoot": "/keepweb",
-    "appSource": "keepweb.d"
-  },
-  "vertx": {},
-  "prometheusMetrics": {
-    "endpoint": "/metrics",
-    "enabled": true,
-    "publishQuantiles": true
-  },
-  "metrics": {
-    "enabled": true,
-    "jvmMetricsEnabled": false,
-    "metricsUser": "metrics",
-    "metricsPassword": "13549ED65AD8760294B9DC898C44F8ABEED399ABB1CA7DC51E8CCFF461D56D13:32BDC8A5DF60FCE424299543DFFF408F500DB1B1EEC4FAB848AA0ED794F5D89AA65A5449EC36BF9CBF53980E4B7DF2B3A3581186E409F5B69BC0C16E51237CC8"
-  }
 }
 ```
 
