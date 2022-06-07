@@ -53,8 +53,6 @@ Check the details in [Security Configuration](../installconfig/configuration/sec
 
 ### Server based applications
 
-**Note**: The application server is upgraded to an OAuth application compliant registry with id, secret and callback
-{: .alert .alert-danger}
 
 In the Admin Client (or the [Admin API](administrationui.md)), we can define an "application" which consists of:
 
