@@ -52,12 +52,12 @@ In each of the sections you specify a user object in the same way:
 }
 ```
 
-| Key      | Purpose                                                  |
-| -------- | -------------------------------------------------------- |
-| Json key | UserId for authentication, case sensitive, no variations |
-| active   | true/false to temporarily disable an account             |
-| CN       | Common name in X500 format                               |
-| secret   | Salted and encrypted password                            |
+| Key      | Purpose                                                                      |
+| -------- | ---------------------------------------------------------------------------- |
+| Json key | UserId for authentication, case sensitive, no variations                     |
+| active   | true/false to temporarily disable an account                                 |
+| CN       | Common name in X500 format, optional. When missing user name is the Json key |
+| secret   | Salted and encrypted password                                                |
 
 ## Obtaining salted passwords
 
@@ -78,7 +78,7 @@ The management endpoint (Port 8889) has, besides others, an utility function to 
 
 This creates the user "Doctor Notes" with the password `password` to access the management console
 
-<div class="panel panel-error">
+<div class="panel panel-danger">
 **Don't leave default passwords in your system**
 {: .panel-heading}
 <div class="panel-body">
