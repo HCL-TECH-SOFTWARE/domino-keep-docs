@@ -71,8 +71,3 @@ The database contains one local user **John Doe** who is deactivated.
 
 When you want to run KEEP local on your Mac/PC, you need to activate that user.
 
-The activation button is available in the **Notes client**, under menu `File -> Open -> HCL Notes Applications`. Select `Project KEEP Configuration` application. If you don't see this listed see the [Troubleshooting guide]({{ '/docs/installconfig/troubleshooting' | relative_url }}) for any issues with the installations.
-
-![Project KEEP Configuration]({{ '/assets/images/KeepConfigApp.png' | relative_url }}){: .scale-img-seventy-five-percent }
-
-![John Doe]({{ '/assets/images/JohnDoeConfig.png' | relative_url }}){: .scale-img-seventy-five-percent }
