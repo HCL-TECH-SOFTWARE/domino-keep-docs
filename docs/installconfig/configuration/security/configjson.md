@@ -193,8 +193,6 @@ A current `config.json` has the following top-level properties. These properties
 | useJnxDesigns            | Boolean                                        | False to stop the use of Jnx Designs                                                                                                                                                                                                     |
 | AllowJwtMail             | Boolean                                        | True to allow email to be sent via a JWT token.                                                                                                                                                                                          |
 | AllowLocalMailFile       | Boolean                                        | True to allow local mail file                                                                                                                                                                                                            |
-| shutdownkey              | String                                         | Key to be passed to trigger a server shutdown. This is hashed out in the "/config" endpoint and only accessible by looking at the relevant config files. Note, this may have been overloaded in a config file in the config.d directory. |
-
 
 ### Prometheus Parameters
 
