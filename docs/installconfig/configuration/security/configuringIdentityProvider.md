@@ -27,15 +27,29 @@ KEEP supports identity providers, that can produce JWT access tokens e.g:
 Check out the [Keycloak](./configuringKeycloak) example configuration
 {: .alert .alert-info}
 
-### Example JWT
+### Example For Encode JWT
+User need to go through the following link to decode the encoded token (https://jwt.io/).
+Then the page looks like as below:
+
+![JWT Encode & Decode](../../../assets/images/JWTEncode&Decode.png)
 
 ```bash
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUaGUgRGVtbyBXaXp6YXJkIiwic3ViIjoiQ049RG9jdG9yIE5vdGVzL0
 89UHJvamVjdEtlZXAiLCJzY29wZXMiOiJNQUlMICREQVRBIiwiaWF0IjoxNjE4NTA2MzM5LCJleHAiOjE2MTg1MDk5MzksI
 mF1ZCI6IkRvbWlubyJ9.HJC2MTu8OPT8KnsZnLWqIIc3CoPaEmzQwnygEaRjapk
 ```
-
 When decoded, this translates to-
+
+HEADER: ALGORITHM & TOKEN TYPE
+
+```json
+{
+  "typ": "JWT",
+  "alg": "HS256"
+}
+```
+
+PAYLOAD: DATA
 
 ```json
 {
@@ -46,6 +60,17 @@ When decoded, this translates to-
   "exp": 1618509939,
   "aud": "Domino"
 }
+```
+VERIFY SIGNATURE
+
+```json
+HMACSHA256(
+  base64UrlEncode(header) + "." +
+  base64UrlEncode(payload),
+  
+your-256-bit-secret
+
+) secret base64 encoded
 ```
 
 - **iss**: "Issuer" - Name of the IdP providing the claim.
