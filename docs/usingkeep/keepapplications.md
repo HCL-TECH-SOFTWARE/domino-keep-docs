@@ -56,14 +56,24 @@ Check the details in [Security Configuration](../installconfig/configuration/sec
 
 In the Admin Client (or the [Admin API](administrationui.md)), we can define an "application" which consists of:
 
-- ClientID, which is the Application ID
-- ClientSecret, which is the secret defined for the application
-- Scopes, which is the list of KEEP database that the application wants to access
+![Application](../assets/images/Application.png)
 
-When the application presents ClientID and ClientSecret in the header of a request, it can access the databases,
-even when they are not defined as "Open Access". Thus, an application server can have more access than a browser application.
+1. App Name, gives name of the application.
+2. Description, descrption for application given while creating
+3. AppID, which is the Application ID.
+4. Edit, to edit the details application while creating it.
+5. Generate Application Secret, It generates the application secret.
+6. Client_Secret, which is the secret defined for the application. It is generated when Generate Application secret is clicked.
+7. Delete, to delete the application.
+8. Launch, to launch the application.
 
-The point to note here is that there is "no security bypass". The access to the databases is still governed by their ACL. So, when a user accesses databases via the app but has no access privileges, access to the database will be denied.
+Along with above application also has Scopes, which is the list of KEEP database that the application wants to access. It is added whle creating the application. Can edit it through Edit option.
+
+
+When the application presents AppID and ClientSecret in the header of a request, it can access the databases,
+even when they are not defined as "Open Access". This information is required for an application to use an OAUTH flow to gain access to data. Thus, an application server can have more access than a browser application.
+
+KEEP offers an OAUTH/OICD controlled access.
 
 ### Desktop applications
 
