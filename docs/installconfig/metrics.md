@@ -20,6 +20,7 @@ KEEP supports metrics produced by [MicroMeter](https://micrometer.io) in a [Prom
     }
 ```
 
+
 ### Metrics collected
 
 Out-of-the-box Vert.x automatically collects a variety of metrics about JVM, CPU, thread pools, HTTP servers and the event bus.
