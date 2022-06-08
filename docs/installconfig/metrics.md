@@ -12,7 +12,7 @@ nav_order: 30
 Metrics are exposed on their own dedicated port, "METRICSPORT" in the config. The default, if not set, is port 8890.
 KEEP supports metrics produced by [MicroMeter](https://micrometer.io) in a [Prometheus](https://prometheus.io/) compatible format, pollable from the metrics port.
 
-## Metrics config
+### Metrics config
 ```json
    {
       "enabled": true,
