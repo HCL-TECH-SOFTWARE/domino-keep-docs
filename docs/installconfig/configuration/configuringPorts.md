@@ -9,13 +9,17 @@ nav_order: 11
 
 ![Ports in use](../../assets/images/PortUse.png)
 
-KEEP uses three ports which have different purposes and warrant different access/security settings. By dividing KEEP access across more than one port, an administrator can take advantage of access security provided by the operating system and/or firewall.
+KEEP uses four ports which have different purposes and warrant different access/security settings. By dividing KEEP access across more than one port, an administrator can take advantage of access security provided by the operating system and/or firewall.
 
 The ports are specified in `config.json` but can be overwritten using enviroment variables. See the page on [configuration](./security/configjson) for details.
 
 ### Data PORT (8880)
 
 This is the main port used by KEEP to interact with API users. This port should be exposed to all users and be secured by https, either on KEEP or using a proxy. All access to data requires authentication.
+
+### Healthcheck Port (8886)
+
+Healthcheck is to check whether KEEP is up. It's a standard approach for Docker and Kubernetes environments, so any automated tooling that manages your containers can periodically check and automatically take action if the tool (in this case KEEP) is no longer working. It has a single endpoint, "/health" which responds with information about whether all parts of KEEP are responding - the eventbus, main KEEP server, KEEP management server, KEEP metrics server and access to a Domino database. It has separate security, it's own username and password. This follows the same approach as the management server, but it's a completely separate user. None of the users that have access to the rest of KEEP will have access to the healthcheck port, and the healthcheck user will not have access to other areas of KEEP.
 
 ### Management Port (8889)
 
