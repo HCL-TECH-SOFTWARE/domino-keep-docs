@@ -19,7 +19,7 @@ KEEP supports metrics produced by [MicroMeter](https://micrometer.io) in a [Prom
       "jvmMetricsEnabled": false
     }
 ```
-<red> When **jvmMetricsEnabled** is set to true, more metrics data is collected. </red>
+<font color="red"> When **jvmMetricsEnabled** is set to true, more metrics data is collected. </font>
 
 ### Metrics collected
 
