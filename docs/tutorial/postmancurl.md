@@ -61,7 +61,7 @@ Use the following command to list all the databases:
 Replace `$Bearer` with the actual Bearer value.
 
 ```
-curl --location --request GET 'localhost:8880/api/v1/admin/access' \
+curl --location --request POST 'localhost:8880/api/v1/admin/access' \
 --header 'Authorization: Bearer $Bearer' \
 --header 'Content-Type: application/json' \
 --data-raw '{
