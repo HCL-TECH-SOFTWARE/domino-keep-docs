@@ -128,3 +128,4 @@ To be successful in composing MIME payloads, make yourself familiar with the spe
 - [MIME type sniffing by WHATWG](https://mimesniff.spec.whatwg.org/#understanding-mime-types)
 - [Java code examples with MIME](https://www.programcreek.com/java-api-examples/?api=org.apache.http.entity.mime.MIME)
 - [Oracle definition on MIME](https://docs.oracle.com/cd/E19146-01/819-2630/abumi/index.html)
+- [Wikipedia on MultiPart](https://en.wikipedia.org/wiki/MIME#Multipart_subtypes)
