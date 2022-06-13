@@ -120,6 +120,8 @@ An image post looks like this:
 }
 ```
 
+### Further reading
+
 To be successful in composing MIME payloads, make yourself familiar with the specification and more explanations:
 
 - [W3C Multipart specification](https://www.w3.org/Protocols/rfc1341/7_2_Multipart.html)
