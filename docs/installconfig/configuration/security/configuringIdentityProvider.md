@@ -29,7 +29,8 @@ Check out the [Keycloak](./configuringKeycloak) example configuration
 {: .alert .alert-info}
 
 ### Example For Encode JWT
-You can use the official JWT site to decode and inspect the encoded token (https://jwt.io/).
+
+You can use the [official JWT site](https://jwt.io/) to decode and inspect the encoded token.
 
 ![JWT Encode & Decode](../../../assets/images/JWTEncode&Decode.png)
 
