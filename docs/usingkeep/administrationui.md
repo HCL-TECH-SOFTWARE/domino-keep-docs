@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Admin UI 
+title: Web UI
 parent: Using KEEP
-nav_order: 3
+nav_order: 4
 ---
 
-## Admin UI
+## Web UI for schema, scope and app management
 
-The Admin UI provides a user interface to a number of KEEP APIs. It thus serves an example what a [React](https://reactjs.org/) application using the KEEP APIs is capable of. It covers application, database, people and groups management. Anything that can be done using the AdminUI, can also be done using Postman, curl, SwaggerUI or similar tools. We have tutorials to walk you through the same.
+The Admin UI provides a user interface to a number of KEEP APIs. It thus serves an example what a [React](https://reactjs.org/) application using the KEEP APIs is capable of. It covers schema, scope and app management management. Anything that can be done using the WebUI, and more, can also be done using Postman, curl, SwaggerUI or similar tools. We have tutorials to walk you through the same.
 
 This is what the Login page looks like.
 
@@ -110,10 +110,9 @@ To make changes to the configuration, select the Form. This will load the Accces
 
 It is here that you can set the Read or Write access formulae for each of the fields in the form.
 
-<!--
----
+## <!--
 
- ### People Management Tutorial
+### People Management Tutorial
 
 Select [KEEP People Management](http://localhost:8880/admin/ui/people) from the home page.
 

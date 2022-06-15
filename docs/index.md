@@ -29,7 +29,6 @@ HCL Project KEEP, a.k.a Domino REST API, provides a secure REST API access into 
 
 [Get started now]({{ 'introduction/quickstart' | relative_url }}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub]({{ site.github.repository_url }}){: .btn .fs-5 .mb-4 .mb-md-0 } [Download {{ site.version}} ]({{ site.flexnet_url }}){: .btn .fs-5 .mb-4 .mb-md-0 }
 
-
 <div class="panel panel-success">
 **Note**
 {: .panel-heading}
@@ -37,6 +36,7 @@ HCL Project KEEP, a.k.a Domino REST API, provides a secure REST API access into 
 Log in to [Flexnet](https://hclsoftware.flexnetoperations.com/) before downloading KEEP using the above button.
 
 To troubleshoot error "The account ID or package ID is missing. Please provide it and try again.", search for "HCL Domino REST API Early Access" in the product list.
+
 </div></div>
 
 ---
@@ -110,9 +110,9 @@ We follow the [API first](https://swagger.io/resources/articles/adopting-an-api-
 
 KEEP has an [extensible architecture](./extendingkeep/index) that allows it to serve multiple API versions from a Domino server. We currently support admin, core, CI/CD and PIM APIs but KEEP can be extended to add more APIs.
 
-### Web admin GUI
+### Web GUI for Schema, Scope and App management
 
-We provide a Web [Admin UI](./usingkeep/administrationui) that facilitates admin actions.
+We provide a [Web UI](./usingkeep/administrationui) that facilitates managing schemas, scopes and applications.
 
 ### Design, admin and data
 
@@ -120,4 +120,4 @@ Along with the application design and admin features, KEEP allows CRUD operation
 
 ### Low barrier to entry
 
-KEEP runs on Domino and/or your Notes Client on Windows/Linux/Mac. Someone with previous working experience of Notes and Domino can quickly get started with KEEP, as you are about to find out for yourself!
+KEEP runs on Domino and/or your Notes Client on Windows/Linux/Mac. Someone with previous working experience of Notes and Domino can quickly get started with KEEP, as you are about [to find out for yourself](introduction/quickstart.md)!

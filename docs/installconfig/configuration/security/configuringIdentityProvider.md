@@ -15,7 +15,8 @@ However, for an actual deployment, you might want to configure your own IdP and 
 
 ### Identity providers
 
-KEEP supports identity providers, that can produce JWT access tokens e.g:
+KEEP supports identity providers, that can produce JWT access tokens.
+For Example:
 
 - Microsoft Active Directory
 - Redhat [Keycloak](https://keycloak.org/)
@@ -28,8 +29,8 @@ Check out the [Keycloak](./configuringKeycloak) example configuration
 {: .alert .alert-info}
 
 ### Example For Encode JWT
-User need to go through the following link to decode the encoded token (https://jwt.io/).
-Then the page looks like as below:
+
+You can use the [official JWT site](https://jwt.io/) to decode and inspect the encoded token.
 
 ![JWT Encode & Decode](../../../assets/images/JWTEncode&Decode.png)
 

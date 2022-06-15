@@ -54,41 +54,46 @@ curl --location --request POST 'localhost:8880/api/v1/auth' \
 
 Use the following command to list all the databases:
 
-![AllDatabases]({{ '/assets/images/AllDatabasesPostman.png' | relative_url }})
+![AllDatabases](../assets/images/AllDatabasesPostman.png)
 
 #### Curl code snippet
 
 Replace `$Bearer` with the actual Bearer value.
 
 ```
-curl --location --request GET 'localhost:8880/api/v1/admin/nsf' \
---header 'Authorization: Bearer $Bearer'
+curl --location --request POST 'localhost:8880/api/v1/admin/access' \
+--header 'Authorization: Bearer $Bearer' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "checkAllNsf": true,
+    "onlyConfigured": false
+}'
 ```
 
 ### Verify the views and forms for the demo database
 
 Use the following commands to check the views and forms in the database.
 
-![PostmanViews]({{ '/assets/images/PostmanViews.png' | relative_url }})
+![PostmanViews](../assets/images/PostmanViews.png)
 
 #### Curl code snippet
 
 Please replace `$Bearer` with actual Bearer value.
 
 ```
-curl --location --request GET 'localhost:8880/api/v1/lists?db=demo' \
+curl --location --request GET 'localhost:8880/api/v1/lists?dataSource=demo' \
 --header 'Authorization: Bearer $Bearer' \
 --header 'Accept: application/json'
 ```
 
-![PostmanForms]({{ '/assets/images/PostmanForms.png' | relative_url }})
+![PostmanForms](../assets/images/PostmanForms.png)
 
 #### Curl code snippet
 
 Please replace `$Bearer` with actual Bearer value.
 
 ```
-curl --location --request GET 'localhost:8880/api/v1/design/forms?db=demo' \
+curl --location --request GET 'localhost:8880/api/v1/design/forms?dataSource=demo' \
 --header 'Authorization: Bearer $Bearer'
 ```
 
@@ -96,14 +101,14 @@ curl --location --request GET 'localhost:8880/api/v1/design/forms?db=demo' \
 
 Use the following command to provide the body for the create document POST request.
 
-![CreateDocument]({{ '/assets/images/CreateDocument.png' | relative_url }})
+![CreateDocument](../assets/images/CreateDocument.png)
 
 #### Curl code snippet
 
 Please replace `$Bearer` with actual Bearer value.
 
 ```
-curl --location --request POST 'localhost:8880/api/v1/document?db=demo' \
+curl --location --request POST 'localhost:8880/api/v1/document?dataSource=demo' \
 --header 'Authorization: Bearer $Bearer' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -122,14 +127,14 @@ curl --location --request POST 'localhost:8880/api/v1/document?db=demo' \
 
 Use the following command to retrieve a document.
 
-![RetrieveDocument]({{ '/assets/images/retrievedoc.png' | relative_url }})
+![RetrieveDocument](../assets/images/retrievedoc.png)
 
 #### Curl code snippet
 
 Please replace `$Bearer` with actual Bearer value.Also replace `{{UNID_0}}` with actual unid.
 
 ```
-curl --location -g --request GET 'localhost:8880/api/v1/document/{{UNID_0}}/default?db=demo' \
+curl --location -g --request GET 'localhost:8880/api/v1/document/{{UNID_0}}/default?dataSource=demo' \
 --header 'Authorization: Bearer $Bearer' \
 --header 'Content-Type: application/json' \
 --data-raw ''
@@ -139,14 +144,14 @@ curl --location -g --request GET 'localhost:8880/api/v1/document/{{UNID_0}}/defa
 
 Use the following command to delete a document.
 
-![DeleteDocument]({{ '/assets/images/Deletedoc.png' | relative_url }})
+![DeleteDocument](../assets/images/Deletedoc.png)
 
 #### Curl code snippet
 
 Please replace `$Bearer` with actual Bearer value.Also replace `{{UNID_0}}` with actual unid.
 
 ```
-curl --location -g --request DELETE 'localhost:8880/api/v1/document/{{UNID_0}}/default?db=demo' \
+curl --location -g --request DELETE 'localhost:8880/api/v1/document/{{UNID_0}}/default?dataSource=demo&Form=Customer' \
 --header 'Authorization: Bearer $Bearer' \
 --header 'Content-Type: application/json' \
 --data-raw ''
@@ -156,13 +161,13 @@ curl --location -g --request DELETE 'localhost:8880/api/v1/document/{{UNID_0}}/d
 
 To verify that the document is deleted, try retrieving it again. Retrieve should fail.
 
-![DocumentRetrieve]({{ '/assets/images/DocumentRetrieve.png' | relative_url }})
+![DocumentRetrieve](../assets/images/DocumentRetrieve.png)
 
 ### Logout
 
 Use the following command to log out.
 
-![Logout]({{ '/assets/images/Logout.png' | relative_url }})
+![Logout](../assets/images/Logout.png)
 
 #### Curl code snippet
 
@@ -172,14 +177,14 @@ Please replace `$Bearer` with actual Bearer value.
 curl --location --request POST 'localhost:8880/api/v1/auth/logout' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer $Bearer' \
---data-raw '{"Logout" : "Yea"}'
+--data-raw '{"logout" : "Yes"}'
 ```
 
 ### Shutdown
 
 Finally, use the following command to shut down. Provide the body for the POST request.
 
-![Shutdown]({{ '/assets/images/Shutdown.png' | relative_url }})
+![Shutdown](../assets/images/Shutdown.png)
 
 #### Curl code snippet
 

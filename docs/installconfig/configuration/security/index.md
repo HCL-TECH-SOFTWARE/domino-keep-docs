@@ -21,6 +21,8 @@ Good security is not a one-trick pony, but a combination of factors. Here is wha
 
 Here's a flowchart to show how KEEP handles security.
 
-![Security flow](../../../assets/images/KeepDataAccess.png)
+<!-- ![Security flow](../../../assets/images/KeepDataAccess.png) -->
 
-See amore details in [security configuration](securityjson).
+![Security flow](../../../assets/images/WebAuth.png)
+
+See more details in [security configuration](securityjson).
