@@ -12,6 +12,16 @@ nav_order: 30
 Metrics are exposed on their own dedicated port, "METRICSPORT" in the config. The default, if not set, is port 8890.
 KEEP supports metrics produced by [MicroMeter](https://micrometer.io) in a [Prometheus](https://prometheus.io/) compatible format, pollable from the metrics port.
 
+### Metrics config
+```json
+   {
+      "enabled": true,
+      "jvmMetricsEnabled": false
+    }
+```
+ When **jvmMetricsEnabled** is set to true, more metrics data is collected and it will impact the performance.Don't configure this unless you need to troubleshoot.{: .alert .alert-danger}
+
+
 ### Metrics collected
 
 Out-of-the-box Vert.x automatically collects a variety of metrics about JVM, CPU, thread pools, HTTP servers and the event bus.
