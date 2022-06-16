@@ -96,6 +96,6 @@ All elements need to be present. “Audience” must be set to “Domino” and 
 
 KEEP is designed to consume an access token. This token can be the result of an OAuth dance or simply the result of an exchange of Domino credentials. The KEEP API does not participate in an OAuth dance, it uses the result of it.
 
-![Flow Diagram](../../../assets/images/KEEPFlowDiagram.png)
+![Flow Diagram](../../../assets/images/WebAuth.png)
 
 ![Flow Diagram2](../../../assets/images/FlowDiagramKeep.png)
