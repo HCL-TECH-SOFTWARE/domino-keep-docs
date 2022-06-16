@@ -66,9 +66,18 @@ It is the responsibility of the administrator to save key files in secure locati
 The JWT requires the following format (Additional entries get ignored):
 
 ```json
+// {
+//   "iss": "The Demo Wizzard",
+//   "sub": "CN=Doctor Notes/O=ProjectKeep",
+//   "scopes": "MAIL $DATA",
+//   "iat": 1618506339,
+//   "exp": 1618509939,
+//   "aud": "Domino"
+// }
+
 {
-  "iss": "The Demo Wizzard",
-  "sub": "CN=Doctor Notes/O=ProjectKeep",
+  "iss": "Issuer Name",
+  "sub": "CN=Common Name/O=Org",
   "scopes": "MAIL $DATA",
   "iat": 1618506339,
   "exp": 1618509939,
