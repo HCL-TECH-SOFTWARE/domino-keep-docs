@@ -9,6 +9,11 @@ nav_order: 4
 
 The Admin UI provides a user interface to a number of KEEP APIs. It thus serves an example what a [React](https://reactjs.org/) application using the KEEP APIs is capable of. It covers schema, scope and app management management. Anything that can be done using the WebUI, and more, can also be done using Postman, curl, SwaggerUI or similar tools. We have tutorials to walk you through the same.
 
+
+#### The screenshots may vary/screenshots are based on latest keep snapshots. Make sure you're up-to-date.
+{: .alert .alert-danger}
+
+
 This is what the Login page looks like.
 
 ![KEEP API](../assets/images/AdminLogin.png)
