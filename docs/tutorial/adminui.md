@@ -10,7 +10,7 @@ nav_order: 1
 This tutorial shows how to use the Admin UI to configure and use a database for KEEP. Download the database `Demo.nsf` from [Resources](../references/downloads) and follow along. Anything you can do with the Admin UI you can also do using Postman, curl, SwaggerUI or similar tools. See how to do each of the tasks in this tutorial using [Postman and curl]({{'tutorial/postmancurl' | relative_url }}) and using [SwaggerUI](./swagger).
 
 
-### The screenshots may vary/screenshots are based on latest keep snapshots. make sure you're up-to-date
+### The screenshots may vary/screenshots are based on latest keep snapshots. Make sure you're up-to-date.
 {: .alert .alert-danger}
 ### Prepare database access
 
