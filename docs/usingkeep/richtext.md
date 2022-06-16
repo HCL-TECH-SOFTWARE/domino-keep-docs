@@ -120,6 +120,41 @@ An image post looks like this:
 }
 ```
 
+### Flat JSON submissions (a.k.a Inception mode)
+
+If your consuming service can't deal with the RichText JSON structure, you can wrap the JSON structure into a Base64 encoded String and prefix it with `Base64:` (case sensitive).
+
+So you have the `content` element, which most likely is already Base64 encoded wapped a second time into Base64. To clarify, you start with:
+
+```json
+{
+  "type": "image/png",
+  "encoding": "base64",
+  "content": "-Encoded base64 here-"
+}
+```
+
+Then convert this to Base64:
+
+<div class="panel panel-success">
+Conversion result
+{: .panel-heading}
+<div style="word-break: break-all; overflow-wrap: break-word; white-space: pre-wrap;">
+ewogICJ0eXBlIjogImltYWdlL3BuZyIsCiAgImVuY29kaW5nIjogImJhc2U2NCIsCiAgImNvbnRlbnQiOiAiLUVuY29kZWQgYmFzZTY0IGhlcmUtIgp9
+</div></div>
+
+to finally prefix it with `Base64:` and submit it as (other fields omitted for clarity):
+
+```json
+{
+  "Body": "Base64:ewogICJ0eXBlIjogImltYWdlL3BuZyIsCiAgImVuY29kaW5nIjogImJhc2U2NCIsCiAgImNvbnRlbnQiOiAiLUVuY29kZWQgYmFzZTY0IGhlcmUtIgp9",
+  "Form" : "Main Document",
+  ...
+}
+```
+
+YMMV
+
 ### Further reading
 
 To be successful in composing MIME payloads, make yourself familiar with the specification and more explanations:
