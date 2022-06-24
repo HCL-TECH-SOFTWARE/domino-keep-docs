@@ -7,8 +7,9 @@ nav_order: 3
 
 ## Installing on Linux Server
 
-On Linux the installer uses the HCL Domino server to install KEEP.
-It is **strongly** recommended to use the default directories on Linux.
+- On Linux the installer uses the HCL Domino server to install KEEP.
+- It is **strongly** recommended to use the default directories on Linux.
+- Also, do not install using the `java` executable in `/opt/hcl/domino/bin/`. If your system does not have Java installed, you can use the `java` executable in the  `/opt/hcl/domino/notes/latest/linux/jvm/bin/` directory.
 
 The call to the installer looks like this:
 
