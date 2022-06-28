@@ -69,6 +69,15 @@ The container formats today that resemble these capabilities are [ECMA-376 (ISO/
 
 Based on this mismatch of source and target environment we designed your option [dealing with RichText](../usingkeep/richtext.md) in KEEP
 
+## Roles
+
+- **Domino developer**: creates the **schema** that defines what data can be accessed in a nsf database
+- **Domino administrator**: creates and activates the **scope** that defines how the data can be accessed. Also creates (optional) OAuth compatible applications with `client_id` and `client_secret` properties
+- **VoltMX administrator**: configures Volt MX's foundry middleware to interact with KEEP using the foundry KEEP adapter
+- **Application developer**: develops applications leveraging KEEP Endpoints, VoltMX services and front-end tools like VoltMX Iris, VSCode or any tools and framework of choice
+
+Read more about them in [KEEP Roles](../usingkeep/roles)
+
 ## On the todo list
 
 We are not done yet:
