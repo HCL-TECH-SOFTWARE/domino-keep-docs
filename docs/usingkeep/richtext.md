@@ -22,7 +22,7 @@ Any field you want to access in KEEP needs to be defined [in a schema](enablinga
 ```json
 {
   "name": "Body",
-  "type": "text",
+  "type": "string",
   "format": "richtext"
 }
 ```
