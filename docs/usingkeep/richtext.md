@@ -125,7 +125,7 @@ An image post looks like this:
 
 ### Flat JSON submissions (a.k.a Inception mode)
 
-If your consuming service can't deal with the RichText JSON structure, you can wrap the JSON structure into a Base64 encoded String and prefix it with `Base64:` (case sensitive).
+If your consuming service can't deal with the RichText JSON structure, you can wrap the JSON structure into a Base64 encoded String.
 
 So you have the `content` element, which most likely is already Base64 encoded wapped a second time into Base64. To clarify, you start with:
 
