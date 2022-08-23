@@ -7,7 +7,7 @@ nav_order: 1
 
 ## KEEP roles
 
-Depending on your organisation's size and structure multiple roles can be held by one person or team, or the organisation might have specialized teams representing each role. Or it's a mix of both.
+Depending on your organization's size and structure multiple roles can be held by one person or team, or the organisation might have specialized teams representing each role. Or it's a mix of both.
 
 ![Roles in KEEP](../assets/images/DominoAdminDeveloperMXDeveloper.png)
 
@@ -22,7 +22,7 @@ creates and activates the **scope** that defines how the data can be accessed. A
 
 ### VoltMX administrator
 
-configures Volt MX's foundry middleware to interact with KEEP using the foundry KEEP adapter. Needs to be able to read data from a KEEP scope, so minimum access is `Reader`. The Domino adapter marshalls user permissions to KEEP. There is no "database user" that holds all connections, but individual user permission.
+configures Volt MX's foundry middleware to interact with KEEP using the foundry KEEP adapter. Needs to be able to read data from a KEEP scope, so minimum access is `Reader`. The Domino adapter marshals user permissions to KEEP. There is no "database user" that holds all connections, but individual user permission.
 
 ### VoltMX developer
 
@@ -39,5 +39,5 @@ develops applications leveraging KEEP Endpoints, VoltMX services using front-end
 
 develops applications using the SDKs native to the mobile OS like XCode or Android studio. Needs to be able to read data from a KEEP scope, so minimum access is `Reader`. When the application wants to update data in Notes, higher access will be required.
 
-The **VoltMX Iris IDE** allows to create multi-device experiences without getting lost in device specificals
+The **VoltMX Iris IDE** allows to create multi-device experiences without getting lost in device specifics.
 {: .alert .alert-danger}

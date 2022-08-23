@@ -7,7 +7,7 @@ nav_order: 50
 
 ## Understanding Logging
 
-Project KEEP uses the Apache [Log4J2](https://logging.apache.org/log4j/2.x/) logging framework. We configued it with reasonable defaults in the `log4j2.properties` file. It uses output to console and a logging file. The content looks like this:
+Project KEEP uses the Apache [Log4J2](https://logging.apache.org/log4j/2.x/) logging framework. We configured it with reasonable defaults in the `log4j2.properties` file. It uses output to console and a logging file. The content looks like this:
 
 ```properties
 # Root logger option
@@ -55,7 +55,7 @@ In the production version the KEEP value will change from `logger.keep.level=DEB
 
 You could edit the `log4j2.properties` file directly. However, depending on your installation it might sit inside a jar file and break the signature and get overwritten on any KEEP update.
 
-The right approach is to ammend the commandline parameters used to launch KEEP:
+The right approach is to amend the commandline parameters used to launch KEEP:
 
 ```bash
 -Dlog4j.configurationFile=/path/to/modified/custom.properties
@@ -87,7 +87,7 @@ logger.keep.appenderRef.stdout.ref=STDOUT
 
 ### Interesting packages
 
-Depending on your interest, you can specify alternete log levels for Java packages. Potential package of interest (there are more) are listed below. Packages always include sub-packages unless they have their own specification.
+Depending on your interest, you can specify alternate log levels for Java packages. Potential package of interest (there are more) are listed below. Packages always include sub-packages unless they have their own specification.
 
 | Package                       | Description                                                          |
 | ----------------------------- | -------------------------------------------------------------------- |

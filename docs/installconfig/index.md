@@ -94,13 +94,13 @@ The configuration follows the concept of [an Overlay File System](https://en.wik
 
 When jar files contain a resource `/config/config.json`, that configuration file is added to total configuration
 
-Then, it is overlayed with any JSON files in the `keepconfig.d` directory within the Notes data directory and then finally, with any environment parameters.
+Then, it is overlaid with any JSON files in the `keepconfig.d` directory within the Notes data directory and then finally, with any environment parameters.
 
 ### Hierarchy
 
 ![The call hierarchy](../assets/images/ActualConfiguration.png)
 
-All files contribute JSON, which are overlayed on top of each other. JSON elements with same names get overwritten. Arrays are replaced and not overwritten.
+All files contribute JSON, which are overlaid on top of each other. JSON elements with same names get overwritten. Arrays are replaced and not overwritten.
 
 The JSON files in `keepconfig.d` are processed in alphabetical order. Last entry wins. This processing order allows you, for example, to disable elements temporarily through settings in a `z-final-words.json` file without impacting the permanent configuration.
 

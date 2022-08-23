@@ -18,8 +18,8 @@ This page lists the changes in each release.
 - Updated Postman examples
 - Updated landing page
 - OpenAPI display now has dropdown showing all schemas
-- Updated RichText to MIME, RichText to Markdow rendering
-- [Funtional accounts](../installconfig/installation/functionalUsers) are now stored in JSON file
+- Updated RichText to MIME, RichText to Markdown rendering
+- [Functional accounts](../installconfig/installation/functionalUsers) are now stored in JSON file
 
 ### 1.6 Beta EA
 
@@ -33,7 +33,7 @@ This page lists the changes in each release.
 - Updated admin UI
 - Consistency enforcement for JSON. Fields defined as multi-value will always return array regardless of note content. Fields defined as single value will never return an array
 - KEEP Schema caters to Names, Readers, Authors
-- OAuth IdP functiionality for KEEP applications
+- OAuth IdP functionality for KEEP applications
 - extended info in JWT token
 - related multi-value fields can be configured to return combined records
 
@@ -53,7 +53,7 @@ This page lists the changes in each release.
 
 ### 12.0.1-EarlyAccess Beta2
 
-- **Installer**: The downloadables now include the Java based installer. See [installation](../installconfig/index.md) for details. Currently the installer has been tested on Linux only but you are free to try.
+- **Installer**: The downloads now include the Java based installer. See [installation](../installconfig/index.md) for details. Currently the installer has been tested on Linux only but you are free to try.
 - OData now is read/write for OData clients supporting write operations (e.g. [Salesforce](../usingkeep/salesforce.md)).
 - Updated all Java dependencies to the latest available version.
 - Improved startup sequence: eliminated dependency on DXL to bootstrap KEEP, hence making the process more stable.

@@ -110,7 +110,7 @@ Select a database from the list of databases and the details for it will load. S
 
 From the list of Unconfigured Forms, click on the Form that you would like to configure. Select 'Yes' on the popup. This will configure the form with default settings. The selected Form will now be listed under the Configured Form.
 
-To make changes to the configuration, select the Form. This will load the Acccess Mode for the Form.
+To make changes to the configuration, select the Form. This will load the Access Mode for the Form.
 ![Access Mode](../assets/images/AccessMode.png)
 
 It is here that you can set the Read or Write access formulae for each of the fields in the form.

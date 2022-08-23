@@ -12,7 +12,7 @@ The [Vert.x](https://vertx.io) EventBus is the nervous system of KEEP. Vert.x re
 - When the HttpListener receives a request from the HttpClient, it forwards it to the WebHandler based on the OperationId.
 - The WebHandler generates a temporary address to listen for results and forwards the request to the EventBus.
 - The EventBus relays the request to the WorkerVerticle.
-- The WorkerVerticle sends an acknowledgement to the EventBus and requests the DbHandler to perform an action.
+- The WorkerVerticle sends an acknowledgment to the EventBus and requests the DbHandler to perform an action.
 - The DbHandler sends data to the temporary address in batches, until all the data is sent to the HttpListener.
 - The HttpClient starts interacting with data as soon as it receives it. The data is received in batches.
 - The header determines if it is Data, Error, or completion. (See below.)
@@ -44,8 +44,8 @@ note right of WebHandler: Transforms request\ngenerate Temp address
 WebHandler->EventBus: subscribe to TEMP address
 WebHandler->EventBus: forward request
 EventBus->WorkerVerticles: forward request
-WorkerVerticles->EventBus: accnowledge request
-EventBus->WebHandler: accnowledge request
+WorkerVerticles->EventBus: acknowledge request
+EventBus->WebHandler: acknowledge request
 WebHandler->HttpListener: Set response headers
 WorkerVerticles->DbHandler: request data
 loop Response data

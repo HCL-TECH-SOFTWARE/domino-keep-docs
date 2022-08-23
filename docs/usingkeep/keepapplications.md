@@ -59,7 +59,7 @@ In the Admin Client (or the [Admin API](administrationui.md)), we can define an 
 ![Application](../assets/images/Application.png)
 
 1. App Name, gives name of the application.
-2. Description, descrption for application given while creating
+2. Description, description for application given while creating
 3. AppID, which is the Application ID.
 4. Edit, to edit the details application while creating it.
 5. Generate Application Secret, It generates the application secret.

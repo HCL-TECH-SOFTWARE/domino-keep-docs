@@ -44,7 +44,7 @@ After Notes has been installed, it must be configured to find your Mail file on 
 
 8. Your location record is now complete so click **OK**.
 
-Now that you've imported your Notes ID, do a quick check to verify that that's the ID you're actually using. This is necessary as Notes ships with a generic **user.id** file in the data directory, and if you're using user.id your securty is essentially turned off.
+Now that you've imported your Notes ID, do a quick check to verify that that's the ID you're actually using. This is necessary as Notes ships with a generic **user.id** file in the data directory, and if you're using user.id your security is essentially turned off.
 
 Select **File \ Security \ User Security**. Verify that the Notes ID in use is correct. If it's not, go to **File \ Security \ Switch Id** to change it.
 
@@ -56,7 +56,7 @@ Now that you've configured your mail settings, you need to create Server Connect
 
 2. Next click **Advanced** to bring up the Advanced page and select **Connections**.
 
-3. Finally click the **New** dropdown menu and select **Server Connectiuon** to bring up the Server Connection form:
+3. Finally click the **New** dropdown menu and select **Server Connection** to bring up the Server Connection form:
 
 ![Server Connections]({{ '/assets/images/ServerConnect.png' | relative_url }})
 

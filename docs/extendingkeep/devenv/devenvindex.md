@@ -41,7 +41,7 @@ This section describes the steps you will need to take, and the tools you will n
 Maven is setup to (manually) generate [PlantUML](https://plantuml.com/) diagrams for use in Maven sites. Unfortunately the plugin uses Java11, while KEEP is stuck on Domino's Java8 so some manual steps are involved:
 
 - Source directory: `src/main/plantuml` all files `*.txt`
-- Target directory: `src/site/resourc/assets/images/uml` (so they can be used in site)
+- Target directory: `src/site/resource/assets/images/uml` (so they can be used in site)
 - Temporarily witch to Java11
 - Execute `mvn com.github.funthomas424242:plantuml-maven-plugin:generate`
 - Execute `mvn site` to incorporate new images in site

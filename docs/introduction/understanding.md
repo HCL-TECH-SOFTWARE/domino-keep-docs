@@ -13,11 +13,11 @@ KEEP is the middleware connecting Notes & Domino to a contemporary REST like API
 
 ## A Note can contain ANYTHING, an API shouldn't
 
-A document note (a.k.a a document) in a Notes database can contain any number of items (colloquial refered to as _fields_ - which is actually inaccurate) that are fully self contained, describing their datatype, cardinality (single value, multi-value) and content. There is no fix relationship to any form containing defining fields.
+A document note (a.k.a a document) in a Notes database can contain any number of items (colloquial referred to as _fields_ - which is actually inaccurate) that are fully self contained, describing their datatype, cardinality (single value, multi-value) and content. There is no fix relationship to any form containing defining fields.
 
-By _convention_ documents contain an item with the name `Form` pointing to what the document tentatively might contain. **Tentative!** The document might not contain items for each field in the refered form, might contain items (created by actions, agents or external code ) without a matching field in the form or items which don't match the data type of the field definition.
+By _convention_ documents contain an item with the name `Form` pointing to what the document tentatively might contain. **Tentative!** The document might not contain items for each field in the referred form, might contain items (created by actions, agents or external code ) without a matching field in the form or items which don't match the data type of the field definition.
 
-Furhtermore a document might be viewed with different forms and/or change the value of its form item during its lifetime
+Furthermore a document might be viewed with different forms and/or change the value of its form item during its lifetime
 
 This free for all capabilities are not very suitable to be exposed in an API. An API that states "You will get something JSON, but we can't tell what", is of limited use. Therefore we considered how to define the shape of data to expose. Our initial approach was to just use the form design at runtime, but found this too limiting. Now the _Scope and Schema management UI_ (a.k.a. AdminUI) uses form design as input for a schema definition that is close to [JSON Schema](https://json-schema.org). Our resulting decisions/constrains are:
 
@@ -25,7 +25,7 @@ This free for all capabilities are not very suitable to be exposed in an API. An
 - Documents without a `form` item are not available in the API, but can contribute to views/forms
 - If a form item value has no matching schema definition, it is not available in the UI
 - There are 1:n schemas for any enabled "form". In KEEP they are referred to as `mode` or `formMode`
-- You can create a schema for an non-exisiting form using the API. This is valid since we use the value of a document's form item rather than the form itself
+- You can create a schema for an non-existing form using the API. This is valid since we use the value of a document's form item rather than the form itself
 - Which mode is available to a given user is determined by an `@Formula` that can include item values, UserName, Groups and roles for its computation. This allows to map permissions and workflows on an API level
 - Reading and writing coerces note item values into the ones defined in the schema. Multi-value fields are delivered as array, while single values as scalar, regardless of item content.
 
@@ -33,7 +33,7 @@ This free for all capabilities are not very suitable to be exposed in an API. An
 
 [Notes' security](https://wissel.net/blog/2014/02/domino-development-back-to-basics-part-6-better-safe-than-sorry-security.html) uses ACL entries and special item types `Reader`, `Name` and `Author` to define access permissions. Since this is near and dear to all applications, the API needs to support this:
 
-- the schema's format containing values like `date-time` or `int64` got extendend to include `readers`, `names`, `authors` and `richtext`. This allows for appropriate data mappings
+- the schema's format containing values like `date-time` or `int64` got extended to include `readers`, `names`, `authors` and `richtext`. This allows for appropriate data mappings
 - JSON's binary data type is mapped to 0 and 1
 
 ## Who are you? It depends

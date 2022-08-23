@@ -34,7 +34,7 @@ DbRequestParameters granting access to session, database, Domino client and the 
 Inside the method `process` there are 2 ways to send results back to the EventBus:
 
 - With data: `request.emit(resultData)` - can be called multiple times.
-- On error: `throw new KeepExceptionWrongDataRequest` - can be called only once. You can throw any error, but we highly recomment [KeepExceptions](../assets/images/KeepErrors.png), since they carry the HTTP status code back.
+- On error: `throw new KeepExceptionWrongDataRequest` - can be called only once. You can throw any error, but we highly recommend [KeepExceptions](../assets/images/KeepErrors.png), since they carry the HTTP status code back.
 
 We don't need to call this.onComplete(), this is handled in the abstract class already.
 
