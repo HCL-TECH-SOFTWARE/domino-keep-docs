@@ -12,7 +12,7 @@ nav_order: 1
 
 ## What's New
 
-Check the [Changelog](../references/changelog.md) to learn what is new in {{ site.version }}
+Check the [Changelog](../references/changelog) to learn what is new in {{ site.version }}
 
 ## A few phrases you should know
 
@@ -64,7 +64,7 @@ Read more about them in [KEEP Roles](../usingkeep/roles)
 
 ### Endpoints
 
-Ensure your endpoints are [secure](../installconfig/configuration/security/securingKEEPEndpoints.md).
+Ensure your endpoints are [secure](../installconfig/configuration/security/securingKEEPEndpoints).
 Bring up a browser and verify that you can hit these endpoints:
 
 | Endpoints                                                                                      | Ports | Details                                                                                                                                                                                                                                                                                                                                                           | Webpages                                          |

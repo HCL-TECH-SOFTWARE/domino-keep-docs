@@ -38,7 +38,7 @@ This free for all capabilities are not very suitable to be exposed in an API. An
 
 ## Who are you? It depends
 
-Domino provides its own source of identity, the Domino directory. However this is not the only option in use in customer environments. Furthermore, applications need to access data **on your behalf**. To accomodate this KEEP uses [JTW](https://jwt.io) tokens, defined [scopes](../) and an [OAuth 2.0](https://oauth.net/2/) compliant authorization service:
+Domino provides its own source of identity, the Domino directory. However this is not the only option in use in customer environments. Furthermore, applications need to access data **on your behalf**. To accomodate this KEEP uses [JTW](https://jwt.io) tokens, defined [scopes](../howkeepworks/scopes) and an [OAuth 2.0](https://oauth.net/2/) compliant authorization service:
 
 - Authorization is provided using a JWT token defining permitted scope and user identity
 - Direct login is provided for users, it can be deactivated
