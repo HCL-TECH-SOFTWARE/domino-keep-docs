@@ -25,6 +25,13 @@ HCL Project KEEP, a.k.a Domino REST API, provides a secure REST API access into 
 "_Make Domino development and access available to a broad audience with diverse development backgrounds. Keep the barrier to entry low without sacrificing enterprise and container deployability. Ensure access control through declaration on the server and its databases, relieving end-user applications from that task_!"
 </div></div>
 
+<div class="panel panel-danger">
+[**KEEP {{ site.version }}** Changelog](references/changelog)
+{: .panel-heading}
+<div class="panel-body">
+KEEP is under active development, based on your input and insight. From version to version (until GA) we might break things, so be sure to check the [Changelog](references/changelog) and bear with us on the quest to get it right!
+</div></div>
+
 ![KEEP API](assets/images/svg/DominoKeepAPI.svg){: .scale-img-seventy-five-percent }
 
 [Get started now]({{ 'introduction/quickstart' | relative_url }}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub]({{ site.github.repository_url }}){: .btn .fs-5 .mb-4 .mb-md-0 } [Download {{ site.version}} ]({{ site.flexnet_url }}){: .btn .fs-5 .mb-4 .mb-md-0 }
@@ -45,7 +52,7 @@ To troubleshoot error "The account ID or package ID is missing. Please provide i
 **We want to hear from you**
 {: .panel-heading}
 <div class="panel-body">
-Join us for questions, discussions, ideas and feedback over at [OpenNTF's KEEP chat](https://openntf.slack.com/archives/C0232M13WFQ) , [Discord](https://discord.com/invite/jmRHpDRnH4) and/or participate in the [Early release forum](feedback).
+Join us for questions, discussions, ideas and feedback over at [OpenNTF's Discord server](https://discord.com/invite/jmRHpDRnH4) and/or participate in the [Early release forum](feedback).
 </div></div>
 
 ---

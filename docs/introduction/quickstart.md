@@ -39,7 +39,7 @@ To get up and running quickly, you will need to:
 
 You can use the built-in [Swagger API](../tutorial/swagger), [Postman and Curl](../tutorial/postmancurl), or the [KEEP Admin UI](../tutorial/adminui). To help you, use one of the following tutorials. We have a curl based [keep shell script](../references/downloads) for you to play with.
 
-Make sure to complete the [post installation steps](../installconfig/installation/postinstallation.md) to ensure proper operation
+Make sure to complete the [post installation steps](../installconfig/installation/postinstallation) to ensure proper operation
 {: .alert .alert-success}
 
 ### Tutorials
