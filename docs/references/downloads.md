@@ -29,7 +29,7 @@ Downloadable assets to get you started.
 - [Domino Admin API Postman collection](../assets/downloads/KeepAdminTest.postman_collection.json) to exercise KEEP APIs and its [Sample environment](../assets/downloads/KeepAdminTest.postman_environment.json).
 - [Demo.nsf](../assets/downloads/Demo.nsf) - Demo database for the Postman and Tutorial examples.
 
-The scripts below are only for reference (and amusement). THey have been superceded by the scripts provided by the installer. So there's no need beyond satifying curiosity to download them.
+The scripts below are only for reference (and amusement). THey have been superceded by the scripts provided by the installer. So there's no need beyond satisfying curiosity to download them.
 {: .alert .alert-danger}
 
 <!-- ### Linux

@@ -7,7 +7,7 @@ has_children: true
 
 ## Extending KEEP (Follow the yellow brick road!)
 
-KEEP is designed with extensibity in mind. To extend KEEP, you should be familiar with Java8, [Maven](https://maven.apache.org), [Eclipse Vert.x](https://vertx.io), [DominoJNX](../howkeepworks/dominojnx/index), as well as our principles:
+KEEP is designed with extensibility in mind. To extend KEEP, you should be familiar with Java8, [Maven](https://maven.apache.org), [Eclipse Vert.x](https://vertx.io), [DominoJNX](../howkeepworks/dominojnx/index), as well as our principles:
 
 ### Principles
 
@@ -149,7 +149,7 @@ You will need to set up your `config/config.json` for your extension, stored in 
 
 ### What to implement
 
-When your extension sends JSON on/out the HTTP interface, the only classes you need to implement are the [NSF Handlersc(a.k.a. dbRequest)](nsfhandler). Make sure you read about the security settings using `@Annotations`. When you expect other content, e.g. attachments or Office files or PDF, you will need a [Web Handler](webhandler) too. We took care of most of thee boiler plate, so adding an extension is fast, once you made peace with the KEEP architecture.
+When your extension sends JSON on/out the HTTP interface, the only classes you need to implement are the [NSF Handler(a.k.a. dbRequest)](nsfhandler). Make sure you read about the security settings using `@Annotations`. When you expect other content, e.g. attachments or Office files or PDF, you will need a [Web Handler](webhandler) too. We took care of most of thee boiler plate, so adding an extension is fast, once you made peace with the KEEP architecture.
 
 ### Running and testing your code
 

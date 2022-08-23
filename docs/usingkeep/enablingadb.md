@@ -25,20 +25,20 @@ A brave developer could use Domino designer to create or update one. The rest (p
 
 ## The KEEP Schema
 
-defines what views, folders, document and agents can be accessed through the KEEP API. Access to documents is controlled by accessing their `Form` item and use the value to lookup access definitions, called `Mode` in KEEP's lingo that define the item names and properties accessible read- or writeable.
+defines what views, folders, document and agents can be accessed through the KEEP API. Access to documents is controlled by accessing their `Form` item and use the value to lookup access definitions, called `Mode` in KEEP's lingo that define the item names and properties accessible read- or writable.
 
 Since the exact terminology is long winded and colloquially often no distinction is made between document/item and form/field, the short version is: The KEEP schema controls accesss to forms and fields.
 
 ![From DB to schema to scope](../assets/images/KeepSchemaToApp.png)
 
-While the AdminUI helps to generate a KEEP schema from an exisitng form, there no technical need for a form to be present, other than the possibility to open the Notes document in a Notes client too. Creating such a Schema requires direct post to the API.
+While the AdminUI helps to generate a KEEP schema from an existing form, there no technical need for a form to be present, other than the possibility to open the Notes document in a Notes client too. Creating such a Schema requires direct post to the API.
 
 ## Schema components
 
-**Note** | Please refer to the OpenAPI sspecification running on your server. It is the definite guide for your deployed version.
+**Note** | Please refer to the OpenAPI specification running on your server. It is the definite guide for your deployed version.
 {: .alert .alert-danger}
 
-The high level entry contains a few properties and the collection of forms, views and agents made avaiable:
+The high level entry contains a few properties and the collection of forms, views and agents made available:
 
 ![High Level schema components](../assets/images/SchemaTopLevel.png)
 
@@ -122,7 +122,7 @@ A typical Notes constuct are documents containing a group of multi value fields,
 
 ![KEEP Fields](../assets/images/SampleJsonNoFieldGroup.png)
 
-By assigning the fields `Name`, `age` and `fruit` the **fieldGroup** `LostBoys`, KEEP will render them as records in an JSON Object. We opted for an object to ease processing and addressing since arrays might not have a guarantee of sequence. The result lookd like this:
+By assigning the fields `Name`, `age` and `fruit` the **fieldGroup** `LostBoys`, KEEP will render them as records in an JSON Object. We opted for an object to ease processing and addressing since arrays might not have a guarantee of sequence. The result looks like this:
 
 ![KEEP Fields](../assets/images/SampleJsonFieldGroup.png)
 

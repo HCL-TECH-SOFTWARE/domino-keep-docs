@@ -45,7 +45,7 @@ Note if you are using Domino+KEEP docker image, the `oauth.nsf` should already b
    b. Set file name to oauth.nsf
    c. (Set title as you deem fit)
    d. Pick `KeepOauth.ntf` as the application template
-3. Asssign the role `[OAuthAdmin]` to the server and your administrative user or usergroup (we suggest `[LocalKeepAdmins]` using your notes client.Make sure there is an ACL entry of type `server` (for your server) that has Manager access and has `OAuthAdmin` role (make sure the checkbox is checked).
+3. Assign the role `[OAuthAdmin]` to the server and your administrative user or usergroup (we suggest `[LocalKeepAdmins]` using your notes client.Make sure there is an ACL entry of type `server` (for your server) that has Manager access and has `OAuthAdmin` role (make sure the checkbox is checked).
 
 ![keep oauthnsf acl](../../../assets/images/keep-oauthnsf-acl.png)
 
@@ -83,7 +83,7 @@ Create a new Identity service in the Foundry browser console:
 1. Pause here for a moment (don't save yet), and complete the steps for [setting up Keep databases and applications](#Keep-Application-and-Database-Setup)
 1. Scope = database `name` (API Name) for the database added in the next step; if more than one database, you should be able to enter a list of database names; check Keep documentation to see how the names are delimited (perhaps a comma or space, but to keep it simple, just enter one db name if uncertain about how to specify multiple)
 1. Client ID = `App id` from the application created in the next section below
-1. Client Secret = Obtained when you first creat the appliction (next section)
+1. Client Secret = Obtained when you first create the application (next section)
 1. Now you can `save`
 
 ![voltmx identityprovider keepidplite](../../../assets/images/voltmx-identityprovider-keepidplite.png)

@@ -50,7 +50,7 @@ We support PEM formatted keys (RSA/EC). Obtain the public key from your IdP prov
 {
     "jwt":
     {
-        "oidc":
+        "oicd":
         {
             "active": true,
             "algorithm": "RS256",

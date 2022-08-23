@@ -37,7 +37,7 @@ Under **_Security_** tab, for **_TCP Authentication_**, disable **_Anonymous_**.
 
 Save and close.
 
-3. Now you need to create idpcat.nsf file using idpcat.ntf template. To do that, click on **_File_**, goto **_Application_** and select **_New_**. In the **_New Application_** pop up, fill in the following details-
+3. Now you need to create idpcat.nsf file using idpcat.ntf template. To do that, click on **_File_**, go to **_Application_** and select **_New_**. In the **_New Application_** pop up, fill in the following details-
    **_Server_**: Select your server from the dropdown.
    **_Title_**: Give title as idpcat
    **_Template_**: Click on advanced template and select IdP catalog template.

@@ -43,7 +43,7 @@ The following error is shown:
 
 ### User ID and password being requested repeatedly when using Notes for KEEP testing
 
-Sometimes on the initial starting up of KEEP or creation of KeepConfig and KeepAgents databases, or doing things like creating a folder in mail database, you can get prompted for user ID and password repeatedly. This happens if the "Don't prompt for a password" checkbox under User Security is unchecked or if it gets reset based on the organisation's policy.
+Sometimes on the initial starting up of KEEP or creation of KeepConfig and KeepAgents databases, or doing things like creating a folder in mail database, you can get prompted for user ID and password repeatedly. This happens if the "Don't prompt for a password" checkbox under User Security is unchecked or if it gets reset based on the organization's policy.
 
 To fix this, stop your KEEP debugging session, go into Notes, go to the Notes setting under File -> Security -> User Security -> enable "Don't prompt for a password from other Notes-based programs (reduces security)", exit Notes and restart your KEEP debugging session.
 

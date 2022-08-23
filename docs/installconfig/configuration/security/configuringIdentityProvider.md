@@ -89,7 +89,7 @@ You need to create a JSON file in the `keepconfig.d` directory and allow access 
 {
   "disableJwtExpiryCheck": false,
   "jwt": {
-    "oidc": {
+    "oicd": {
       "active": true,
       "algorithm": "RS256",
       "keyFile": "10-jwt.pubkey"

@@ -14,7 +14,7 @@ Project KEEP comes with reasonable default configuration settings. They allow yo
 
 ### Understanding configuration
 
-The configuration follows the concept of and Overlay File System, where the base configuration is retrieved from the jar file and then overlayed with all the JSON files (if present) in the keepconfig.d directory within the Notes data directory and finally, the environment parameters, if any of those exist.
+The configuration follows the concept of and Overlay File System, where the base configuration is retrieved from the jar file and then overlaid with all the JSON files (if present) in the keepconfig.d directory within the Notes data directory and finally, the environment parameters, if any of those exist.
 
 ### Environment
 

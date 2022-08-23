@@ -25,7 +25,7 @@ If you create your own CA, you must:
 - Create the private key and root certificate.
 - Create an intermediate key and certificate.
 - Create certificates for your servers.
-- Convert them if necessary (e.g. for import in Java Keystors JKS).
+- Convert them if necessary (e.g. for import in Java Keystore JKS).
 - Make the public key of the root and intermediate certificates available.
 - Import these certificates in all browsers and runtimes used for testing.
 

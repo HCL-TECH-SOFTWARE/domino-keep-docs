@@ -16,8 +16,8 @@ Check the [Changelog](../references/changelog) to learn what is new in {{ site.v
 
 ## A few phrases you should know
 
-- A database exposed on the API is refered to as a **scope**. The exposure happens through an entry in KEEP's configuration database by an administrator with `Editor` access there. The scope gets used in the URLs as `?dataSource=[scopename]`. Scopes for databases are lowercase only
-- The shape of data available is refered to as a **schema**. The schema is an json file in the design resources of the database. It gets created by a developer with `Designer` access to the NSF
+- A database exposed on the API is referred to as a **scope**. The exposure happens through an entry in KEEP's configuration database by an administrator with `Editor` access there. The scope gets used in the URLs as `?dataSource=[scopename]`. Scopes for databases are lowercase only
+- The shape of data available is referred to as a **schema**. The schema is an json file in the design resources of the database. It gets created by a developer with `Designer` access to the NSF
 - A **KEEP Application** is an [OAuth](https://oauth.net/) compatible definition of a `client_id` and a `client_secret` as well as the list of permitted scopes
 - A **scope** points to a **schema** that is contained in a database. A database can have [**multiple schemas**](../assets/images/KeepSchemaToApp.png) for different use cases and a **schema** can be pointed to by **more than one scope**
 

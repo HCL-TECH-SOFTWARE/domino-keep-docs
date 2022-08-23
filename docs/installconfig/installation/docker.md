@@ -138,7 +138,7 @@ docker exec -it $containername /bin/bash
 - Metrics should be accessible on `http://$host:8890/metrics`.
 
 <div class="panel panel-success">
-**Alternate Docker cofiguration**
+**Alternate Docker configuration**
 {: .panel-heading}
 <div class="panel-body">
 When you run your Domino servers on Linux, you probably use the [Nashcom startup script](https://www.nashcom.de/nshweb/pages/startscript.htm) for Domino.
