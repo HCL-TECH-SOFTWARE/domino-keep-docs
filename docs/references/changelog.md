@@ -11,6 +11,18 @@ This page lists the changes in each release.
 
 ### Current Version: {{ site.version }}
 
+- Update vert.x to 4.3.3
+- Update all Java dependencies
+- Fixed large amount of AdminUI and other bugs
+- Installer for Windows and Linux (Java command line) available (Container image too)
+- Updated Postman examples
+- Updated landing page
+- OpenAPI display now has dropdown showing all schemas
+- Updated RichText to MIME, RichText to Markdow rendering
+- [Funtional accounts](../installconfig/installation/functionalUsers) are now stored in JSON file
+
+### 1.6 Beta EA
+
 - Dropped Domino versioning, switched to KEEP's internal version
 - Updated vert.x to 4.3.0
 - Updated all Java dependencies

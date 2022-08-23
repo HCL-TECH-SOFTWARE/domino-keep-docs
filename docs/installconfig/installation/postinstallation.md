@@ -7,27 +7,27 @@ nav_order: 6
 
 # Post Installation Tasks
 
-This chapter describes tasks you can perform after installing an instance of KEEP.
+Complete the tasks listed here to finalize a production worthy KEEP deployment. The headlines link to details for each task. Feedback is welcome.
 
 ## [Securing ports](../configuration/configuringPorts)
 
-Port encryption encrypts the communication between the Client and the Keep Server, bringing an additional layer of security to the network communication. For more information on [Securing ports](../configuration/configuringPorts).
+A production environment must encrypt the communication between any client and the KEEP Server. We use multiple ports, learn how to secure them.
 
 ## [Enable a database](../../usingkeep/enablingadb)
 
-For more information about creating a keep schema, forms, agents and add database click on [Enable a database](../../usingkeep/enablingadb).
+To make a database available on the KEEP rest API, one needs to create a KEEP `schema` and link it to a publicly visible `scope`. The schema defines what documents, based on the value of their `form` item, views and folders as well as agents are available for a call via http.
 
 ## [Configure JWT](../configuration/security/authentication)
 
-JSON Web Token (JWT) is an open standard that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. For more information on [Configure JWT](../configuration/security/authentication).
+KEEP uses JSON Web Token (JWT) for Authroization. To allow using KEEP without the deployment of an external Identity Provider (IdP) KEEP can be configured to provide a JWT after authentication with Domino credentials.
 
 ## [Sharing JWT between servers](../configuration/security/encryption)
 
-This section explains usage of JWT token sharing between servers. For more information on [Sharing JWT between servers](../configuration/security/encryption).
+JWT token can be shared between servers, effectively enabling SSO (Single Sign On) for KEEP. It is LTPA for grownups
 
 ## [Configure apps](../../tutorial/adminui)
 
-This section explains the setup of Admin UI and adding databases. For more information on [Configure apps](../../tutorial/adminui).
+The Admin UI allow to configure databaase schemas, server scopes and OAuth applications (Domino functioning as IdP)
 
 ## [Setup functional Accounts](./functionalUsers)
 
