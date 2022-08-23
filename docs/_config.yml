@@ -4,7 +4,7 @@
 remote_theme: Stwissel/just-the-docs
 title: "HCL Project KEEP"
 description: A modern take on REST interaction with Domino
-version: 1.6 Beta EA
+version: 1.7.3 EA
 logo: "/assets/images/svg/HCL_Domino_KEEP_light.svg"
 flexnet_url: "https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/entitledDownloadFile.action?downloadPkgId=HCL%20Domino%20REST%20API%20Early%20Access%20Release"
 #baseurl: "/pages/HCL-Janus/domino-keep-plus-docs/" # the subpath of your site, e.g. /blog
