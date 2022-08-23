@@ -31,11 +31,19 @@ This enables the correct, within the means of the API, processing of RichText, f
 
 ### Reading RichText
 
-There are 3 ways to retrieve RichText:
+There are 5 ways to retrieve RichText:
 
 - As part of the regular `/document/{unid}` URL or a list operation using `&documents=true`
+- Using the `/query` URL
 - Using the `/richtext/markdown/{unid}` endpoint, returning markdown, quite lossy, but easy to digest
 - Using the `/richtext/mime/{unid}` endpoint returning a [MIME](https://datatracker.ietf.org/doc/html/rfc1341) representation of a Notes RichText
+- Using the `/bulk/unid` URL
+
+By default the following APIs return RichText as HTML, but you can specify a different format by using the `richTextAs=` URL paramater.  The valid formats are `html`, `mime` and `md`.
+
+- `/document/{unid}`
+- `/query`
+- `/bulk/unid`
 
 ### Writing RichText
 
