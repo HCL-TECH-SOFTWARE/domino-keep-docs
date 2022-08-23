@@ -2,7 +2,7 @@
 REM Run site preview with local Jekyll
 CD docs
 CALL bundle install
-CALL bundle exec jekyll serve --livereload --incremental --config _config-local.yml
+CALL bundle exec jekyll serve -o --livereload --incremental --config _config-local.yml
 IF ERRORLEVEL 1 GOTO error
 GOTO end
 

@@ -12,7 +12,7 @@ nav_order: 1
 
 ## What's New
 
-Check the [Changelog](../references/changelog.md) to learn what is new in {{ site.version }}
+Check the [Changelog](../references/changelog) to learn what is new in {{ site.version }}
 
 ## A few phrases you should know
 
@@ -39,7 +39,7 @@ To get up and running quickly, you will need to:
 
 You can use the built-in [Swagger API](../tutorial/swagger), [Postman and Curl](../tutorial/postmancurl), or the [KEEP Admin UI](../tutorial/adminui). To help you, use one of the following tutorials. We have a curl based [keep shell script](../references/downloads) for you to play with.
 
-Make sure to complete the [post installation steps](../installconfig/installation/postinstallation.md) to ensure proper operation
+Make sure to complete the [post installation steps](../installconfig/installation/postinstallation) to ensure proper operation
 {: .alert .alert-success}
 
 ### Tutorials
@@ -64,7 +64,7 @@ Read more about them in [KEEP Roles](../usingkeep/roles)
 
 ### Endpoints
 
-Ensure your endpoints are [secure](../installconfig/configuration/security/securingKEEPEndpoints.md).
+Ensure your endpoints are [secure](../installconfig/configuration/security/securingKEEPEndpoints).
 Bring up a browser and verify that you can hit these endpoints:
 
 | Endpoints                                                                                      | Ports | Details                                                                                                                                                                                                                                                                                                                                                           | Webpages                                          |
