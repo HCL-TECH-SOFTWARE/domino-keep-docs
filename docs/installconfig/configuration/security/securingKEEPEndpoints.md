@@ -30,7 +30,7 @@ We recommend that you keep your configuration changes in the `config.d` director
 - TThe metrics endpoint (8890) uses BASIC authentication with the user name set in the configuration variable `metrics/metricsUser` and the salted and encrypted password in the configuration variable `metrics/metricsPassword`. It is strongly recommended to update these values and only share with the metrics owner. The metrics endpoint is read only.
 - The management endpoint (8889) uses basic authentication. it can serve multiple users configured in the `managementAPI` key of the configuration.
 
-The credentials for the management endpoint are **deliberatly NOT** retrived from a directory service (Domino or otherwise) to be able to access the management API on failure of individual components (last code standing). Trying to link this API to a directory service would defeat the purpose of the management endpoint.
+The credentials for the management endpoint are **deliberately NOT** retrieved from a directory service (Domino or otherwise) to be able to access the management API on failure of individual components (last code standing). Trying to link this API to a directory service would defeat the purpose of the management endpoint.
 {: .alert .alert-danger}
 
 ### Areas of security to assess and implement

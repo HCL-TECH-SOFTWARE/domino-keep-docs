@@ -12,12 +12,12 @@ nav_order: 1
 
 ## What's New
 
-Check the [Changelog](../references/changelog.md) to learn what is new in {{ site.version }}
+Check the [Changelog](../references/changelog) to learn what is new in {{ site.version }}
 
 ## A few phrases you should know
 
-- A database exposed on the API is refered to as a **scope**. The exposure happens through an entry in KEEP's configuration database by an administrator with `Editor` access there. The scope gets used in the URLs as `?dataSource=[scopename]`. Scopes for databases are lowercase only
-- The shape of data available is refered to as a **schema**. The schema is an json file in the design resources of the database. It gets created by a developer with `Designer` access to the NSF
+- A database exposed on the API is referred to as a **scope**. The exposure happens through an entry in KEEP's configuration database by an administrator with `Editor` access there. The scope gets used in the URLs as `?dataSource=[scopename]`. Scopes for databases are lowercase only
+- The shape of data available is referred to as a **schema**. The schema is an json file in the design resources of the database. It gets created by a developer with `Designer` access to the NSF
 - A **KEEP Application** is an [OAuth](https://oauth.net/) compatible definition of a `client_id` and a `client_secret` as well as the list of permitted scopes
 - A **scope** points to a **schema** that is contained in a database. A database can have [**multiple schemas**](../assets/images/KeepSchemaToApp.png) for different use cases and a **schema** can be pointed to by **more than one scope**
 
@@ -39,7 +39,7 @@ To get up and running quickly, you will need to:
 
 You can use the built-in [Swagger API](../tutorial/swagger), [Postman and Curl](../tutorial/postmancurl), or the [KEEP Admin UI](../tutorial/adminui). To help you, use one of the following tutorials. We have a curl based [keep shell script](../references/downloads) for you to play with.
 
-Make sure to complete the [post installation steps](../installconfig/installation/postinstallation.md) to ensure proper operation
+Make sure to complete the [post installation steps](../installconfig/installation/postinstallation) to ensure proper operation
 {: .alert .alert-success}
 
 ### Tutorials
@@ -64,7 +64,7 @@ Read more about them in [KEEP Roles](../usingkeep/roles)
 
 ### Endpoints
 
-Ensure your endpoints are [secure](../installconfig/configuration/security/securingKEEPEndpoints.md).
+Ensure your endpoints are [secure](../installconfig/configuration/security/securingKEEPEndpoints).
 Bring up a browser and verify that you can hit these endpoints:
 
 | Endpoints                                                                                      | Ports | Details                                                                                                                                                                                                                                                                                                                                                           | Webpages                                          |

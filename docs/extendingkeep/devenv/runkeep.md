@@ -18,7 +18,7 @@ Next find a version of the project KEEP jar, **projectkeep.jar**.
 
 ### Configure KEEP
 
-Once the jar file is in place, you will need to configure two enviroment variables:
+Once the jar file is in place, you will need to configure two environment variables:
 
 Add a new variable called DYLD_LIBRARY_PATH and point it to your Notes root directory (for example: c:\Notes).
 

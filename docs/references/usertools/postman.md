@@ -48,7 +48,7 @@ Set the password to **password** and user name to **John Doe** and then click **
 
 ### Environment Variables
 
-In some of the KEEP APIs, you see fields surrounded by double brackets like **\{\{HOST}}** or **\{\{AdminName}}**. These fields represent user inputs and should generally not be hardcoded. For KEEP, the environment variables are packaged in the relevant environment you imported in.
+In some of the KEEP APIs, you see fields surrounded by double brackets like **\{\{HOST}}** or **\{\{AdminName}}**. These fields represent user inputs and should generally not be hard coded. For KEEP, the environment variables are packaged in the relevant environment you imported in.
 
 1. Click the **eyeball icon** to the right of the environment box:
 

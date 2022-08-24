@@ -21,7 +21,7 @@ Maven is an open source build program that came out of the Apache Jakarta projec
 
 A Project Object Model file, pom.xml, provides all the configuration information necessary to build a particular project. If you bring up the pom.xml file in the root domino-keep directory you'll see it begins with general information about the project, including the project name and version number which are used as identifiers.  The project information is followed by a list of Maven Plugins, as one can customize Maven's behavior by adding a number of specialized plugins that perform a desired function. Finally the pom file ends with a list of the projects dependencies.  The Pom file in root domino-keep directory builds the whole project, but there are also satellite Pom files in each of the major subdirectories.  If there is a Pom file present, you know that a Maven build will run there.
 
-In general, someone setting up a build enviroment will not need to modify the existing pom files, as they are already present and correct.  But they are worth a mention here so that you have a basic understanding of how a Maven build works.  If you need to add a new dependency or a new Maven plugin this is where it's done.
+In general, someone setting up a build environment will not need to modify the existing pom files, as they are already present and correct.  But they are worth a mention here so that you have a basic understanding of how a Maven build works.  If you need to add a new dependency or a new Maven plugin this is where it's done.
 
 ### Run a full KEEP build
 

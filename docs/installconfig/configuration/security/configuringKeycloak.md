@@ -68,11 +68,11 @@ Next step is to assign the client the common client scopes `keep-common` and `of
 
 ## Application specific scopes
 
-The configuration so far will identify a user presenting the access token to KEEP, but not yet provide any access. We need to specify what scopes this application will be allowed to access. We can use any of the global scopes `MAIL`, `$DATA` or `$DECRYPT` or, preferrably, a lowercase database alias. Multiple scopes are separated using a space.
+The configuration so far will identify a user presenting the access token to KEEP, but not yet provide any access. We need to specify what scopes this application will be allowed to access. We can use any of the global scopes `MAIL`, `$DATA` or `$DECRYPT` or, preferably, a lowercase database alias. Multiple scopes are separated using a space.
 
 ---
 
-**Note** It is best practise to give an external application as little as possible access so it can function. So think twice before allowing any of the uppercase general scopes
+**Note** It is best practice to give an external application as little as possible access so it can function. So think twice before allowing any of the uppercase general scopes
 
 ---
 

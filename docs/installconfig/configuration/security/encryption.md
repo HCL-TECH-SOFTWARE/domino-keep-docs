@@ -25,7 +25,7 @@ If you create your own CA, you must:
 - Create the private key and root certificate.
 - Create an intermediate key and certificate.
 - Create certificates for your servers.
-- Convert them if necessary (e.g. for import in Java Keystors JKS).
+- Convert them if necessary (e.g. for import in Java Keystore JKS).
 - Make the public key of the root and intermediate certificates available.
 - Import these certificates in all browsers and runtimes used for testing.
 
@@ -35,7 +35,7 @@ Again: **It's generally better to use [LetsEncrypt](https://letsencrypt.org/)**.
 
 ## Encryption key for JWT signing
 
-KEEP uses JWT for authentication. When you get started with KEEP, you probably log in with a Domino user name and password. KEEP, out of the box, uses an ephidermal symmetric encryption key to sign requests. Since you can't see the key or share it, this configuration is reasonably secure. When you restart KEEP, a new key is used.
+KEEP uses JWT for authentication. When you get started with KEEP, you probably log in with a Domino user name and password. KEEP, out of the box, uses an ephemeral symmetric encryption key to sign requests. Since you can't see the key or share it, this configuration is reasonably secure. When you restart KEEP, a new key is used.
 
 To use a key that can be deployed to an external identity provider (IdP) or used to send requests to the Domino ID vault service, you must generate a public/private key pair and configure the [security](./index) settings. Never share the private key!
 

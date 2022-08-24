@@ -70,7 +70,7 @@ The properties are:
 |method | HTTP Method to use for the callbackUrl and callbackUrlError. |
 |payload | A JSON object to pass into then agent. This can contain any additional information the agent needs to use. |
 
-The process creates a docuemnt in **KeepAgents.nsf** to track processing of the agents. You can check that in the Notes Client, with the UUID, or query with an API.
+The process creates a document in **KeepAgents.nsf** to track processing of the agents. You can check that in the Notes Client, with the UUID, or query with an API.
 
 ## Asynchronous Agent Scheduler
 

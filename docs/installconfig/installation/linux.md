@@ -31,7 +31,7 @@ sudo java -jar keepinstaller.jar \
 | `-k`  | `--keepDir=<keepDir>`       |     ✓     | Directory for the Keep binary installation                                      |
 | `-p`  | `--programDir=<programDir>` |     ✓     | Directory where HCL Notes or Domino is installed                                |
 |       |                             |           |
-| `-a`  | `--accept`                  |           | automatically accept terms & ccoditions                                         |
+| `-a`  | `--accept`                  |           | automatically accept terms & conditions                                         |
 | `-h`  | `--help`                    |           | Show this help message and exit.                                                |
 | `-n`  | `--noIniUpdates`            |           | Install the files, show updated ini entries, but don't write them out           |
 | `-r`  | `--dryRun`                  |           | do not actually copy or alter files and settings                                |
@@ -40,7 +40,7 @@ sudo java -jar keepinstaller.jar \
 
 The installer adds the `keep` task to the automatically starting tasks. If opted out using `-n` you can issue `load keep` manually in the Domino console.
 
-### Using a reponse file
+### Using a response file
 
 Instead of providing all parameters on the command line, the KEEP installer can be called using a [response file](https://picocli.info/#AtFiles):
 

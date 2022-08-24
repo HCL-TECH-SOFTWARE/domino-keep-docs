@@ -11,7 +11,7 @@ nav_order: 3
 
 ### Background
 
-[RichText (RTF)](https://en.wikipedia.org/wiki/Rich_Text_Format) was specified by Microsoft in 1987. Notes/Domino uses a similar specification. It is essentially a container format designed to host [plain text](https://www.youtube.com/watch?v=_mZBa3sqTrI), formatted text, images, attachments, embedded objects and layout information. It is [white space sensitive](https://twitter.com/jordwalke/status/1272431278868987904), a fancy term for: being able to "format" something by hitting the space key repeateatly.
+[RichText (RTF)](https://en.wikipedia.org/wiki/Rich_Text_Format) was specified by Microsoft in 1987. Notes/Domino uses a similar specification. It is essentially a container format designed to host [plain text](https://www.youtube.com/watch?v=_mZBa3sqTrI), formatted text, images, attachments, embedded objects and layout information. It is [white space sensitive](https://twitter.com/jordwalke/status/1272431278868987904), a fancy term for: being able to "format" something by hitting the space key repeatedly.
 
 The container formats today that resemble these capabilities are [ECMA-376 (ISO/IEC-29500)](https://www.ecma-international.org/publications-and-standards/standards/ecma-376/) (a.k.a Office Open XML), [ISO/IEC 26300:2006](http://www.oasis-open.org/committees/download.php/19274/OpenDocument-v1.0ed2-cs1.pdf) (a.k.a Open Document Format), which are both XML based and [MIME (RFC 1341)](https://datatracker.ietf.org/doc/html/rfc1341) which is widely used in eMail. The XML formats, mainly used in word processors aren't native to the web, while MIME doesn't prescribe (it is **multipurpose** after all) its content parts **and** isn't native to web browsers.
 
@@ -31,11 +31,19 @@ This enables the correct, within the means of the API, processing of RichText, f
 
 ### Reading RichText
 
-There are 3 ways to retrieve RichText:
+There are 5 ways to retrieve RichText:
 
 - As part of the regular `/document/{unid}` URL or a list operation using `&documents=true`
+- Using the `/query` URL
 - Using the `/richtext/markdown/{unid}` endpoint, returning markdown, quite lossy, but easy to digest
 - Using the `/richtext/mime/{unid}` endpoint returning a [MIME](https://datatracker.ietf.org/doc/html/rfc1341) representation of a Notes RichText
+- Using the `/bulk/unid` URL
+
+By default the following APIs return RichText as HTML, but you can specify a different format by using the `richTextAs=` URL parameter.  The valid formats are `html`, `mime` and `md`.
+
+- `/document/{unid}`
+- `/query`
+- `/bulk/unid`
 
 ### Writing RichText
 
@@ -127,7 +135,7 @@ An image post looks like this:
 
 If your consuming service can't deal with the RichText JSON structure, you can wrap the JSON structure into a Base64 encoded String.
 
-So you have the `content` element, which most likely is already Base64 encoded wapped a second time into Base64. To clarify, you start with:
+So you have the `content` element, which most likely is already Base64 encoded wrapped a second time into Base64. To clarify, you start with:
 
 ```json
 {
@@ -163,7 +171,7 @@ YMMV
 
 The name of any attachment can be seen, when your form mode contains the virtual field `$FILES` (Case sensitive) and you retrieve the document using the `/document` endpoint. Using the `/attachments/{unid}/{attachmentName}` endpoint, they can be retrieved in their binary format
 
-_Note_: Currrently the attachments are not picked up by the `@AttachmentNames` formula until they get saved in Notes client once - working on it.
+_Note_: Currently the attachments are not picked up by the `@AttachmentNames` formula until they get saved in Notes client once - working on it.
 {: .panel .panel-danger}
 
 ### Further reading

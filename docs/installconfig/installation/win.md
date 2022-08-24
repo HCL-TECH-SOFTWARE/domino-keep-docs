@@ -20,7 +20,7 @@ Installation on an HCL Notes client is for serverless product evaluation. **It i
 ### Note
 
 - Domino must be [installed](https://www.hcltechsw.com/domino)
-- KEEP installer need to be run as admin
+- KEEP installer need to be run as administrator.
 - Use the following command and run the installer to deploy KEEP for Domino:
 
 Run the installer to deploy KEEP for Domino (make sure to follow the .jar file name saved in your directory, followed by the parameters):
@@ -42,7 +42,7 @@ java -jar keepinstaller.jar ^
 | `-k`  | `--keepDir=<keepDir>`       |           | Directory for the Keep binary installation                                      |
 | `-p`  | `--programDir=<programDir>` |     ✓     | Directory where HCL Notes or Domino is installed                                |
 |       |                             |           |
-| `-a`  | `--accept`                  |           | automatically accept terms & ccoditions                                         |
+| `-a`  | `--accept`                  |           | automatically accept terms & conditions                                         |
 | `-h`  | `--help`                    |           | Show this help message and exit.                                                |
 | `-n`  | `--noIniUpdates`            |           | Install the files, show updated ini entries, but don't write them out           |
 | `-r`  | `--dryRun`                  |           | do not actually copy or alter files and settings                                |

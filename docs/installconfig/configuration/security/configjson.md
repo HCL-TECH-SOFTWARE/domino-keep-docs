@@ -200,7 +200,7 @@ A current `config.json` has the following top-level properties. These properties
 | :--------------------- | :------ | :--------------------------------- |
 | Endpoint               | String  | Route path to metrics.             |
 | enabled                | Boolean | true to enable metrics collection. |
-| publishQuantiles       | Boolean | true to publish Qantiles.          |
+| publishQuantiles       | Boolean | true to publish Quantiles.          |
 
 
 ### Version parameters
