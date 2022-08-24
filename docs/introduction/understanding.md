@@ -13,13 +13,13 @@ KEEP is the middleware connecting Notes & Domino to a contemporary REST like API
 
 ## A Note can contain ANYTHING, an API shouldn't
 
-A document note (a.k.a a document) in a Notes database can contain any number of items (colloquial referred to as _fields_ - which is actually inaccurate) that are fully self contained, describing their datatype, cardinality (single value, multi-value) and content. There is no fix relationship to any form containing defining fields.
+A document note (a.k.a a document) in a Notes database can contain any number of items (colloquial referred to as _fields_ - which is actually inaccurate) that are fully self contained, describing their datatype, cardinality (single value, multi-value) and content. There is no fixed relationship to any form containing defining fields.
 
 By _convention_ documents contain an item with the name `Form` pointing to what the document tentatively might contain. **Tentative!** The document might not contain items for each field in the referred form, might contain items (created by actions, agents or external code ) without a matching field in the form or items which don't match the data type of the field definition.
 
 Furthermore a document might be viewed with different forms and/or change the value of its form item during its lifetime
 
-This free for all capabilities are not very suitable to be exposed in an API. An API that states "You will get something JSON, but we can't tell what", is of limited use. Therefore we considered how to define the shape of data to expose. Our initial approach was to just use the form design at runtime, but found this too limiting. Now the _Scope and Schema management UI_ (a.k.a. AdminUI) uses form design as input for a schema definition that is close to [JSON Schema](https://json-schema.org). Our resulting decisions/constrains are:
+These free for all capabilities are not very suitable to be exposed in an API. An API that states "You will get something JSON, but we can't tell what", is of limited use. Therefore we considered how to define the shape of data to expose. Our initial approach was to just use the form design at runtime, but found this too limiting. Now the _Scope and Schema management UI_ (a.k.a. AdminUI) uses form design as input for a schema definition that is close to [JSON Schema](https://json-schema.org). Our resulting decisions/constrains are:
 
 - We use the value of the `form` item to link a document to 1:n schemas
 - Documents without a `form` item are not available in the API, but can contribute to views/forms
@@ -67,7 +67,7 @@ Before [diving into details](../usingkeep/richtext.md), a quick trip down the IT
 
 The container formats today that resemble these capabilities are [ECMA-376 (ISO/IEC-29500)](https://www.ecma-international.org/publications-and-standards/standards/ecma-376/) (a.k.a Office Open XML), [ISO/IEC 26300:2006](http://www.oasis-open.org/committees/download.php/19274/OpenDocument-v1.0ed2-cs1.pdf) (a.k.a Open Document Format), which are both XML based and [MIME (RFC 1341)](https://datatracker.ietf.org/doc/html/rfc1341) which is widely used in eMail. The XML formats, mainly used in word processors aren't native to the web, while MIME doesn't prescribe (it is **multipurpose** after all) its content parts **and** isn't native to web browsers.
 
-Based on this mismatch of source and target environment we designed your option [dealing with RichText](../usingkeep/richtext.md) in KEEP
+Based on this mismatch of source and target environment we designed your option [dealing with RichText](../usingkeep/richtext) in KEEP
 
 ## Roles
 
