@@ -14,6 +14,11 @@ nav_order: 1
 
 Check the [Changelog](../references/changelog) to learn what is new in {{ site.version }}
 
+## The KEEP schema
+
+You won't find the KEEP schema here. Samples and explanations, configuration and steps - yes. The actual schema however lives live on your KEEP server instance as OpenAPI specification. You can read and explore it directly with your own data!
+{: .alert .alert-danger}
+
 ## A few phrases you should know
 
 - A database exposed on the API is referred to as a **scope**. The exposure happens through an entry in KEEP's configuration database by an administrator with `Editor` access there. The scope gets used in the URLs as `?dataSource=[scopename]`. Scopes for databases are lowercase only
