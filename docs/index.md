@@ -55,6 +55,13 @@ To troubleshoot error "The account ID or package ID is missing. Please provide i
 Join us for questions, discussions, ideas and feedback over at [OpenNTF's Discord server](https://discord.com/invite/jmRHpDRnH4) and/or participate in the [Early release forum](feedback).
 </div></div>
 
+<div class="panel panel-danger">
+Where is the **actual** API documentation?
+{: .panel-heading}
+<div class="panel-body">
+We use an [OpenAPI](https://www.openapis.org) based API specification. Its documentation can be seen after starting KEEP and opening its URL (depending on your Domino server URL). This way you can be sure to always look at the specification running on your server, current and accurate
+</div></div>
+
 ---
 
 Domino REST API is designed to re-establish Domino as a world class, modern, standards-compliant, cloud native and enterprise-level collaboration platform. It adds contemporary [REST APIs](https://www.redhat.com/en/topics/api/what-is-a-rest-api) to Notes and Domino, enabling a modern programming experience with the tools of your choice.
