@@ -17,7 +17,7 @@ Try the KEEP Open API with a sample demo Notes database with your existing HCL N
 <div class="panel-body">
 The HCL Domino REST API is designed for use with the HCL Domino server. The ability to deploy it to a Notes client on Windows or macOS is provided for your convenience- to enable you to evaluate and experiment. You can explore the API without setting up a HCL Domino server.
 
-**It is not supported for any production use!**
+**It is not supported for any production use !**<br />HCL Suppport will not entertain tickets for it.
 
 </div></div>
 
@@ -70,4 +70,3 @@ KEEP starts and checks for errors. It creates the database `KeepConfig.nsf` whic
 The database contains one local user **John Doe** who is deactivated.
 
 When you want to run KEEP local on your Mac/PC, you need to activate that user.
-
