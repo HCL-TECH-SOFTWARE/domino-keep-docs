@@ -13,7 +13,7 @@ KEEP is the middleware connecting Notes & Domino to a contemporary REST like API
 
 ## A Note can contain ANYTHING, an API shouldn't
 
-A document note (a.k.a a document) in a Notes database can contain any number of items (colloquial refered to as _fields_ - which is actually inaccurate) that are fully self contained, describing their datatype, cardinality (single value, multi-value) and content. There is no fix relationship to any form containing defining fields.
+A document note (a.k.a a document) in a Notes database can contain any number of items (colloquial referred to as _fields_ - which is actually inaccurate) that are fully self contained, describing their datatype, cardinality (single value, multi-value) and content. There is no fix relationship to any form containing defining fields.
 
 By _convention_ documents contain an item with the name `Form` pointing to what the document tentatively might contain. **Tentative!** The document might not contain items for each field in the referred form, might contain items (created by actions, agents or external code ) without a matching field in the form or items which don't match the data type of the field definition.
 
