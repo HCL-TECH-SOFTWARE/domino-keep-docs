@@ -132,3 +132,13 @@ pre {
     overflow-wrap: break-word;
     white-space: pre-wrap;
 }
+
+#oldkeep #oldkeepcontent {
+    display: none;
+}
+#oldkeep:target #oldkeepcontent {
+    display: block;
+}
+#oldkeep:target a {
+    display: none;
+}
