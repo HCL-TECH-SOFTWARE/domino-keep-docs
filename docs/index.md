@@ -8,13 +8,27 @@ has_children: true
 ---
 
 {::options parse_block_html="true" /}
+<div class="panel panel-success">
+**Domino REST API**
+{: .panel-heading}
+<div class="panel-body">
+{: .fs-5 }
+[**Domino REST API**](https://opensource.hcltechsw.com/Domino-rest-api/index.html) (previously known as HCL Project KEEP) has been released and up-to-date information is available at
+[https://opensource.hcltechsw.com/domino-rest-api](https://opensource.hcltechsw.com/Domino-rest-api/index.html)
 
-# HCL Project KEEP
+Please make sure to update any bookmarks you may have to reference the new documentation site.
+{: .alert .alert-success}
+{: .fs-3 }
+</div></div>
+
+<div id="oldkeep">
+<a href="#oldkeep">Show old KEEP content</a>
+<div id="oldkeepcontent">
+## HCL Project KEEP
 
 HCL Project KEEP, a.k.a Domino REST API, provides a secure REST API access into HCL Domino servers and databases.
-{: .alert .alert-info}
 
-{: .fs-9 }
+{: .fs-3 }
 {{ site.version }}
 {: .fs-3 }
 
@@ -135,3 +149,4 @@ Along with the application design and admin features, KEEP allows CRUD operation
 ### Low barrier to entry
 
 KEEP runs on Domino and/or your Notes Client on Windows/Linux/Mac. Someone with previous working experience of Notes and Domino can quickly get started with KEEP, as you are about [to find out for yourself](introduction/quickstart.md)!
+</div></div>
