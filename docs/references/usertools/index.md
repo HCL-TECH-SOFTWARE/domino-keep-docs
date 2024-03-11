@@ -20,6 +20,7 @@ Below is the list of tools that can be used when dealing with REST APIs. Some of
 | [Let's Encrypt](https://letsencrypt.org/)            | Generates free SSL certificates.                                                                                                                              |
 | [SourceTree for GIT](https://www.sourcetreeapp.com/) | Used for version control.                                                                                                                                     |
 | [Swagger UI](https://swagger.io/tools/swagger-ui/)   | Allows visualization and interaction with APIs without the need for actual implementation logic.                                                              |
+| [Mockium](https://softwium.com/mockium/)             | Online platform for generating sample datasets.                                                                                                               |
 
 ### Developer Tools
 
